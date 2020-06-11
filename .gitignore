@@ -1,0 +1,9 @@
+package-lock.json
+yarn.lock
+*.log
+storybook-static
+build
+node_modules
+src/**/*.js
+src/**/*.js.map
+.idea
