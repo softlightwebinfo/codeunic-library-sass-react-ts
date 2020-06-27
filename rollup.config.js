@@ -4,8 +4,8 @@ import typescript from "rollup-plugin-typescript2";
 import sass from "rollup-plugin-sass";
 import commonjs from "rollup-plugin-commonjs";
 import copy from "rollup-plugin-copy";
-
 import packageJson from "./package.json";
+import svg from 'rollup-plugin-svg';
 
 export default {
     input: "src/index.ts",
@@ -28,9 +28,11 @@ export default {
             output: 'build/bundle.css',
             insert: true,
             watch: 'src/components/**/*.scss',
+            options: {}
         }),
+        svg(),
         resolve(),
         commonjs(),
-        typescript({ useTsconfigDeclarationDir: true })
+        typescript({useTsconfigDeclarationDir: true})
     ]
 };

@@ -2,7 +2,7 @@ import * as React from "react";
 import {ITestComponentProps} from "./TestComponent.types";
 import "./TestComponent.scss";
 
-export const TestComponent: React.FC<ITestComponentProps> = ({theme}) => (
+export const TestComponent: React.FC<ITestComponentProps> = ({theme}: ITestComponentProps) => (
     <div
         data-testid="test-component"
         className={`test-component test-component-${theme}`}

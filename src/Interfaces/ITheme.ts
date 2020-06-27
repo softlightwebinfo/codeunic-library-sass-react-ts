@@ -1,0 +1,1 @@
+export type ITheme = "success" | "danger" | "info" | "warning" | "primary" | "secondary" | "error";
