@@ -1,0 +1,12 @@
+.Boxx-component {
+  margin: auto;
+  display: flex;
+  outline: 0;
+  position: relative;
+  justify-content: center;
+  padding: 24px;
+  background-color: #333;
+  @media (min-width: 600px) {
+    border-radius: 4px;
+  }
+}

@@ -3,7 +3,7 @@ import {ButtonComponent} from './ButtonComponent';
 
 // @ts-ignore
 export default {
-    title: "Buttons|Button"
+    title: "Components|Button"
 };
 
 export const Default = () => <ButtonComponent>Click para enviar</ButtonComponent>;
@@ -15,6 +15,7 @@ export const Danger = () => <ButtonComponent theme={"danger"}>Click para enviar<
 export const Warning = () => <ButtonComponent theme={"warning"}>Click para enviar</ButtonComponent>;
 export const Error = () => <ButtonComponent theme={"error"}>Click para enviar</ButtonComponent>;
 export const Disabled = () => <ButtonComponent isDisabled>Disabled</ButtonComponent>;
+export const Color = () => <ButtonComponent variant={"color"} theme={"primary"}>Color</ButtonComponent>;
 export const BorderOutline = () => (
     <>
         <ButtonComponent variant={"outlined"} theme={"primary"}>Border outline</ButtonComponent>

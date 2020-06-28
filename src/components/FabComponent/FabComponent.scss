@@ -1,4 +1,6 @@
+@import "../../sass/index";
 .fab-component {
+  $then: &;
   color: rgba(0, 0, 0, 0.87);
   width: 56px;
   height: 56px;
@@ -46,5 +48,102 @@
     min-width: 48px;
     min-height: auto;
     border-radius: 24px;
+  }
+
+  &#{$then}--outlined, &#{$then}--color {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &:hover {
+    background-color: $default_hover;
+    cursor: pointer;
+  }
+
+  &--success {
+    background-color: $color-success;
+    color: #fff;
+
+    &#{$then}--outlined, &#{$then}--color {
+      background-color: transparent;
+      color: $color-success;
+      border: 1px solid $color-success;
+    }
+
+    &#{$then}--color {
+      border: 0px;
+    }
+  }
+
+  &--primary {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: $color-primary;
+
+    &#{$then}--outlined, &#{$then}--color {
+      background-color: transparent;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+    }
+
+    &#{$then}--color {
+      border: 0px;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      background-color: $color-primary_hover;
+    }
+  }
+
+  &--secondary {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: $color-secondary;
+
+    &#{$then}--outlined, &#{$then}--color {
+      background-color: transparent;
+      color: $color-secondary;
+      border: 1px solid $color-secondary;
+    }
+
+    &#{$then}--color {
+      border: 0px;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      background-color: $color-secondary_hover;
+    }
+  }
+
+  &--info {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: $color-info;
+
+    &#{$then}--outlined, &#{$then}--color {
+      background-color: transparent;
+      color: $color-info;
+      border: 1px solid $color-info;
+    }
+
+    &#{$then}--color {
+      border: 0px;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      background-color: $color-info_hover;
+    }
+  }
+
+  &#{$then}--color {
+    background-color: transparent;
+  }
+
+  &--disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
   }
 }

@@ -16,3 +16,13 @@ $color-info_hover: rgb(100, 141, 174);
 $color-disabled: rgba(255, 255, 255, 0.12);
 $color-disabled-2: rgba(0, 0, 0, 0.12);
 
+.separator {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    width: 128px;
+    height: 128px;
+    margin: 8px;
+  }
+}

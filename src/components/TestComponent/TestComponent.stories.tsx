@@ -3,7 +3,7 @@ import {TestComponent} from './TestComponent';
 
 // @ts-ignore
 export default {
-    title: "TestComponent"
+    title: "Components|Test"
 };
 
 export const Primary = () => <TestComponent theme="primary"/>;

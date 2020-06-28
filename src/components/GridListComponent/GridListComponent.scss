@@ -1,0 +1,8 @@
+.GridList-component {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+  list-style: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}

@@ -9,7 +9,10 @@ export function ButtonComponent(props: IButtonComponentProps) {
     classNames.push(`button-component--${props.variant || "contained"}`);
 
     return (
-        <button className={classNames.join(" ")}>
+        <button
+            style={props.style}
+            className={classNames.join(" ")}
+        >
             <span className={"button-component__children"}>{props.children}</span>
         </button>
     );

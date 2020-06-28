@@ -4,11 +4,11 @@ import {IconComponent} from "../..";
 
 // @ts-ignore
 export default {
-    title: "Fab|Fab"
+    title: "Components|Fab"
 };
 
 export const Default = () => (
-    <FabComponent theme="primary" icon={"alarm"}/>
+    <FabComponent icon={"alarm"}/>
 );
 
 export const Children = () => (

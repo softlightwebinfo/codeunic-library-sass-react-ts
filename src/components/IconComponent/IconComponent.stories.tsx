@@ -3,7 +3,7 @@ import {IconComponent} from './IconComponent';
 
 // @ts-ignore
 export default {
-    title: "Icons|Icon"
+    title: "Components|Icon"
 };
 
 export const Default = () => <IconComponent icon="alarm"/>;

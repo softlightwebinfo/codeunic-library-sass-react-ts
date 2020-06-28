@@ -1,0 +1,63 @@
+.Container-component {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+
+  @media (min-width: 600px) {
+    .MuiContainer-root {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  &--disable-gutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &--fixed {
+    @media (min-width: 600px) {
+      max-width: 600px;
+    }
+    @media (min-width: 960px) {
+      max-width: 960px;
+    }
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+    }
+    @media (min-width: 1920px) {
+      max-width: 1920px;
+    }
+  }
+
+  @media (min-width: 0px) {
+    &--maxWidth-xs {
+      max-width: 444px;
+    }
+  }
+  @media (min-width: 600px) {
+    &--maxWidth-sm {
+      max-width: 600px;
+    }
+  }
+  @media (min-width: 960px) {
+    &--maxWidth-md {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1280px) {
+    &--maxWidth-lg {
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1920px) {
+    &--maxWidth-xl {
+      max-width: 1920px;
+    }
+  }
+}

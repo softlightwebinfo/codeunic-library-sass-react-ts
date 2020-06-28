@@ -2,7 +2,7 @@ import {ITheme} from "../../Interfaces/ITheme";
 import {IChildren} from "../../Interfaces/IChildren";
 
 export interface IFabComponentProps {
-    theme: ITheme;
+    theme?: ITheme;
     children?: IChildren;
     icon?: string;
 }

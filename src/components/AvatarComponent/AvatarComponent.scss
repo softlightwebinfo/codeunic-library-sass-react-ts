@@ -1,0 +1,16 @@
+.Avatar-component {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.25rem;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+  color: #121212;
+  background-color: #757575;
+}
