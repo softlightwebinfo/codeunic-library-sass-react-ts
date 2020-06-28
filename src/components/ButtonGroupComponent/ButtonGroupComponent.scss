@@ -1,0 +1,7 @@
+@import "../../sass/index";
+
+.ButtonGroup-component {
+  $then: &;
+  display: inline-flex;
+  border-radius: 4px;
+}

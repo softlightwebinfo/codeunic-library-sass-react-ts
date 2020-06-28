@@ -7,5 +7,6 @@ export interface IButtonComponentProps {
     theme?: ITheme;
     variant?: "contained" | "outlined" | "color";
     isDisabled?: boolean;
+    grouped?: boolean;
     style?: IStyle;
 }

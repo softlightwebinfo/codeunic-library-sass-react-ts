@@ -7,6 +7,7 @@ export function ButtonComponent(props: IButtonComponentProps) {
     if (props.theme) classNames.push(`button-component--${props.theme}`);
     if (props.isDisabled) classNames.push(`button-component--disabled`);
     classNames.push(`button-component--${props.variant || "contained"}`);
+    classNames.push(`button-component--grouped`);
 
     return (
         <button

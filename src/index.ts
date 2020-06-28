@@ -12,6 +12,7 @@ export {TypographyComponent} from "./components/TypographyComponent/TypographyCo
 export {AvatarComponent} from "./components/AvatarComponent/AvatarComponent";
 export {GridListComponent} from "./components/GridListComponent/GridListComponent";
 export {GridListTileComponent} from "./components/GridListTileComponent/GridListTileComponent";
+export {ButtonGroupComponent} from "./components/ButtonGroupComponent/ButtonGroupComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'

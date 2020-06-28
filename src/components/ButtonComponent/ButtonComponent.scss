@@ -114,4 +114,23 @@
     cursor: default;
     pointer-events: none;
   }
+
+  &--grouped {
+    min-width: 40px;
+    box-shadow: none;
+
+    &#{$then}:not(:last-child) {
+      border-right-color: transparent;
+      box-shadow: none;
+    }
+
+    &#{$then}:not(:last-child) {
+      box-shadow: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &#{$then}:not(:first-child) {
+      margin-left: -1px;
+    }
+  }
 }
