@@ -14,6 +14,7 @@ export {GridListComponent} from "./components/GridListComponent/GridListComponen
 export {GridListTileComponent} from "./components/GridListTileComponent/GridListTileComponent";
 export {ButtonGroupComponent} from "./components/ButtonGroupComponent/ButtonGroupComponent";
 export {InputFieldComponent} from "./components/InputFieldComponent/InputFieldComponent";
+export {InputLabelComponent} from "./components/InputLabelComponent/InputLabelComponent";
 export {TextFieldComponent} from "./components/TextFieldComponent/TextFieldComponent";
 export {FormControlComponent} from "./components/FormControlComponent/FormControlComponent";
 
