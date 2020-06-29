@@ -10,10 +10,12 @@ export enum ITBem {
 export class BEM {
     private _parent: string;
     private _classNames: IObjectMix;
+    private _listClassNames: string[] = [];
 
     constructor(parent: string, classNames: IObjectMix) {
         this._parent = parent;
         this._classNames = classNames;
+        this._listClassNames.push(parent)
     }
 
     toString(): string {
@@ -26,6 +28,11 @@ export class BEM {
                 }
             }
             return previousValue;
-        }, [this._parent]).join(" ");
+        }, [...this._listClassNames]).join(" ");
+    }
+
+    Append(className: string) {
+        this._listClassNames.push(className);
+        return this;
     }
 }

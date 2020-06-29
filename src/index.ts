@@ -13,6 +13,9 @@ export {AvatarComponent} from "./components/AvatarComponent/AvatarComponent";
 export {GridListComponent} from "./components/GridListComponent/GridListComponent";
 export {GridListTileComponent} from "./components/GridListTileComponent/GridListTileComponent";
 export {ButtonGroupComponent} from "./components/ButtonGroupComponent/ButtonGroupComponent";
+export {InputFieldComponent} from "./components/InputFieldComponent/InputFieldComponent";
+export {TextFieldComponent} from "./components/TextFieldComponent/TextFieldComponent";
+export {FormControlComponent} from "./components/FormControlComponent/FormControlComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'

@@ -1,0 +1,24 @@
+.FormControl-component {
+  border: 0;
+  margin: 0;
+  display: inline-flex;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  flex-direction: column;
+  vertical-align: top;
+  width: 100%;
+
+  &--focus {
+    .InputLabel-component {
+      color: #90caf9;
+
+    }
+
+    .InputField-component {
+      &__input {
+        border-bottom: 1px solid #90caf9;
+      }
+    }
+  }
+}

@@ -36,6 +36,7 @@ export function GridListTileComponent(props: IGridListTileComponentProps) {
         },
     };
     return (
+        // @ts-ignore
         <Component className={bm.toString()} style={props.style}>
             <div style={classes.tile}>
                 {React.Children.map(props.children, (child) => {
