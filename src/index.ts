@@ -17,6 +17,12 @@ export {InputFieldComponent} from "./components/InputFieldComponent/InputFieldCo
 export {InputLabelComponent} from "./components/InputLabelComponent/InputLabelComponent";
 export {TextFieldComponent} from "./components/TextFieldComponent/TextFieldComponent";
 export {FormControlComponent} from "./components/FormControlComponent/FormControlComponent";
+export {AppBarComponent} from "./components/AppBarComponent/AppBarComponent";
+export {ToolbarComponent} from "./components/ToolbarComponent/ToolbarComponent";
+export {ButtonIconComponent} from "./components/ButtonIconComponent/ButtonIconComponent";
+export {InputSearchComponent} from "./components/InputSearchComponent/InputSearchComponent";
+export {FlexGrowComponent} from "./components/FlexGrowComponent/FlexGrowComponent";
+export {BadgeComponent} from "./components/BadgeComponent/BadgeComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'

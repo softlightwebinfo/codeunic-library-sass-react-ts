@@ -1,0 +1,26 @@
+@import "../../sass/index";
+
+.Toolbar-component {
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  &--gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+    @media (min-width: 600px) {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  &--regular {
+    min-height: 56px;
+    @media (min-width: 0px) and (orientation: landscape) {
+      min-height: 48px;
+    }
+    @media (min-width: 600px) {
+      min-height: 64px;
+    }
+  }
+}

@@ -18,6 +18,7 @@ export function InputFieldComponent(props: IInputFieldComponentProps) {
                 onFocus={props.onFocus}
                 onBlur={props.onBlur}
                 className={"InputField-component__input"}
+                required={props.required}
             />
         </div>
     );

@@ -6,6 +6,7 @@ export interface IInputFieldComponentProps {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
     onFocus?: (e: ChangeEvent<HTMLInputElement>) => void;
+    required?: boolean;
     value?: string;
     placeholder?: string;
     type?: IInput;

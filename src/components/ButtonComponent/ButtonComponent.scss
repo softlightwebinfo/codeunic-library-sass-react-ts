@@ -83,6 +83,12 @@
     }
   }
 
+  &--inherit {
+    color: inherit;
+    border-color: currentColor;
+    background-color: inherit;
+  }
+
   &--info {
     color: rgba(0, 0, 0, 0.87);
     background-color: $color-info;
@@ -129,6 +135,7 @@
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+
     &#{$then}:not(:first-child) {
       margin-left: -1px;
     }

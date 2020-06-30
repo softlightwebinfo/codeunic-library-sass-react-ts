@@ -31,6 +31,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
     };
     const InputElement = (
         <InputFieldComponent
+            required={props.required}
             aria-describedby={props.helperTextId}
             autoComplete={props.autoComplete}
             autoFocus={props.autoFocus}
@@ -53,7 +54,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
         <FormControlComponent className={bm.toString()} focus={focus}>
             {label && (
                 <InputLabelComponent isUp={isUp} htmlFor={props.id} className={"TextField-component__label TextField-component__label-form-control"}>
-                    {label}
+                    {`${label} ${props.required ? " *" : ""}`}
                 </InputLabelComponent>
             )}
             {InputElement}
