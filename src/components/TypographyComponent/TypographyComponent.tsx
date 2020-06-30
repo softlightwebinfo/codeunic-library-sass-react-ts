@@ -11,11 +11,10 @@ export function TypographyComponent(props: ITypographyComponentProps) {
         'color': props.color,
         display: props.display,
         align: props.align,
-        [props.variant]: !!props.variant,
+        [props.variant || "div"]: !!props.variant,
     });
     let Component: any = props.component || props.variant || "div";
-    Component = mapping[Component];
-
+    Component = mapping[Component] || "div";
     return (
         <Component
             onClick={props.onClick}

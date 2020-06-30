@@ -1,0 +1,17 @@
+@import "../../sass/index";
+
+.Card-component {
+  overflow: hidden;
+  @include Paper;
+  @include Elevation(1);
+
+  &--rounded {
+    border-radius: 4px;
+  }
+
+  &--variant {
+    &-outlined {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+  }
+}

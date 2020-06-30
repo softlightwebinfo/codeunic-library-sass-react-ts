@@ -5,7 +5,6 @@ import sass from "rollup-plugin-sass";
 import commonjs from "rollup-plugin-commonjs";
 import copy from "rollup-plugin-copy";
 import packageJson from "./package.json";
-import svg from 'rollup-plugin-svg';
 
 export default {
     input: "src/index.ts",
@@ -30,7 +29,6 @@ export default {
             watch: 'src/components/**/*.scss',
             options: {}
         }),
-        svg(),
         resolve(),
         commonjs(),
         typescript({useTsconfigDeclarationDir: true})

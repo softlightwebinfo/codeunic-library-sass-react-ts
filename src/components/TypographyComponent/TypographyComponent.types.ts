@@ -10,7 +10,7 @@ import {IStyle} from "../../Interfaces/IStyle";
 export interface ITypographyComponentProps {
     onClick?: (e: any) => void;
     style?: IStyle;
-    children: IChildren | ReactElement[];
+    children: IChildren | ReactElement[] | string[];
     align?: IAlign;
     color?: IColor;
     display?: IDisplay;
