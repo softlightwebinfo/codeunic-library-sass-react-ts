@@ -23,6 +23,7 @@ export {ButtonIconComponent} from "./components/ButtonIconComponent/ButtonIconCo
 export {InputSearchComponent} from "./components/InputSearchComponent/InputSearchComponent";
 export {FlexGrowComponent} from "./components/FlexGrowComponent/FlexGrowComponent";
 export {BadgeComponent} from "./components/BadgeComponent/BadgeComponent";
+export {CardMediaComponent} from "./components/CardMediaComponent/CardMediaComponent";
 export * from "./components/CardComponent";
 
 //Layouts

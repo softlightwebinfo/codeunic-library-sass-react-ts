@@ -4,4 +4,12 @@
   display: flex;
   padding-bottom: 8px;
   align-items: center;
+
+  > *:not(:first-child) {
+    margin-left: 8px !important;
+  }
+
+  &--separate {
+    padding: 16px;
+  }
 }

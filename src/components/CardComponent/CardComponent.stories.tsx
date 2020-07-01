@@ -1,9 +1,10 @@
 import React from "react";
 import {CardComponent} from './CardComponent';
-import {AvatarComponent, BoxxComponent, ButtonComponent, ButtonIconComponent, CardHeaderComponent, IconComponent, TypographyComponent} from "../..";
+import {AvatarComponent, BoxxComponent, ButtonComponent, ButtonIconComponent, CardActionAreaComponent, CardHeaderComponent, FlexGrowComponent, IconComponent, TypographyComponent} from "../..";
 import {CardContentComponent} from "./CardContentComponent";
 import {CardActionsComponent} from "./CardActionsComponent";
 import {text, withKnobs} from "@storybook/addon-knobs";
+import {CardMediaComponent} from "../CardMediaComponent/CardMediaComponent";
 
 // @ts-ignore
 export default {
@@ -35,7 +36,7 @@ export const Default = () => (
                 </TypographyComponent>
             </CardContentComponent>
             <CardActionsComponent>
-                <ButtonComponent variant={"color"} theme={"white"} size="small">Learn More</ButtonComponent>
+                <ButtonComponent variant={"color"} theme={"white"}>Learn More</ButtonComponent>
             </CardActionsComponent>
         </CardComponent>
     </BoxxComponent>
@@ -59,7 +60,7 @@ export const Outlined = () => (
                 </TypographyComponent>
             </CardContentComponent>
             <CardActionsComponent>
-                <ButtonComponent variant={"color"} theme={"white"} size="small">Learn More</ButtonComponent>
+                <ButtonComponent variant={"color"} theme={"white"}>Learn More</ButtonComponent>
             </CardActionsComponent>
         </CardComponent>
     </BoxxComponent>
@@ -82,6 +83,28 @@ export const ComplexInteraction = () => (
                     </ButtonIconComponent>
                 }
             />
+            <CardMediaComponent
+                image="https://dam.cocinafacil.com.mx/wp-content/uploads/2017/02/paella-mixta.jpg"
+                title="Paella dish"
+            />
+            <CardContentComponent>
+                <TypographyComponent variant="body2" color="text-secondary" component="p">
+                    This impressive paella is a perfect party dish and a fun meal to cook together with your
+                    guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                </TypographyComponent>
+            </CardContentComponent>
+            <CardActionsComponent>
+                <ButtonIconComponent>
+                    <IconComponent icon={"favorite"}/>
+                </ButtonIconComponent>
+                <ButtonIconComponent>
+                    <IconComponent icon={"share"}/>
+                </ButtonIconComponent>
+                <FlexGrowComponent/>
+                <ButtonIconComponent>
+                    <IconComponent icon={"arrow"}/>
+                </ButtonIconComponent>
+            </CardActionsComponent>
         </CardComponent>
     </BoxxComponent>
 );
@@ -90,3 +113,32 @@ ComplexInteraction.story = {
         notes: 'A small component',
     },
 };
+export const CardMedia = () => (
+    <BoxxComponent>
+        <CardComponent style={{width: 400}} variant="outlined">
+            <CardActionAreaComponent>
+                <CardMediaComponent
+                    image="https://dam.cocinafacil.com.mx/wp-content/uploads/2017/02/paella-mixta.jpg"
+                    title="Contemplative Reptile"
+                />
+                <CardContentComponent>
+                    <TypographyComponent gutterBottom variant="h5" component="h2">
+                        Lizard
+                    </TypographyComponent>
+                    <TypographyComponent variant="body2" color="text-secondary" component="p">
+                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                        across all continents except Antarctica
+                    </TypographyComponent>
+                </CardContentComponent>
+            </CardActionAreaComponent>
+            <CardActionsComponent>
+                <ButtonComponent variant={"color"} theme="primary">
+                    Share
+                </ButtonComponent>
+                <ButtonComponent variant={"color"} theme="primary">
+                    Learn More
+                </ButtonComponent>
+            </CardActionsComponent>
+        </CardComponent>
+    </BoxxComponent>
+);

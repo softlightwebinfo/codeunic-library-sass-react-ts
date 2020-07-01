@@ -5,7 +5,7 @@ import {BEM} from "../../libs";
 
 export function CardActionsComponent(props: ICardActionsComponentProps) {
     const bm = new BEM("CardActions-component", {
-
+        separate: props.separate,
     });
     return (
         <div

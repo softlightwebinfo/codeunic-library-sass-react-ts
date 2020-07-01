@@ -1,0 +1,8 @@
+@import "../../sass/index";
+
+.CardActionArea-component {
+  @include ButtonBase;
+  width: 100%;
+  display: block;
+  text-align: inherit;
+}
