@@ -1,0 +1,25 @@
+@import "../../sass/index";
+
+.ListItem-component {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &--button {
+    @include ButtonBase;
+  }
+
+  &--gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+}

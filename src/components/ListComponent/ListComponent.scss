@@ -1,0 +1,11 @@
+.List-component {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+
+  &--padding {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

@@ -20,4 +20,5 @@ export interface ITypographyComponentProps {
     variant?: ITypographyVariant;
     variantMapping?: IObjectString;
     component?: string;
+    className?: string;
 }

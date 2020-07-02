@@ -1,0 +1,50 @@
+@import "../../sass/index";
+
+.MenuItem-component {
+  @include ButtonBase;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: auto;
+  overflow: hidden;
+  font-size: 1rem;
+  min-height: 48px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.00938em;
+  padding-bottom: 6px;
+  @media (min-width: 600px) {
+    min-height: auto;
+  }
+
+  &--gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  &--selected, &--selected:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+  }
+
+  &--disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &:hover {
+      cursor: default;
+    }
+  }
+}

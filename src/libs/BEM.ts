@@ -32,6 +32,7 @@ export class BEM {
     }
 
     Append(className: string) {
+        if (!className) return this;
         this._listClassNames.push(className);
         return this;
     }

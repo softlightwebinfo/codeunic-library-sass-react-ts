@@ -15,6 +15,7 @@ export function TypographyComponent(props: ITypographyComponentProps) {
     });
     let Component: any = props.component || props.variant || "div";
     Component = mapping[Component] || "div";
+    bm.Append(props.className);
     return (
         <Component
             onClick={props.onClick}

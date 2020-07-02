@@ -11,6 +11,7 @@ export function ButtonComponent(props: IButtonComponentProps) {
 
     return (
         <button
+            onClick={props.onClick}
             style={props.style}
             className={classNames.join(" ")}
         >
