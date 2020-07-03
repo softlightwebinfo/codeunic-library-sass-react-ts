@@ -30,6 +30,7 @@ export {MenuListComponent} from "./components/MenuListComponent/MenuListComponen
 export {ListComponent} from "./components/ListComponent/ListComponent";
 export {ListItemComponent} from "./components/ListItemComponent/ListItemComponent";
 export {ListItemTextComponent} from "./components/ListItemTextComponent/ListItemTextComponent";
+export {CheckboxComponent} from "./components/CheckboxComponent/CheckboxComponent";
 export * from "./components/CardComponent";
 
 //Layouts

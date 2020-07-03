@@ -1,0 +1,27 @@
+@import "../../sass/index";
+
+.Checkbox-component {
+  @include ButtonBase;
+  @include ButtonIcon;
+  @include GetColors;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+
+    input {
+      top: 0;
+      left: 0;
+      width: 100%;
+      cursor: inherit;
+      height: 100%;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      z-index: 1;
+      position: absolute;
+    }
+  }
+}
