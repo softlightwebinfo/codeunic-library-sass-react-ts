@@ -31,6 +31,8 @@ export {ListComponent} from "./components/ListComponent/ListComponent";
 export {ListItemComponent} from "./components/ListItemComponent/ListItemComponent";
 export {ListItemTextComponent} from "./components/ListItemTextComponent/ListItemTextComponent";
 export {CheckboxComponent} from "./components/CheckboxComponent/CheckboxComponent";
+export {FormGroupComponent} from "./components/FormGroupComponent/FormGroupComponent";
+export {FormControlLabelComponent} from "./components/FormControlLabelComponent/FormControlLabelComponent";
 export * from "./components/CardComponent";
 
 //Layouts

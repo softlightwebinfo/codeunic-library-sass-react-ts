@@ -1,6 +1,9 @@
 $default: #e0e0e0;
 $default_hover: #d5d5d5;
 
+$color-white: white;
+$color-white_hover: white;
+
 $color-success: #26a69a;
 $color-success_hover: #2bbbad;
 
@@ -37,10 +40,14 @@ $color-array: (
                 normal:$color-info,
                 hover:$color-info_hover,
         ),
+        white:(
+                normal:$color-white,
+                hover:$color-white_hover,
+        ),
         disabled:(
                 normal:$color-disabled,
                 hover:$color-disabled-2,
-        )
+        ),
 );
 $variations: (
         light: (

@@ -18,8 +18,8 @@ export function CheckboxComponent(props: ICheckboxComponentProps) {
             <span className={"Checkbox-component__content"}>
                 <input
                     type="checkbox"
-                    name={props.inputProps.name}
-                    id={props.inputProps.id}
+                    name={props.inputProps && props.inputProps.name || props.name}
+                    id={props.inputProps && props.inputProps.id}
                     checked={props.checked}
                     onChange={onChange}
                 />

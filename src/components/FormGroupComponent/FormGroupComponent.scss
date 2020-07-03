@@ -1,0 +1,9 @@
+.FormGroup-component {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &--row {
+    flex-direction: row;
+  }
+}

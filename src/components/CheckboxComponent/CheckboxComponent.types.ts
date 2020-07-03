@@ -2,6 +2,7 @@ import {IOnChange} from "../../Interfaces/IOnChange";
 import {IColor} from "../../Interfaces/IColor";
 
 export interface ICheckboxComponentProps {
+    name?: string;
     color?: IColor;
     onChange?: (checked: boolean, event: IOnChange) => void;
     checked?: boolean;
