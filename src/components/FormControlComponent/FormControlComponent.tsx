@@ -7,12 +7,14 @@ export function FormControlComponent(props: IFormControlComponentProps) {
     const bm = new BEM("FormControl-component", {});
     let classNames = [bm.toString()];
     if (props.className) classNames.push(props.className);
-    if(props.focus) classNames.push("FormControl-component--focus");
+    if (props.focus) classNames.push("FormControl-component--focus");
+    const Component = props.component || "div";
     return (
-        <div
+        // @ts-ignore
+        <Component
             className={classNames.join(" ")}
         >
             {props.children}
-        </div>
+        </Component>
     );
 }

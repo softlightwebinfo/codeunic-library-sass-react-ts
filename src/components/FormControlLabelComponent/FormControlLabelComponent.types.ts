@@ -5,4 +5,5 @@ export interface IFormControlLabelComponentProps {
     control: ReactElement;
     label: string;
     color?: IColor;
+    value?: string;
 }

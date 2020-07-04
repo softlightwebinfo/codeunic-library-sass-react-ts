@@ -5,14 +5,14 @@ import {BEM} from "../../libs";
 import {TypographyComponent} from "../..";
 
 export function FormControlLabelComponent(props: IFormControlLabelComponentProps) {
-    const bm = new BEM("FormControlLabel-component", {
-
-    });
+    const bm = new BEM("FormControlLabel-component", {});
     return (
         <label
             className={bm.toString()}
         >
-            {props.control}
+            {React.cloneElement(props.control, {
+                value: props.value,
+            })}
             <TypographyComponent
                 color={props.color}
                 variant={"body1"}

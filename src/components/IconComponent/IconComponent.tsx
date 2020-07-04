@@ -9,6 +9,8 @@ import share from './assets/compartir';
 import arrow from './assets/arrow';
 import uncheck from './assets/uncheck';
 import check from './assets/check';
+import radio from './assets/radio';
+import radioCircle from './assets/radioCircle';
 import {BEM} from "../../libs";
 
 export const icons = {
@@ -20,6 +22,8 @@ export const icons = {
     arrow,
     uncheck,
     check,
+    radio,
+    radioCircle,
 };
 
 export function IconComponent(props: IIconComponentProps) {
