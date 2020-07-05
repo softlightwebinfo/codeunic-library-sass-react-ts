@@ -3,7 +3,6 @@ import {ICardComponentProps} from "./CardComponent.types";
 import "./CardComponent.scss";
 import {BEM} from "../../libs";
 import PropTypes from 'prop-types';
-import {CSSProperties} from "react";
 
 export function CardComponent(props: ICardComponentProps) {
     const bm = new BEM("Card-component", {
@@ -12,6 +11,7 @@ export function CardComponent(props: ICardComponentProps) {
     });
     return (
         <div
+            onClick={props.onClick}
             style={props.style}
             className={bm.toString()}
         >
