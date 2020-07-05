@@ -16,6 +16,7 @@ export function RadioGroupComponent(props: IRadioGroupComponentProps) {
     };
     const name = useId(props.name);
     return (
+        // @ts-ignore
         <RadioGroupContext.Provider value={{name, onChange: handleChange, value}}>
             <div
                 className={bm.toString()}
