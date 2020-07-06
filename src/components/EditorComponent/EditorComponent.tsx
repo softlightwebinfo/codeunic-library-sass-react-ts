@@ -24,6 +24,7 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
             }
         }),
         openMenu: false,
+        openMenuPlus: false,
         onClick: (e, obj) => {
             if (!this.props.isEditor) {
                 return;
@@ -61,6 +62,37 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                 >
                     <div className="Editor-component__redactor">
                         {this.state.editor.render()}
+                        <div className={"Editor-component__add"}>
+                            <div className="ce-toolbar__plus">
+                                <MenuComponent
+                                    style={{
+                                        maxWidth: "auto"
+                                    }}
+                                    PaperProps={{
+                                        style: {
+                                            backgroundColor: "white",
+                                            left: 0,
+                                            minWidth: 114,
+                                        }
+                                    }}
+                                    keepMounted
+                                    id={"menu"}
+                                    open={this.state.openMenuPlus}
+                                    trigger={this.state.editor.actionPlus(() => {
+                                        this.setState({
+                                            openMenuPlus: true,
+                                        });
+                                    })}
+                                    onClose={() => {
+                                        this.setState({
+                                            openMenuPlus: false,
+                                        });
+                                    }}
+                                >
+                                    {this.state.editor.actionsPlus()}
+                                </MenuComponent>
+                            </div>
+                        </div>
                     </div>
                     <div
                         className={`Editor-component__icon ${this.state.editor.getFocus() != null && "Editor-component__icon--open"}`}

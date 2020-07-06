@@ -38,4 +38,36 @@
       opacity: 1;
     }
   }
+
+  &__add {
+    width: 100%;
+    position: relative;
+    max-width: 650px;
+    margin: auto;
+    .ce-toolbar__plus {
+      color: #707684;
+      cursor: pointer;
+      width: 34px;
+      height: 34px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      margin-left: -10px;
+      svg {
+        fill: currentColor;
+        vertical-align: middle;
+        max-height: 100%;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
 }
