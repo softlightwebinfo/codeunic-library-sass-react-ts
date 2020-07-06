@@ -8,7 +8,8 @@
     "build"
   ],
   "scripts": {
-    "build": "rollup -c && tsc",
+    "build": "rollup -c",
+    "build-ts": "rollup -c && tsc",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook"
   },

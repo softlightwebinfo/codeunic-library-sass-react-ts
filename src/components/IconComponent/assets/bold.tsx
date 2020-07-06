@@ -2,7 +2,7 @@ import React from "react";
 import {IIconAsset} from "../../../Interfaces/IIconAsset";
 
 export default (props: IIconAsset) => (
-    <svg className={props.className} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width={props.width} height={props.height} viewBox="0 0 20 20">
+    <svg style={props.style} className={props.className} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width={props.width} height={props.height} viewBox="0 0 20 20">
         <path fill="#000000" d="M10 9h-2.5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h2.5c1.103 0 2 0.897 2 2s-0.897 2-2 2zM8 8h2c0.551 0 1-0.449 1-1s-0.449-1-1-1h-2v2z"/>
         <path fill="#000000" d="M11 15h-3.5c-0.276 0-0.5-0.224-0.5-0.5v-3c0-0.276 0.224-0.5 0.5-0.5h3.5c1.103 0 2 0.897 2 2s-0.897 2-2 2zM8 14h3c0.551 0 1-0.449 1-1s-0.449-1-1-1h-3v2z"/>
         <path fill="#000000"

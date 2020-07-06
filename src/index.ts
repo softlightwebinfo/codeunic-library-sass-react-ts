@@ -36,6 +36,9 @@ export {FormControlLabelComponent} from "./components/FormControlLabelComponent/
 export {RadioGroupComponent} from "./components/RadioGroupComponent/RadioGroupComponent";
 export {RadioComponent} from "./components/RadioComponent/RadioComponent";
 export {FormLabelComponent} from "./components/FormLabelComponent/FormLabelComponent";
+export {EditorComponent} from "./components/EditorComponent/EditorComponent";
+export {DelimiterComponent} from "./components/DelimiterComponent/DelimiterComponent";
+export {PreloaderComponent} from "./components/PreloaderComponent/PreloaderComponent";
 export * from "./components/CardComponent";
 
 //Layouts

@@ -8,8 +8,11 @@ export function ListItemComponent(props: IListItemComponentProps) {
         button: props.button,
         gutters: props.gutters != undefined ? props.gutters : true,
     });
+    const Component = props.component || "div";
+    bm.Append(props.className);
     return (
-        <div
+        // @ts-ignore
+        <Component
             aria-haspopup={props.ariaHasPopup}
             aria-controls={props.ariaControl}
             aria-label={props.ariaLabel}
@@ -17,6 +20,6 @@ export function ListItemComponent(props: IListItemComponentProps) {
             className={bm.toString()}
         >
             {props.children}
-        </div>
+        </Component>
     );
 }

@@ -9,6 +9,7 @@ export function ListComponent(props: IListComponentProps) {
         padding: props.padding != undefined ? props.padding : true,
     });
     const Component = props.component || "div";
+    bm.Append(props.className);
     return (
         // @ts-ignore
         <Component

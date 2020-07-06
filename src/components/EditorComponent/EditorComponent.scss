@@ -1,0 +1,41 @@
+.Editor-component {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 1;
+  background-color: #fff;
+  min-height: 100vh;
+
+  &__redactor {
+    padding-bottom: 300px;
+    @media (min-width: 651px) {
+      margin-right: 50px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    padding-right: 16px;
+    opacity: 0;
+
+    svg {
+      fill: currentColor;
+      vertical-align: middle;
+      max-height: 100%;
+    }
+
+    > span {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      color: #707684;
+      cursor: pointer;
+    }
+
+    &--open {
+      opacity: 1;
+    }
+  }
+}

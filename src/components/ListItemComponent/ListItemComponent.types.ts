@@ -2,6 +2,8 @@ import {IChildren} from "../../Interfaces/IChildren";
 import {ReactElement, MouseEvent} from "react";
 
 export interface IListItemComponentProps {
+    className?: string;
+    component?: string;
     gutters?: boolean;
     children: IChildren | ReactElement[];
     button?: boolean;

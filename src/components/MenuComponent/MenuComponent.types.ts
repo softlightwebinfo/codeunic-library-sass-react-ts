@@ -10,6 +10,7 @@ export interface IMenuComponentProps {
     keepMounted?: boolean;
     open: boolean;
     onClose: () => void;
+    style?: IStyle;
     PaperProps?: IPaperProps;
 }
 

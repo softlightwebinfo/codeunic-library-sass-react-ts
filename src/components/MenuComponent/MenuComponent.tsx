@@ -38,7 +38,7 @@ export class MenuComponent extends React.Component<IMenuComponentProps> {
         }
 
         return (
-            <div className={"Menu-parent-component"} ref={this.wrapperRef}>
+            <div className={"Menu-parent-component"} ref={this.wrapperRef} style={this.props.style}>
                 {this.props.trigger}
                 <div
                     style={this.props.PaperProps && this.props.PaperProps.style}

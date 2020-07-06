@@ -12,6 +12,7 @@ import check from './assets/check';
 import radio from './assets/radio';
 import radioCircle from './assets/radioCircle';
 import {BEM} from "../../libs";
+import bold from "./assets/bold";
 
 export const icons = {
     alarm,
@@ -24,6 +25,7 @@ export const icons = {
     check,
     radio,
     radioCircle,
+    bold,
 };
 
 export function IconComponent(props: IIconComponentProps) {
