@@ -5,6 +5,7 @@ import "./EditorNewComponent.scss";
 import {BEM} from "../../libs";
 import {Editor, EditorContext} from "../../models/Editor";
 import {MenuComponent, MenuItemComponent, MenuListComponent} from "../..";
+import {EditorDataEnum} from "../../models/EditorData";
 
 export class EditorComponent extends React.Component<IEditorComponentProps> {
     constructor(props) {
@@ -12,7 +13,16 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
     }
 
     public state = {
-        editor: new Editor(this.props.data),
+        editor: new Editor(this.props.data, {
+            onInput: (e, type) => {
+                if (type == EditorDataEnum.HEADER || type == EditorDataEnum.PARAGRAPH) {
+                    this.state.editor.setText(e.currentTarget.innerHTML);
+                    this.setState({
+                        editor: this.state.editor,
+                    })
+                }
+            }
+        }),
         openMenu: false,
         onClick: (e, obj) => {
             if (!this.props.isEditor) {

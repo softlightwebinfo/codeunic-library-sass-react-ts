@@ -9,13 +9,19 @@ export const useEditorContext = () => {
     return React.useContext(EditorContext);
 };
 
+export interface IEditorOn {
+    onInput: (e: any, type: EditorDataEnum) => void;
+}
+
 export class Editor {
     private data: EditorData[];
     private focus = null;
     private focusTop = 0;
+    private onInput;
 
-    constructor(data: EditorData[]) {
+    constructor(data: EditorData[], on: IEditorOn) {
         this.data = data;
+        this.onInput = on.onInput;
     }
 
     private types(type: EditorDataEnum, data: EditorDataType) {
@@ -24,7 +30,7 @@ export class Editor {
                 let editor = data as EditorDataData;
                 return (
                     <TypographyComponent className={"ce-Paragraph"} component={`div`}>
-                        <span dangerouslySetInnerHTML={{__html: editor.text}}/>
+                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={"true"} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.PARAGRAPH)}/>
                     </TypographyComponent>
                 );
             }
@@ -37,7 +43,7 @@ export class Editor {
                 let editor = data as EditorDataData;
                 return (
                     <TypographyComponent className={"ce-Header"} component={`h${editor.level}`}>
-                        {editor.text}
+                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={"true"} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.HEADER)}/>
                     </TypographyComponent>
                 );
             }
@@ -226,5 +232,10 @@ export class Editor {
             this.data.splice(Number(this.focus) - 1, 0, this.data.splice(Number(this.focus), 1)[0]);
             this.focus = null;
         }
+    }
+
+    setText(innerHTML: string) {
+        let a = this.data[this.focus].data as EditorDataData;
+        a.text = innerHTML;
     }
 }

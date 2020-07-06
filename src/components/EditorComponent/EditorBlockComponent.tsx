@@ -14,6 +14,9 @@ export function EditorBlockComponent(props: IEditorBlockComponentProps) {
             top: e.currentTarget.offsetTop,
         });
     };
+    const onInput = (e) => {
+        console.log(e);
+    };
     return (
         <div
             onClick={onClick}
