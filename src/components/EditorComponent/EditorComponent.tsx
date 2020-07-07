@@ -4,8 +4,9 @@ import "./EditorComponent.scss";
 import "./EditorNewComponent.scss";
 import {BEM} from "../../libs";
 import {Editor, EditorContext} from "../../models/Editor";
-import {MenuComponent, MenuItemComponent, MenuListComponent} from "../..";
+import {ButtonComponent, DialogActionsComponent, DialogComponent, DialogContentComponent, DialogTitleComponent, MenuComponent, TextFieldComponent} from "../..";
 import {EditorDataEnum} from "../../models/EditorData";
+import {DialogContentTextComponent} from "../DialogComponent/DialogContentTextComponent";
 
 export class EditorComponent extends React.Component<IEditorComponentProps> {
     constructor(props) {
@@ -13,18 +14,37 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
     }
 
     public state = {
+        text: "",
         editor: new Editor(this.props.data, {
             onInput: (e, type) => {
                 if (type == EditorDataEnum.HEADER || type == EditorDataEnum.PARAGRAPH) {
                     this.state.editor.setText(e.currentTarget.innerHTML);
+                } else if (type == EditorDataEnum.LIST) {
+                    this.state.editor.setList(e);
+                } else if (type == EditorDataEnum.IMAGE) {
                     this.setState({
-                        editor: this.state.editor,
-                    })
+                        openModalImage: true,
+                    });
                 }
+                this.setState({
+                    editor: this.state.editor,
+                })
             }
         }),
+        onInput: (ee, type: EditorDataEnum) => {
+            switch (type) {
+                case EditorDataEnum.LINK: {
+                    this.state.editor.setText(ee.currentTarget.innerHTML);
+                    break;
+                }
+            }
+            this.setState({
+                editor: this.state.editor,
+            })
+        },
         openMenu: false,
         openMenuPlus: false,
+        openModalImage: false,
         onClick: (e, obj) => {
             if (!this.props.isEditor) {
                 return;
@@ -36,6 +56,13 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                 openMenu: false,
             })
         }
+    };
+
+    private onClickAction = (e: EditorDataEnum) => {
+        this.state.editor.addNewElement(Number(e));
+        this.setState({
+            editor: this.state.editor,
+        })
     };
 
     componentDidMount(): void {
@@ -53,6 +80,50 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
         this.state.editor.componentWillUnmount();
     }
 
+    plus(direction: "right" | "left") {
+        return (
+            <div className={"Editor-component__add"}>
+                <div className="ce-toolbar__plus">
+                    <MenuComponent
+                        style={{
+                            maxWidth: "auto"
+                        }}
+                        PaperProps={{
+                            style: {
+                                backgroundColor: "white",
+                                [direction]: 0,
+                                minWidth: 114,
+                                maxWidth: 'initial'
+                            }
+                        }}
+                        keepMounted
+                        id={"menu"}
+                        open={this.state.openMenuPlus}
+                        trigger={this.state.editor.actionPlus(() => {
+                            this.setState({
+                                openMenuPlus: true,
+                            });
+                        })}
+                        onClose={() => {
+                            this.setState({
+                                openMenuPlus: false,
+                            });
+                        }}
+                    >
+                        {this.state.editor.actionsPlus(e => {
+                            if (direction == "left") {
+                                this.state.editor.setFocus(null);
+                            }
+                            this.onClickAction(e);
+                        })}
+                    </MenuComponent>
+                </div>
+            </div>
+        )
+    }
+
+    handleClose = () => this.setState({openModalImage: false});
+
     render() {
         const bm = new BEM("Editor-component", {});
         return (
@@ -62,36 +133,9 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                 >
                     <div className="Editor-component__redactor">
                         {this.state.editor.render()}
-                        <div className={"Editor-component__add"}>
-                            <div className="ce-toolbar__plus">
-                                <MenuComponent
-                                    style={{
-                                        maxWidth: "auto"
-                                    }}
-                                    PaperProps={{
-                                        style: {
-                                            backgroundColor: "white",
-                                            left: 0,
-                                            minWidth: 114,
-                                        }
-                                    }}
-                                    keepMounted
-                                    id={"menu"}
-                                    open={this.state.openMenuPlus}
-                                    trigger={this.state.editor.actionPlus(() => {
-                                        this.setState({
-                                            openMenuPlus: true,
-                                        });
-                                    })}
-                                    onClose={() => {
-                                        this.setState({
-                                            openMenuPlus: false,
-                                        });
-                                    }}
-                                >
-                                    {this.state.editor.actionsPlus()}
-                                </MenuComponent>
-                            </div>
+                        {this.plus("left")}
+                        <div className={"Editor-component__actions"}>
+                            <ButtonComponent onClick={() => this.props.onSave(this.state.editor)}>Save</ButtonComponent>
                         </div>
                     </div>
                     <div
@@ -101,6 +145,7 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                         }}
                     >
                         <span>
+                            {this.plus("right")}
                             <MenuComponent
                                 PaperProps={{
                                     style: {
@@ -149,6 +194,35 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                             </MenuComponent>
                         </span>
                     </div>
+                    <DialogComponent open={this.state.openModalImage} onClose={this.handleClose} portal={true}>
+                        <DialogTitleComponent>Image settings</DialogTitleComponent>
+                        <DialogContentComponent>
+                            <DialogContentTextComponent>
+                                To subscribe to this website, please enter your email address here. We will send updates
+                                occasionally.
+                            </DialogContentTextComponent>
+                            <TextFieldComponent placeholder={"Url image"} id={"eedit"} value={this.state.text} onChange={(e) => this.setState({text: e.target.value})}/>
+                        </DialogContentComponent>
+                        <DialogActionsComponent>
+                            <ButtonComponent
+                                variant={"color"}
+                                onClick={this.handleClose}
+                                theme="primary">
+                                Cancel
+                            </ButtonComponent>
+                            <ButtonComponent
+                                variant={"color"}
+                                onClick={() => {
+                                    this.state.editor.setImage(this.state.text);
+                                    this.setState({text: "", editor: this.state.editor});
+                                    this.handleClose();
+                                }}
+                                theme="primary"
+                            >
+                                Save
+                            </ButtonComponent>
+                        </DialogActionsComponent>
+                    </DialogComponent>
                 </div>
             </EditorContext.Provider>
         );

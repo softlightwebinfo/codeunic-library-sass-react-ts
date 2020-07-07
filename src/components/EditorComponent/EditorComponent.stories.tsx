@@ -4,11 +4,14 @@ import {EditorData, EditorDataEnum, EditorDataImage} from "../../models/EditorDa
 
 // @ts-ignore
 export default {
-    title: "Components|EditorComponent"
+    title: "Containers|Editor"
 };
 
 export const Default = () => <EditorComponent
     isEditor={true}
+    onSave={(e) => {
+        console.log(e);
+    }}
     data={[
         new EditorData(EditorDataEnum.HEADER, {
             text: "Editor.js",
@@ -38,6 +41,10 @@ export const Default = () => <EditorComponent
         }),
         new EditorData(EditorDataEnum.PARAGRAPH, {
             text: 'There are dozens of <a href="https://github.com/editor-js">ready-to-use Blocks</a> and the <a href="https://editorjs.io/creating-a-block-tool">simple API</a> for creation any Block you need. For example, you can implement Blocks for Tweets, Instagram posts, surveys and polls, CTA-buttons and even games.'
+        }),
+        new EditorData(EditorDataEnum.LINK, {
+            text: "https://github.com/softlightwebinfo/codeunic-library-sass-react-ts",
+            level: 2,
         }),
         new EditorData(EditorDataEnum.HEADER, {
             text: "What does it mean clean data output",

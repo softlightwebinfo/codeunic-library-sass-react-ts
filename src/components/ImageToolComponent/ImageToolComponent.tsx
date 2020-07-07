@@ -9,12 +9,14 @@ export function ImageToolComponent(props: IImageToolComponentProps) {
     const [loading, setLoading] = useState(true);
     const bm = new BEM("ImageTool-component", {
         loading: loading,
+        hover: props.hover,
     });
     const onLoad = () => {
         setLoading(false);
     };
     return (
         <div
+            onClick={props.onClick}
             className={bm.toString()}
         >
             <div className={"ImageTool-component__image"}>

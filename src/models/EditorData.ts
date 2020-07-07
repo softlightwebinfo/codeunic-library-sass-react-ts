@@ -9,7 +9,7 @@ export class EditorData {
 
 }
 
-export type EditorDataType = EditorDataImage | EditorDataData | EditorDataList | EditorDataTable | {};
+export type EditorDataType = EditorDataImage | EditorDataData | EditorDataList | EditorDataTable | EditorDataLink | {};
 
 export class EditorDataImage {
     file: { url: string; };
@@ -32,6 +32,10 @@ export class EditorDataData {
     level?: number;
 }
 
+export class EditorDataLink {
+    text: string;
+}
+
 export type EditorDataList_Enum = "unordered" | "ordered";
 
 export class EditorDataList {
@@ -44,6 +48,13 @@ export class EditorDataTable {
 }
 
 export enum EditorDataEnum {
+    CHECKLIST,
+    QUOTE,
+    RAW,
+    LINK,
+    CODE,
+    WARNING,
+    TABLE,
     PARAGRAPH,
     HEADER,
     //TABLE,

@@ -53,4 +53,10 @@
       display: block;
     }
   }
+
+  &--hover {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

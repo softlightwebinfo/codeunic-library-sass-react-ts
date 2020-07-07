@@ -1,0 +1,14 @@
+@import "../../sass/index";
+
+.Dialog-component {
+  @include Paper;
+  @include Elevation(24);
+  border-radius: 4px;
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+  max-width: 600px;
+}

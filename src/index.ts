@@ -39,6 +39,17 @@ export {FormLabelComponent} from "./components/FormLabelComponent/FormLabelCompo
 export {EditorComponent} from "./components/EditorComponent/EditorComponent";
 export {DelimiterComponent} from "./components/DelimiterComponent/DelimiterComponent";
 export {PreloaderComponent} from "./components/PreloaderComponent/PreloaderComponent";
+export {ImageToolComponent} from "./components/ImageToolComponent/ImageToolComponent";
+
+export {DialogComponent} from "./components/DialogComponent/DialogComponent";
+export {DialogActionsComponent} from "./components/DialogComponent/DialogActionsComponent";
+export {DialogContentComponent} from "./components/DialogComponent/DialogContentComponent";
+export {DialogTitleComponent} from "./components/DialogComponent/DialogTitleComponent";
+
+export {LinkToolComponent} from "./components/LinkToolComponent/LinkToolComponent";
+export {OverlayComponent} from "./components/OverlayComponent/OverlayComponent";
+
+export {PortalComponent} from "./components/PortalComponent/PortalComponent";
 export * from "./components/CardComponent";
 
 //Layouts
