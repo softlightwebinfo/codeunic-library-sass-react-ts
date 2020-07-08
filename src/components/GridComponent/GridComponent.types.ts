@@ -17,4 +17,5 @@ export interface IGridComponentProps extends IGridColumns {
     justify?: IJustify;
     wrap?: IWrap;
     zeroMinWidth?: boolean;
+    className?: string;
 }

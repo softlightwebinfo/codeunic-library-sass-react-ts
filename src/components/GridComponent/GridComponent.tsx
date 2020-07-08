@@ -20,6 +20,7 @@ export function GridComponent(props: IGridComponentProps) {
     });
     let bmContainer = new BEM(`Grid-container`, {});
     let bmItem = new BEM(`Grid-item`, {});
+    bm.Append(props.className);
     let classNames = [bm.toString()];
     if (props.container) {
         classNames.push(bmContainer.toString());
