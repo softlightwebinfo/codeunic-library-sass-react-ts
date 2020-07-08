@@ -11,6 +11,7 @@ export function BadgeComponent(props: IBadgeComponentProps) {
     });
     return (
         <div
+            style={props.style}
             className={bm.toString()}
         >
             {props.children}

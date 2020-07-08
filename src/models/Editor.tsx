@@ -11,6 +11,7 @@ export const useEditorContext = () => {
 
 export interface IEditorOn {
     onInput: (e: any, type: EditorDataEnum) => void;
+    isEditor: boolean;
 }
 
 export class Editor {
@@ -18,10 +19,12 @@ export class Editor {
     private focus = null;
     private focusTop = 0;
     private onInput;
+    private isEditor: boolean;
 
     constructor(data: EditorData[], on: IEditorOn) {
         this.data = data;
         this.onInput = on.onInput;
+        this.isEditor = on.isEditor;
     }
 
     private types(type: EditorDataEnum, data: EditorDataType) {
@@ -30,7 +33,7 @@ export class Editor {
                 let editor = data as EditorDataData;
                 return (
                     <TypographyComponent className={"ce-Paragraph"} component={`div`}>
-                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={"true"} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.PARAGRAPH)}/>
+                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={this.isEditor} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.PARAGRAPH)}/>
                     </TypographyComponent>
                 );
             }
@@ -43,7 +46,7 @@ export class Editor {
                 let editor = data as EditorDataData;
                 return (
                     <TypographyComponent className={"ce-Header"} component={`h${editor.level}`}>
-                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={"true"} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.HEADER)}/>
+                        <span dangerouslySetInnerHTML={{__html: editor.text}} contentEditable={this.isEditor} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.HEADER)}/>
                     </TypographyComponent>
                 );
             }
@@ -52,7 +55,7 @@ export class Editor {
 
                 return (
                     <div
-                        contentEditable={true}
+                        contentEditable={this.isEditor}
                         suppressContentEditableWarning={true}
                         key={editor.items.length}
                         onBlur={(e) => {
@@ -81,7 +84,9 @@ export class Editor {
                     <ImageToolComponent
                         hover
                         onClick={() => {
-                            this.onInput(null, EditorDataEnum.IMAGE);
+                            if (this.isEditor) {
+                                this.onInput(null, EditorDataEnum.IMAGE);
+                            }
                         }}
                         caption={editor.caption}
                         image={editor.file.url}
@@ -91,7 +96,7 @@ export class Editor {
             case EditorDataEnum.LINK: {
                 let editor = data as EditorDataLink;
                 return (
-                    <LinkToolComponent error editor placeholder={"LINK"}>
+                    <LinkToolComponent error editor={this.isEditor} placeholder={"LINK"}>
                         {editor.text}
                     </LinkToolComponent>
                 )

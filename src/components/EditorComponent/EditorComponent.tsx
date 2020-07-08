@@ -3,10 +3,10 @@ import {IEditorComponentProps} from "./EditorComponent.types";
 import "./EditorComponent.scss";
 import "./EditorNewComponent.scss";
 import {BEM} from "../../libs";
-import {Editor, EditorContext} from "../../models/Editor";
+import {Editor, EditorContext} from "../../models";
 import {ButtonComponent, DialogActionsComponent, DialogComponent, DialogContentComponent, DialogTitleComponent, MenuComponent, TextFieldComponent} from "../..";
-import {EditorDataEnum} from "../../models/EditorData";
-import {DialogContentTextComponent} from "../DialogComponent/DialogContentTextComponent";
+import {EditorDataEnum} from "../../models";
+import {DialogContentTextComponent} from "../..";
 
 export class EditorComponent extends React.Component<IEditorComponentProps> {
     constructor(props) {
@@ -15,7 +15,9 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
 
     public state = {
         text: "",
+        isEditor: this.props.isEditor,
         editor: new Editor(this.props.data, {
+            isEditor: this.props.isEditor,
             onInput: (e, type) => {
                 if (type == EditorDataEnum.HEADER || type == EditorDataEnum.PARAGRAPH) {
                     this.state.editor.setText(e.currentTarget.innerHTML);
@@ -133,17 +135,22 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                 >
                     <div className="Editor-component__redactor">
                         {this.state.editor.render()}
-                        {this.plus("left")}
-                        <div className={"Editor-component__actions"}>
-                            <ButtonComponent onClick={() => this.props.onSave(this.state.editor)}>Save</ButtonComponent>
-                        </div>
+                        {this.props.isEditor && (
+                            <>
+                                {this.plus("left")}
+                                <div className={"Editor-component__actions"}>
+                                    <ButtonComponent onClick={() => this.props.onSave(this.state.editor)}>Save</ButtonComponent>
+                                </div>
+                            </>
+                        )}
                     </div>
-                    <div
-                        className={`Editor-component__icon ${this.state.editor.getFocus() != null && "Editor-component__icon--open"}`}
-                        style={{
-                            top: this.state.editor.getFocusTop(),
-                        }}
-                    >
+                    {this.props.isEditor && (
+                        <div
+                            className={`Editor-component__icon ${this.state.editor.getFocus() != null && "Editor-component__icon--open"}`}
+                            style={{
+                                top: this.state.editor.getFocusTop(),
+                            }}
+                        >
                         <span>
                             {this.plus("right")}
                             <MenuComponent
@@ -193,36 +200,39 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
                                 })}
                             </MenuComponent>
                         </span>
-                    </div>
-                    <DialogComponent open={this.state.openModalImage} onClose={this.handleClose} portal={true}>
-                        <DialogTitleComponent>Image settings</DialogTitleComponent>
-                        <DialogContentComponent>
-                            <DialogContentTextComponent>
-                                To subscribe to this website, please enter your email address here. We will send updates
-                                occasionally.
-                            </DialogContentTextComponent>
-                            <TextFieldComponent placeholder={"Url image"} id={"eedit"} value={this.state.text} onChange={(e) => this.setState({text: e.target.value})}/>
-                        </DialogContentComponent>
-                        <DialogActionsComponent>
-                            <ButtonComponent
-                                variant={"color"}
-                                onClick={this.handleClose}
-                                theme="primary">
-                                Cancel
-                            </ButtonComponent>
-                            <ButtonComponent
-                                variant={"color"}
-                                onClick={() => {
-                                    this.state.editor.setImage(this.state.text);
-                                    this.setState({text: "", editor: this.state.editor});
-                                    this.handleClose();
-                                }}
-                                theme="primary"
-                            >
-                                Save
-                            </ButtonComponent>
-                        </DialogActionsComponent>
-                    </DialogComponent>
+                        </div>
+                    )}
+                    {this.props.isEditor && (
+                        <DialogComponent open={this.state.openModalImage} onClose={this.handleClose} portal={true}>
+                            <DialogTitleComponent>Image settings</DialogTitleComponent>
+                            <DialogContentComponent>
+                                <DialogContentTextComponent>
+                                    To subscribe to this website, please enter your email address here. We will send updates
+                                    occasionally.
+                                </DialogContentTextComponent>
+                                <TextFieldComponent placeholder={"Url image"} id={"eedit"} value={this.state.text} onChange={(e) => this.setState({text: e.target.value})}/>
+                            </DialogContentComponent>
+                            <DialogActionsComponent>
+                                <ButtonComponent
+                                    variant={"color"}
+                                    onClick={this.handleClose}
+                                    theme="primary">
+                                    Cancel
+                                </ButtonComponent>
+                                <ButtonComponent
+                                    variant={"color"}
+                                    onClick={() => {
+                                        this.state.editor.setImage(this.state.text);
+                                        this.setState({text: "", editor: this.state.editor});
+                                        this.handleClose();
+                                    }}
+                                    theme="primary"
+                                >
+                                    Save
+                                </ButtonComponent>
+                            </DialogActionsComponent>
+                        </DialogComponent>
+                    )};
                 </div>
             </EditorContext.Provider>
         );

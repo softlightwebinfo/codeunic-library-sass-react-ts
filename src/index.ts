@@ -45,6 +45,7 @@ export {DialogComponent} from "./components/DialogComponent/DialogComponent";
 export {DialogActionsComponent} from "./components/DialogComponent/DialogActionsComponent";
 export {DialogContentComponent} from "./components/DialogComponent/DialogContentComponent";
 export {DialogTitleComponent} from "./components/DialogComponent/DialogTitleComponent";
+export {DialogContentTextComponent} from "./components/DialogComponent/DialogContentTextComponent";
 
 export {LinkToolComponent} from "./components/LinkToolComponent/LinkToolComponent";
 export {OverlayComponent} from "./components/OverlayComponent/OverlayComponent";
@@ -58,3 +59,4 @@ export {GridMessageLayout} from './layouts/GridMessageLayout/GridMessageLayout'
 
 export * from "./libs";
 export * from "./utils";
+export * from "./models";
