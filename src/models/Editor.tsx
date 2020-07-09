@@ -1,8 +1,8 @@
-import {EditorData, EditorDataData, EditorDataEnum, EditorDataImage, EditorDataLink, EditorDataList, EditorDataType} from "./EditorData";
+import {EditorData, EditorDataCode, EditorDataData, EditorDataEnum, EditorDataImage, EditorDataLink, EditorDataList, EditorDataType} from "./EditorData";
 import * as React from "react";
-import {DelimiterComponent, LinkToolComponent, ListComponent, ListItemComponent, TypographyComponent} from "..";
+import {DelimiterComponent, ImageToolComponent, LinkToolComponent, ListComponent, ListItemComponent, TypographyComponent} from "..";
 import {EditorBlockComponent} from "../components/EditorComponent/EditorBlockComponent";
-import {ImageToolComponent} from "..";
+import {CodeComponent} from "../components/CodeComponent/CodeComponent";
 
 export const EditorContext = React.createContext(null);
 export const useEditorContext = () => {
@@ -92,6 +92,16 @@ export class Editor {
                         image={editor.file.url}
                     />
                 );
+            }
+            case EditorDataEnum.CODE: {
+                let editor = data as EditorDataCode;
+                return (
+                    <span key={editor.text} contentEditable={this.isEditor} suppressContentEditableWarning={true} onBlur={ee => this.onInput(ee, EditorDataEnum.CODE)}>
+                        <CodeComponent>
+                                {editor.text}
+                        </CodeComponent>
+                    </span>
+                )
             }
             case EditorDataEnum.LINK: {
                 let editor = data as EditorDataLink;
@@ -408,6 +418,17 @@ export class Editor {
             case EditorDataEnum.LINK: {
                 element = new EditorData(e, {
                     text: "https://github.com/softlightwebinfo/codeunic-library-sass-react-ts"
+                });
+                break;
+            }
+            case EditorDataEnum.CODE: {
+                element = new EditorData(EditorDataEnum.CODE, {
+                    text: "const para = document.querySelector('p');\n" +
+                        "para.addEventListener('click', updateName);\n" +
+                        "function updateName() {\n" +
+                        "  let name = prompt('Ingresa un nuevo nombre');\n" +
+                        "  para.textContent = 'Player 1: ' + name;\n" +
+                        "}"
                 });
                 break;
             }

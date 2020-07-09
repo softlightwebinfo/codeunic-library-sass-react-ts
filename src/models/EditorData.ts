@@ -9,7 +9,7 @@ export class EditorData {
 
 }
 
-export type EditorDataType = EditorDataImage | EditorDataData | EditorDataList | EditorDataTable | EditorDataLink | {};
+export type EditorDataType = EditorDataImage | EditorDataData | EditorDataList | EditorDataTable | EditorDataLink | EditorDataCode | {};
 
 export class EditorDataImage {
     file: { url: string; };
@@ -33,6 +33,10 @@ export class EditorDataData {
 }
 
 export class EditorDataLink {
+    text: string;
+}
+
+export class EditorDataCode {
     text: string;
 }
 

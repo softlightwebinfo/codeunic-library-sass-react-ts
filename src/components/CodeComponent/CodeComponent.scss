@@ -1,0 +1,49 @@
+.Code-component {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 15px 15px 15px 3.8em;
+  border-top: 0px solid rgb(61, 126, 154);
+  border-bottom: 0px solid rgb(61, 126, 154);
+  border-left: 5px solid rgb(61, 126, 154);
+  border-right-style: solid;
+  border-right-color: rgb(61, 126, 154);
+  border-image: initial;
+  font-size: 16px;
+  background: rgb(238, 238, 238);
+  color: rgb(51, 51, 51);
+  position: relative;
+  font-family: consolas, monaco, "Andale Mono", monospace;
+  line-height: 1.5;
+  overflow: auto;
+  tab-size: 4;
+  hyphens: none;
+  width: 1014px;
+  max-width: 100%;
+  text-shadow: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  counter-reset: linenumber 0;
+  letter-spacing: -0.04448px;
+  border-right-width: 0px !important;
+  direction: ltr !important;
+
+  code {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-weight: inherit;
+    background: 0px 0px transparent;
+    border-radius: 2px;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    overflow-wrap: normal;
+    text-shadow: none;
+    font-size: 1em;
+    white-space: inherit;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    tab-size: 4;
+    hyphens: none;
+    position: relative;
+  }
+}

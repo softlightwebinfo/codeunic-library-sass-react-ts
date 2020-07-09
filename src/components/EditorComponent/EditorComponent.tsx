@@ -19,8 +19,8 @@ export class EditorComponent extends React.Component<IEditorComponentProps> {
         editor: new Editor(this.props.data, {
             isEditor: this.props.isEditor,
             onInput: (e, type) => {
-                if (type == EditorDataEnum.HEADER || type == EditorDataEnum.PARAGRAPH) {
-                    this.state.editor.setText(e.currentTarget.innerHTML);
+                if (type == EditorDataEnum.CODE || type == EditorDataEnum.HEADER || type == EditorDataEnum.PARAGRAPH) {
+                    this.state.editor.setText(e.currentTarget.innerText);
                 } else if (type == EditorDataEnum.LIST) {
                     this.state.editor.setList(e);
                 } else if (type == EditorDataEnum.IMAGE) {
