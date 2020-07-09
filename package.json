@@ -1,6 +1,6 @@
 {
   "name": "@codeunic/library-ui",
-  "version": "0.9.9",
+  "version": "0.9.10",
   "license": "MIT",
   "main": "build/index.js",
   "module": "build/index.es.js",
