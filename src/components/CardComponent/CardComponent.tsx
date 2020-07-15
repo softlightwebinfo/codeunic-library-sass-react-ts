@@ -9,6 +9,7 @@ export function CardComponent(props: ICardComponentProps) {
         rounded: props.rounded != undefined ? props.rounded : true,
         variant: props.variant,
     });
+    bm.Append(props.className);
     return (
         <div
             onClick={props.onClick}

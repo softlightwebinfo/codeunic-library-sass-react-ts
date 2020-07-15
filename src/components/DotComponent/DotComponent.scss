@@ -1,0 +1,33 @@
+@import "../../sass/index";
+
+.Dot-component {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid $color-primary;
+  display: inline-flex;
+  position: relative;
+
+  &:before {
+    content: "";
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    margin: auto;
+    background-color: $color-primary;
+  }
+
+  &--color {
+    @each $key, $value in $color-array {
+      &-#{$key} {
+        border-color: map_get($value, "normal");
+
+        &:before {
+          border-color: map_get($value, "normal");
+          background-color:  map_get($value, "normal");
+        }
+      }
+    }
+  }
+}

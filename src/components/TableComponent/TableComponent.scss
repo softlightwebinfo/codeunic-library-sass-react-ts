@@ -1,0 +1,11 @@
+.Table-component {
+  border-collapse: collapse;
+  width: 100%;
+  color: #333;
+
+  &-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+}

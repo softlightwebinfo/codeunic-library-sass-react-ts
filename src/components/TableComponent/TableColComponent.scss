@@ -1,0 +1,42 @@
+.TableCol-component {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  white-space: nowrap;
+  text-align: left;
+
+  .TableRow-component--header &,
+  .TableRow-component--header & {
+    border-bottom: 2px solid #dee2e6;
+    letter-spacing: 0.05em;
+    padding: 10px 8px;
+    vertical-align: middle;
+  }
+
+  &:first-child {
+    padding-left: 15px;
+  }
+
+  tbody & {
+    padding: 10px 8px;
+    vertical-align: middle;
+  }
+
+  &--align {
+    &-left {
+      text-align: left;
+    }
+
+    &-justify {
+      text-align: justify;
+    }
+
+    &-center {
+      text-align: center;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+}

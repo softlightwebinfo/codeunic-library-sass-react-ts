@@ -4,7 +4,7 @@ import {IStyle} from "../../Interfaces/IStyle";
 import {MouseEvent} from 'react';
 
 export interface IButtonComponentProps {
-    onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+    onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
     children: IChildren;
     theme?: ITheme;
     variant?: "contained" | "outlined" | "color";

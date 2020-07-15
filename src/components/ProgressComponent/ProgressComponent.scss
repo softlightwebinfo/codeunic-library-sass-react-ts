@@ -1,0 +1,33 @@
+.Progress-component {
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem;
+  margin-bottom: .5rem;
+  height: 5px;
+
+  &__bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    //background-color: #007bff;
+    transition: width .6s ease;
+    height: inherit;
+  }
+
+  &--multiple {
+    height: auto;
+    min-height: 5px;
+  }
+  &__is-multiple{
+    padding: 2px;
+  }
+}

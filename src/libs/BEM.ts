@@ -36,4 +36,8 @@ export class BEM {
         this._listClassNames.push(className);
         return this;
     }
+
+    Children(name: string, extra: string = ""): string {
+        return `${this._parent}__${name}${extra ? ` ${extra}` : ''}`;
+    }
 }

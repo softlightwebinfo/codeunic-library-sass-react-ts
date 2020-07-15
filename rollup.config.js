@@ -26,7 +26,7 @@ export default {
             // Prefix global scss. Useful for variables and mixins.
             output: 'build/bundle.css',
             insert: true,
-            watch: 'src/components/**/*.scss',
+            watch: 'src/**/**/*.scss',
             options: {}
         }),
         resolve(),

@@ -32,6 +32,7 @@ export function IconComponent(props: IIconComponentProps) {
     if (!(props.icon in icons)) return null;
     const Component = icons[props.icon];
     const bm = new BEM("Icon-component", {});
+    bm.Append(props.className);
     return (
         <Component
             className={bm.toString()}

@@ -1,0 +1,52 @@
+@import "../../sass/index";
+
+.CardWidgetProgress-layout {
+  background-color: $color-white;
+  width: 100%;
+
+  &__top {
+    display: flex;
+    margin-bottom: 16px;
+    color: $color-black;
+    justify-content: space-between;
+  }
+
+  &__value {
+    color: $color-black;
+    margin-bottom: 16px;
+  }
+
+  &__last {
+    display: flex;
+    align-items: center;
+    color: $color-black;
+
+    > * {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  & + & {
+    @media (min-width: 576px) {
+      margin-left: 0;
+      border-left: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

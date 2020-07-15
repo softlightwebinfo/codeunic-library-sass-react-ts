@@ -7,6 +7,7 @@ import {Component} from "react";
 export function ListComponent(props: IListComponentProps) {
     const bm = new BEM("List-component", {
         padding: props.padding != undefined ? props.padding : true,
+        horizontal:props.horizontal,
     });
     const Component = props.component || "div";
     bm.Append(props.className);

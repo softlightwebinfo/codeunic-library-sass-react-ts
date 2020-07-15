@@ -1,0 +1,14 @@
+@import "../../sass/index";
+
+.CardWidget-layout {
+  background-color: $color-white;
+
+  &__icon {
+    @include Icon();
+  }
+
+  &__info {
+    text-align: right;
+    color: #000;
+  }
+}

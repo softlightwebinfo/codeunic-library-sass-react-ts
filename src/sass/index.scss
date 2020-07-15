@@ -4,6 +4,9 @@ $default_hover: #d5d5d5;
 $color-white: white;
 $color-white_hover: white;
 
+$color-black: black;
+$color-black_hover: black;
+
 $color-success: #26a69a;
 $color-success_hover: #2bbbad;
 
@@ -13,11 +16,17 @@ $color-primary_hover: rgb(100, 141, 174);
 $color-secondary: #f48fb1;
 $color-secondary_hover: rgb(170, 100, 123);
 
+$color-danger: #f62d51;
+$color-danger_hover: #f62d51;
+
 $color-info: #328cd6;
 $color-info_hover: rgb(100, 141, 174);
 
 $color-disabled: rgba(255, 255, 255, 0.12);
 $color-disabled-2: rgba(0, 0, 0, 0.12);
+
+$color-orange: #ff9b44;
+$color-orange_hover: #ff851a;
 
 $color-array: (
         default:(
@@ -43,6 +52,14 @@ $color-array: (
         white:(
                 normal:$color-white,
                 hover:$color-white_hover,
+        ),
+        orange:(
+                normal:$color-orange,
+                hover:$color-orange_hover,
+        ),
+        danger:(
+                normal:$color-danger,
+                hover:$color-danger_hover,
         ),
         disabled:(
                 normal:$color-disabled,
@@ -247,4 +264,18 @@ $variations: (
   &--row {
     flex-direction: row;
   }
+}
+
+@mixin Icon() {
+  background-color: rgba(255, 155, 68, 0.2);
+  border-radius: 100%;
+  color: #ff9b44;
+  display: inline-block;
+  float: left;
+  font-size: 30px;
+  height: 60px;
+  line-height: 60px;
+  margin-right: 10px;
+  text-align: center;
+  width: 60px;
 }

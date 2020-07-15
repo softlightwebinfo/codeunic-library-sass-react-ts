@@ -1,5 +1,6 @@
 .List-component {
   margin: 0;
+  width: 100%;
   padding: 0;
   position: relative;
   list-style: none;
@@ -7,5 +8,10 @@
   &--padding {
     padding-top: 8px;
     padding-bottom: 8px;
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-grow: 1;
   }
 }

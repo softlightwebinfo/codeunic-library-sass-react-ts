@@ -545,9 +545,10 @@
 }
 
 .Grid-container {
-  width: 100%;
+  //width: 100%;
   display: flex;
   flex-wrap: wrap;
+  //margin: 0;
   box-sizing: border-box;
 }
 

@@ -1,0 +1,16 @@
+.DashtInfo-layout {
+  &__icon {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+    padding-right: 15px;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+  }
+}

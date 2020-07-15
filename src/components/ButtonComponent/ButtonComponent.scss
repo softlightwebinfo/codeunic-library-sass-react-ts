@@ -28,6 +28,28 @@
     cursor: pointer;
   }
 
+  @each $key, $value in $color-array {
+    &--#{$key} {
+      background-color: map_get($value, "normal");
+      color: #fff;
+
+      &#{$then}--outlined, &#{$then}--color {
+        background-color: transparent;
+        color: map_get($value, "normal");
+        border: 1px solid map_get($value, "normal");
+      }
+
+      &#{$then}--color {
+        border: 0;
+      }
+
+      &:hover {
+        background-color: map_get($value, "hover");
+      }
+    }
+  }
+
+
   &--success {
     background-color: $color-success;
     color: #fff;

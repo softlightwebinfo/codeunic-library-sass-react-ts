@@ -1,0 +1,18 @@
+@import "../../sass/index";
+
+.ItemDot-layout {
+  &__item {
+    color: $color-black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .Dot-component {
+      margin-right: 8px;
+    }
+
+    .Typography-component--body1 {
+      flex: 1;
+    }
+  }
+}

@@ -9,6 +9,7 @@ export function BoxxComponent(props: IBoxxComponentProps) {
     });
     return (
         <div
+            style={props.style}
             className={bm.toString()}
         >
             {props.children}

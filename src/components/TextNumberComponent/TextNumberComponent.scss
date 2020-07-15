@@ -1,0 +1,9 @@
+@import "../../sass/index";
+
+.TextNumber-component {
+  @each $key, $value in $color-array {
+    &--#{$key} {
+      color: map_get($value, "normal");
+    }
+  }
+}
