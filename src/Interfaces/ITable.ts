@@ -12,6 +12,8 @@ export interface ITableRow {
 }
 
 export enum ETableColumnType {
+    GROUP_SMALL,
+    PROGRESS,
     ACTION,
     COMPONENT,
     STRING,

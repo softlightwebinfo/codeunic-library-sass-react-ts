@@ -1,0 +1,12 @@
+@import "../../sass/index";
+
+.GroupSmall-component {
+  &__item {
+    color: $color-gray;
+
+    b {
+      margin-right: 5px;
+      color: #000;
+    }
+  }
+}

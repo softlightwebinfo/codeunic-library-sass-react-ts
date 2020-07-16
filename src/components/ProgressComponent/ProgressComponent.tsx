@@ -18,8 +18,7 @@ export function ProgressComponent(props: IProgressComponentProps) {
     const bm = new BEM("Progress-component", {
         multiple: !!props.data,
     });
-    const {data = []} = props;
-    console.log(props);
+    const {data} = props;
     const getData = () => {
         if (data == undefined) {
             return <ProgressBarComponent value={props.value} color={props.color}/>;

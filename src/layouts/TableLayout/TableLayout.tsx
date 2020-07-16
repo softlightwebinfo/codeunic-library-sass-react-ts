@@ -1,15 +1,34 @@
 import * as React from "react";
 import {ITableLayoutProps} from "./TableLayout.types";
 import "./TableLayout.scss";
-import {BEM, DotComponent, DropdownComponent, IconComponent, MessageAvatarComponent, TableColComponent, TableComponent, TableRowComponent} from "../..";
+import {BEM, DotComponent, DropdownComponent, IconComponent, MessageAvatarComponent, ProgressComponent, TableColComponent, TableComponent, TableRowComponent} from "../..";
 import {ETableColumnType, ITableColumn, ITableRow} from "../../Interfaces/ITable";
 import {IMessageAvatarComponentProps} from "../../components/MessageAvatarComponent/MessageAvatarComponent.types";
+import {GroupSmallComponent} from "../../components/GroupSmallComponent/GroupSmallComponent";
+import {IGroupSmallComponentProps} from "../../components/GroupSmallComponent/GroupSmallComponent.types";
+import {IProgressComponentProps} from "../../components/ProgressComponent/ProgressComponent.types";
 
 export function TableLayout(props: ITableLayoutProps) {
     const bem = new BEM("TableLayout-layout", {});
     bem.Append(props.className);
     const contentData = (item: ITableRow, col: ITableColumn) => {
         switch (col.type) {
+            case ETableColumnType.GROUP_SMALL:
+                const dataItem = item[col.key] as IGroupSmallComponentProps;
+                return (
+                    <GroupSmallComponent
+                        name={dataItem.name}
+                        data={dataItem.data}
+                    />
+                );
+            case ETableColumnType.PROGRESS:
+                const dataItemProgress = item[col.key] as IProgressComponentProps;
+                return (
+                    <ProgressComponent
+                        color={dataItemProgress.color}
+                        value={dataItemProgress.value}
+                    />
+                );
             case ETableColumnType.STATUS:
                 return (
                     <DropdownComponent
@@ -28,8 +47,8 @@ export function TableLayout(props: ITableLayoutProps) {
                         value={item[col.key]}
                         trigger={<IconComponent icon={"more_vert"}/>}
                         data={[
-                            {icon: <DotComponent color={"success"}/>, label: "Edit"},
-                            {icon: <DotComponent color={"danger"}/>, label: "Delete"},
+                            {icon: <IconComponent icon={""}/>, label: "Edit"},
+                            {icon: <IconComponent icon={""}/>, label: "Delete"},
                         ]}
                     />
                 );

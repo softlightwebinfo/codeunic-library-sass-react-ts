@@ -28,6 +28,9 @@ $color-disabled-2: rgba(0, 0, 0, 0.12);
 $color-orange: #ff9b44;
 $color-orange_hover: #ff851a;
 
+$color-gray: gray;
+$color-gray_hover: gray;
+
 $color-array: (
         default:(
                 normal:$default,
@@ -65,6 +68,10 @@ $color-array: (
                 normal:$color-disabled,
                 hover:$color-disabled-2,
         ),
+        gray:(
+                normal:$color-gray,
+                hover:$color-gray_hover,
+        )
 );
 $variations: (
         light: (

@@ -52,6 +52,7 @@ export * from "./components/TableComponent";
 export {MessageAvatarComponent} from "./components/MessageAvatarComponent/MessageAvatarComponent";
 export {DropdownComponent} from "./components/DropdownComponent/DropdownComponent";
 export {DropdownMenuComponent} from "./components/DropdownMenuComponent/DropdownMenuComponent";
+export {SidebarComponent} from "./components/SidebarComponent/SidebarComponent";
 
 export {DialogComponent} from "./components/DialogComponent/DialogComponent";
 export {DialogActionsComponent} from "./components/DialogComponent/DialogActionsComponent";
@@ -64,6 +65,7 @@ export {OverlayComponent} from "./components/OverlayComponent/OverlayComponent";
 
 export {PortalComponent} from "./components/PortalComponent/PortalComponent";
 export * from "./components/CardComponent";
+export * from "./components/ScrollbarComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -76,6 +78,10 @@ export {CardWidgetProgressLayout} from './layouts/CardWidgetProgressLayout/CardW
 export {ItemDotLayout} from './layouts/ItemDotLayout/ItemDotLayout'
 export {CardStadisticLayout} from './layouts/CardStadisticLayout/CardStadisticLayout'
 export {CardLayout} from './layouts/CardLayout/CardLayout'
+
+
+//Apps
+export {ChatApp} from './apps/ChatApp/ChatApp';
 
 export * from "./libs";
 export * from "./utils";
