@@ -2,6 +2,11 @@
 
 body {
   font-family: "CircularStd", sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .h {
@@ -11,6 +16,20 @@ body {
     }
     &-color--#{$key} {
       color: map_get($value, "normal");
+    }
+  }
+
+  &-icon {
+    &-phone {
+      path {
+        fill: black;
+      }
+    }
+
+    &-attachment {
+      path {
+        fill: black;
+      }
     }
   }
 }

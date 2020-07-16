@@ -53,19 +53,18 @@ export {MessageAvatarComponent} from "./components/MessageAvatarComponent/Messag
 export {DropdownComponent} from "./components/DropdownComponent/DropdownComponent";
 export {DropdownMenuComponent} from "./components/DropdownMenuComponent/DropdownMenuComponent";
 export {SidebarComponent} from "./components/SidebarComponent/SidebarComponent";
-
 export {DialogComponent} from "./components/DialogComponent/DialogComponent";
 export {DialogActionsComponent} from "./components/DialogComponent/DialogActionsComponent";
 export {DialogContentComponent} from "./components/DialogComponent/DialogContentComponent";
 export {DialogTitleComponent} from "./components/DialogComponent/DialogTitleComponent";
 export {DialogContentTextComponent} from "./components/DialogComponent/DialogContentTextComponent";
-
 export {LinkToolComponent} from "./components/LinkToolComponent/LinkToolComponent";
 export {OverlayComponent} from "./components/OverlayComponent/OverlayComponent";
-
 export {PortalComponent} from "./components/PortalComponent/PortalComponent";
 export * from "./components/CardComponent";
 export * from "./components/ScrollbarComponent";
+export {SidebarMenuComponent} from "./components/SidebarMenuComponent/SidebarMenuComponent";
+export {StatusComponent} from "./components/StatusComponent/StatusComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -78,6 +77,11 @@ export {CardWidgetProgressLayout} from './layouts/CardWidgetProgressLayout/CardW
 export {ItemDotLayout} from './layouts/ItemDotLayout/ItemDotLayout'
 export {CardStadisticLayout} from './layouts/CardStadisticLayout/CardStadisticLayout'
 export {CardLayout} from './layouts/CardLayout/CardLayout'
+export {GroupBoxLayout} from './layouts/GroupBoxLayout/GroupBoxLayout'
+export {GroupWindowLayout} from './layouts/GroupWindowLayout/GroupWindowLayout'
+export {ChatLayout} from './layouts/ChatLayout/ChatLayout'
+export {ChatHeaderLayout} from './layouts/ChatHeaderLayout/ChatHeaderLayout'
+export {ChatFooterLayout} from './layouts/ChatFooterLayout/ChatFooterLayout'
 
 
 //Apps

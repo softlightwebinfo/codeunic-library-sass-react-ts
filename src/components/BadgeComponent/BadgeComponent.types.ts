@@ -1,9 +1,8 @@
 import {IChildren} from "../../Interfaces/IChildren";
 import {ITheme} from "../../Interfaces/ITheme";
-import {IStyle} from "../../Interfaces/IStyle";
+import {IProp} from "../../Interfaces/IProp";
 
-export interface IBadgeComponentProps {
-    style?: IStyle;
+export interface IBadgeComponentProps extends IProp{
     theme?: ITheme;
     right?: boolean;
     badgeContent: number;

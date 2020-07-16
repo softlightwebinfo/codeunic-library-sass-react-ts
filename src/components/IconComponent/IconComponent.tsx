@@ -11,6 +11,13 @@ import uncheck from './assets/uncheck';
 import check from './assets/check';
 import radio from './assets/radio';
 import radioCircle from './assets/radioCircle';
+import plus from './assets/plus-circle';
+import phone from './assets/phone';
+import camera from './assets/camera-video';
+import setting from './assets/cog';
+import attachment from './assets/attachment';
+import send from './assets/send';
+
 import {BEM} from "../../libs";
 import bold from "./assets/bold";
 
@@ -26,6 +33,12 @@ export const icons = {
     radio,
     radioCircle,
     bold,
+    plus,
+    phone,
+    camera,
+    setting,
+    attachment,
+    send,
 };
 
 export function IconComponent(props: IIconComponentProps) {

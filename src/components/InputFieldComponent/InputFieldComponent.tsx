@@ -5,7 +5,7 @@ import {BEM} from "../../libs";
 
 export function InputFieldComponent(props: IInputFieldComponentProps) {
     const bm = new BEM("InputField-component", {});
-
+    bm.Append(props.className);
     return (
         <div className={bm.toString()}>
             <input

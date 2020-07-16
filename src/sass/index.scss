@@ -286,3 +286,10 @@ $variations: (
   text-align: center;
   width: 60px;
 }
+
+@mixin ButtonColorCustom() {
+  background: -moz-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: -webkit-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: -ms-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: linear-gradient(to right, #ff9b44 0%, #fc6075 100%);
+}

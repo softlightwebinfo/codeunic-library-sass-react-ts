@@ -1,0 +1,44 @@
+@import "../../sass/index";
+
+.ChatHeader-layout {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 0 none;
+  margin: 0;
+  min-height: auto;
+  padding: 0;
+
+  &__search {
+    background-color: #f7f7f7;
+    border: 1px solid #e3e3e3;
+    border-radius: 50px;
+
+    input {
+      color: black;
+    }
+  }
+
+  &__list {
+    width: auto;
+    flex: 0;
+
+    .ButtonIcon-component {
+      width: 48px;
+      height: 48px;
+      &:hover {
+        background: rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+
+  &__avatar {
+    flex: 1;
+  }
+}

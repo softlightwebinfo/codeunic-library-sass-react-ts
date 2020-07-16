@@ -9,6 +9,7 @@ export function BadgeComponent(props: IBadgeComponentProps) {
         color: props.theme ? props.theme : "secondary",
         relative: !props.children,
     });
+    bm.Append(props.className);
     return (
         <div
             style={props.style}

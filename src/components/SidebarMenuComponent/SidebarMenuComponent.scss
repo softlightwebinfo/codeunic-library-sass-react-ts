@@ -1,0 +1,52 @@
+.SidebarMenu-component {
+  padding: 10px 0;
+
+  &__list {
+    font-size: 15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+      position: relative;
+    }
+  }
+}
+
+.SidebarMenuItem-component {
+  line-height: 1.3;
+  -webkit-transition: unset;
+  color: #b7c0cd;
+  font-size: 15px;
+  height: auto;
+  padding: 8px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s;
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__plus {
+    margin-left: auto;
+    margin-right: -12px;
+  }
+
+  &__badge {
+    margin-left: auto;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+
+  &--active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

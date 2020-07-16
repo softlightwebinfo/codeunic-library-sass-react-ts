@@ -6,6 +6,8 @@ import {InputFieldComponent} from "../..";
 
 export function InputSearchComponent(props: IInputSearchComponentProps) {
     const bm = new BEM("InputSearch-component", {});
+    const {className, onChange, ...rest} = props;
+    bm.Append(className);
     return (
         <div className={bm.toString()}>
             <div className="InputSearch-component__icon">
@@ -15,8 +17,8 @@ export function InputSearchComponent(props: IInputSearchComponentProps) {
             </div>
             <div className="InputSearch-component__input">
                 <InputFieldComponent
-                    onChange={props.onChange}
-                    {...props}
+                    onChange={onChange}
+                    {...rest}
                 />
             </div>
         </div>

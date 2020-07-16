@@ -1,0 +1,87 @@
+@import "../../sass/index";
+
+.ChatFooter-layout {
+  height: 44px;
+  position: relative;
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    height: 100%;
+    padding: 0 8px;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+
+    .ButtonIcon-component {
+      margin-right: 10px;
+    }
+  }
+
+  .ButtonIcon-component {
+    width: 48px;
+    height: 48px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &__group {
+    display: table-cell;
+    width: 100%;
+  }
+
+  &__input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+
+    textarea {
+      background-color: #fff;
+      border: 1px solid #eaeaea;
+      box-shadow: none;
+      color: #555;
+      display: block;
+      font-size: 14px;
+      height: 44px;
+      margin: 0;
+      padding: 6px 12px;
+      resize: none;
+      border-radius: .25rem;
+      position: relative;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      box-sizing: border-box;
+      width: 1%;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+      &:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    .button-component {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      height: 44px;
+      width: 50px;
+      background: #ff9b44;
+      @include ButtonColorCustom();
+      color: #fff;
+
+      &__children {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../sass/index";
+
+.GroupWindow-layout {
+  display: table;
+  height: 100%;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #f7f7f7;
+
+  &__header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px 15px;
+  }
+
+  &__content {
+    display: table-row;
+    height: 100%;
+  }
+
+  &__footer {
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    padding: 15px;
+  }
+}

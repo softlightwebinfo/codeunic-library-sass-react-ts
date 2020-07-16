@@ -1,0 +1,23 @@
+.Status-component {
+  background-color: #263238;
+  border-radius: 50%;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border: 2px solid #fff;
+  margin: 0;
+  transition: all 0.2s ease-in-out 0s;
+  white-space: nowrap;
+
+  &--online {
+    background-color: #55ce63;
+  }
+
+  &--away {
+    background-color: #faa937;
+  }
+
+  &--offline {
+    background-color: #f62d51;
+  }
+}

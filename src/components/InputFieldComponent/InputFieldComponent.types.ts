@@ -3,6 +3,7 @@ import {IInput} from "../../Interfaces/IInput";
 import {ChangeEvent} from "react";
 
 export interface IInputFieldComponentProps {
+    className?: string;
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
     onFocus?: (e: ChangeEvent<HTMLInputElement>) => void;

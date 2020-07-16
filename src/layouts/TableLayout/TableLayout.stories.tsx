@@ -1,7 +1,7 @@
 import React from "react";
 import {TableLayout} from './TableLayout';
 import {ETableColumnType} from "../../Interfaces/ITable";
-import {TableGroupSmall, TableMessageAvatar, TableProgress} from "../../models/TableLayout";
+import {TableGroupSmall, TableMessageAvatar, TableProgress} from "../../models";
 // @ts-ignore
 export default {
     title: "Layouts|Table"
