@@ -3,6 +3,7 @@ import {IChatLayoutProps} from "./ChatLayout.types";
 import "./ChatLayout.scss";
 import {BEM, ChatFooterLayout, GroupBoxLayout, GroupWindowLayout} from "../..";
 import {ChatHeaderLayout} from "../..";
+import {ChatSidebarLayout} from "../ChatSidebarLayout/ChatSidebarLayout";
 
 export function ChatLayout(props: IChatLayoutProps) {
     const bem = new BEM("Chat-layout", {});
@@ -26,7 +27,7 @@ export function ChatLayout(props: IChatLayoutProps) {
                 />
             )}
             sidebar={(
-                <aside></aside>
+                <ChatSidebarLayout/>
             )}
         />
     );

@@ -1,0 +1,14 @@
+.Separator-component {
+  border-bottom: 1px solid #eaeaea;
+  height: 12px;
+  margin: 7px 0 20px;
+  position: relative;
+  text-align: center;
+
+  &__data {
+    color: #727272;
+    font-size: 12px;
+    padding: 0 11px;
+    background-color: #fff;
+  }
+}

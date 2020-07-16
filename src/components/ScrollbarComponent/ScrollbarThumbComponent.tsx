@@ -1,6 +1,6 @@
 import * as React from "react";
 import {DragCallbackData, ScrollbarThumbProps} from "./ScrollbarThumbComponent.types";
-import "./ScrollbarThumbComponent.scss";
+//import "./ScrollbarThumbComponent.scss";
 import {AXIS_DIRECTION, AXIS_DIRECTION_PROP_TYPE} from "../../Interfaces/IElementPropsWithElementRefAndRenderer";
 import PropTypes from 'prop-types';
 import {DraggableCore, DraggableData, DraggableEvent} from "react-draggable";

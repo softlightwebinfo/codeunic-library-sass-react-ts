@@ -1,6 +1,6 @@
 import * as React from "react";
 import {ScrollbarTrackProps} from "./ScrollbarTrackComponent.types";
-import "./ScrollbarTrackComponent.scss";
+//import "./ScrollbarTrackComponent.scss";
 import {AXIS_DIRECTION, AXIS_DIRECTION_PROP_TYPE} from "../../Interfaces/IElementPropsWithElementRefAndRenderer";
 import {cnb} from "cnbuilder";
 import {isFun, isUndef, renderDivWithRenderer} from "../../utils";

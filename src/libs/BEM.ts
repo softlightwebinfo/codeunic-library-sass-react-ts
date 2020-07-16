@@ -40,4 +40,8 @@ export class BEM {
     Children(name: string, extra: string = ""): string {
         return `${this._parent}__${name}${extra ? ` ${extra}` : ''}`;
     }
+
+    Modifier(children: string, modifier: string, extra: string = "") {
+        return `${this._parent}__${children} ${this._parent}__${children}--${modifier}${extra ? ` ${extra}` : ''}`;
+    }
 }

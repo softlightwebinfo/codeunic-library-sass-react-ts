@@ -1,0 +1,56 @@
+.Tab-component {
+  display: table;
+  height: 100%;
+  table-layout: fixed;
+  width: 100%;
+  background-color: #f7f7f7;
+
+  &__header {
+    background-color: #fff;
+    padding: 0;
+    border: 0;
+  }
+
+  &__list {
+    border-bottom: 1px solid #dee2e6;
+    padding: 0;
+    height: 69px;
+  }
+
+  &__tab {
+    margin-bottom: -1px;
+    display: flex;
+    margin-right: 0;
+    border: 2px solid transparent;
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16.5px 15px;
+    color: #888;
+
+    &--active {
+      color: #495057;
+      border-bottom-width: 2px;
+      border-color: transparent;
+      border-bottom-color: #ff9b44;
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:not(&--active):hover {
+      background-color: #eee;
+      border-color: transparent;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    background-color: #fff;
+    height: 100%;
+    padding-top: 20px;
+  }
+}

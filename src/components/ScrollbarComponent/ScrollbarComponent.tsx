@@ -1,6 +1,6 @@
 import * as React from "react";
 import {ScrollbarProps, ScrollbarState} from "./ScrollbarComponent.types";
-import "./ScrollbarComponent.scss";
+//import "./ScrollbarComponent.scss";
 import {cnb} from "cnbuilder";
 import {DraggableData} from "react-draggable";
 import {zoomLevel} from "zoom-level";

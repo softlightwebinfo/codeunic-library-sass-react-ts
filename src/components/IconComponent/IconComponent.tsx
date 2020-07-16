@@ -17,6 +17,7 @@ import camera from './assets/camera-video';
 import setting from './assets/cog';
 import attachment from './assets/attachment';
 import send from './assets/send';
+import pencil from './assets/pencil';
 
 import {BEM} from "../../libs";
 import bold from "./assets/bold";
@@ -38,6 +39,7 @@ export const icons = {
     camera,
     setting,
     attachment,
+    pencil,
     send,
 };
 

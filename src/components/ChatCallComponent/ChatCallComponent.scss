@@ -1,0 +1,29 @@
+.ChatCall-component {
+  margin-bottom: 20px;
+  display: flex;
+
+  &__avatar {
+    margin-right: 20px;
+  }
+
+  &__body {
+    color: #888;
+    float: left;
+    position: relative;
+    border: 0;
+    padding: 0;
+    border-radius: 0 !important;
+    background-color: transparent;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    span{
+      margin-left: 10px;
+    }
+  }
+}

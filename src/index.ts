@@ -65,6 +65,11 @@ export * from "./components/CardComponent";
 export * from "./components/ScrollbarComponent";
 export {SidebarMenuComponent} from "./components/SidebarMenuComponent/SidebarMenuComponent";
 export {StatusComponent} from "./components/StatusComponent/StatusComponent";
+export {TabComponent} from "./components/TabComponent/TabComponent";
+export {ProfileImageComponent} from "./components/ProfileImageComponent/ProfileImageComponent";
+export {ListInfoComponent} from "./components/ListInfoComponent/ListInfoComponent";
+export {ChatCallComponent} from "./components/ChatCallComponent/ChatCallComponent";
+export {SeparatorComponent} from "./components/SeparatorComponent/SeparatorComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -82,6 +87,8 @@ export {GroupWindowLayout} from './layouts/GroupWindowLayout/GroupWindowLayout'
 export {ChatLayout} from './layouts/ChatLayout/ChatLayout'
 export {ChatHeaderLayout} from './layouts/ChatHeaderLayout/ChatHeaderLayout'
 export {ChatFooterLayout} from './layouts/ChatFooterLayout/ChatFooterLayout'
+export {ProfileSidebarLayout} from './layouts/ProfileSidebarLayout/ProfileSidebarLayout'
+export {CallSidebarLayout} from './layouts/CallSidebarLayout/CallSidebarLayout'
 
 
 //Apps

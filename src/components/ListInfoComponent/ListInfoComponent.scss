@@ -1,0 +1,14 @@
+.ListInfo-component {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    &__value {
+      margin-left: auto;
+    }
+  }
+}
