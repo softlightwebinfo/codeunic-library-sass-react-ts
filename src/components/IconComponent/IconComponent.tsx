@@ -19,6 +19,8 @@ import attachment from './assets/attachment';
 import send from './assets/send';
 import pencil from './assets/pencil';
 import close from './assets/uncheck';
+import grid from './assets/grid';
+import trash from './assets/trash';
 
 import {BEM} from "../../libs";
 import bold from "./assets/bold";
@@ -42,7 +44,9 @@ export const icons = {
     attachment,
     close,
     pencil,
+    grid,
     send,
+    trash,
 };
 
 export function IconComponent(props: IIconComponentProps) {
@@ -54,8 +58,8 @@ export function IconComponent(props: IIconComponentProps) {
         <Component
             className={bm.toString()}
             style={props.style}
-            height={20}
-            width={20}
+            height={props.height || 20}
+            width={props.width || 20}
             src={icons[props.icon]}
             alt={props.title}
             title={props.title}

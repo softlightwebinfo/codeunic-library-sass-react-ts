@@ -35,4 +35,11 @@
     height: 24px;
     font-size: 10px;
   }
+
+  &--big {
+    cursor: pointer;
+    height: 80px;
+    position: relative;
+    width: 80px;
+  }
 }

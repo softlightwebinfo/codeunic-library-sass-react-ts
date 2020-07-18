@@ -21,6 +21,12 @@ body {
   }
 
   &-icon {
+    &-grid {
+      path {
+        fill: black;
+      }
+    }
+
     &-phone {
       path {
         fill: black;

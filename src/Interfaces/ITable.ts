@@ -1,6 +1,7 @@
 import {IAlign} from "./IAlign";
 
 export interface ITableColumn {
+    format?: string;
     key: string;
     data: string;
     type?: ETableColumnType;

@@ -1,0 +1,37 @@
+@import "../../sass/index";
+
+.Profile-widget {
+  overflow: hidden;
+  @include Paper;
+  @include Elevation(1);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: relative;
+
+  &__avatar {
+    margin: auto;
+  }
+
+  &__trigger {
+    color: gray;
+  }
+
+  &__settings {
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 10px;
+  }
+
+  &__name {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__category {
+    text-align: center;
+    display: block;
+    margin-top: 2px;
+  }
+}

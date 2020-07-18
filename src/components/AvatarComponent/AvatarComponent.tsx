@@ -9,6 +9,7 @@ export function AvatarComponent(props: IAvatarComponentProps) {
     const bm = new BEM("Avatar-component", {
         mini: props.mini,
         status: !!props.status,
+        big: props.big,
     });
     bm.Append(props.className);
     return (

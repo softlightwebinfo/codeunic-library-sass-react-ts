@@ -7,12 +7,10 @@ import useComponentVisible from "../../hooks/useComponentVisible";
 
 export function DropdownComponent(props: IDropdownComponentProps) {
     const {ref, isComponentVisible, setIsComponentVisible} = useComponentVisible(false);
-
-
     const bm = new BEM("Dropdown-component", {
         open: open,
     });
-
+    bm.Append(props.className);
     const onClick = (e) => {
         setIsComponentVisible(!isComponentVisible);
     };

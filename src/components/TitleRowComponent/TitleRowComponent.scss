@@ -1,0 +1,18 @@
+.TitleRow-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin-left: 10px !important;
+    }
+  }
+}

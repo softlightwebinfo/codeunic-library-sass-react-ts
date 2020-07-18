@@ -7,6 +7,7 @@ import {IMessageAvatarComponentProps} from "../../components/MessageAvatarCompon
 import {GroupSmallComponent} from "../../components/GroupSmallComponent/GroupSmallComponent";
 import {IGroupSmallComponentProps} from "../../components/GroupSmallComponent/GroupSmallComponent.types";
 import {IProgressComponentProps} from "../../components/ProgressComponent/ProgressComponent.types";
+import moment from 'moment';
 
 export function TableLayout(props: ITableLayoutProps) {
     const bem = new BEM("TableLayout-layout", {});
@@ -59,7 +60,7 @@ export function TableLayout(props: ITableLayoutProps) {
             case ETableColumnType.NUMBER:
                 return item[col.key];
             case ETableColumnType.DATE:
-                break;
+                return moment(item[col.key]).format(col.format || "DD-MM-YYYY HH:mm:ss");
             case ETableColumnType.MESSAGE_AVATAR:
                 const data = item[col.key] as IMessageAvatarComponentProps;
                 return (
@@ -67,6 +68,7 @@ export function TableLayout(props: ITableLayoutProps) {
                         name={data.name}
                         title={data.title}
                         subTitle={data.subTitle}
+                        src={data.src}
                     />
                 );
             default: {

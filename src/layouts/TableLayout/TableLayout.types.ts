@@ -4,7 +4,9 @@ import {ITableColumn, ITableRow} from "../../Interfaces/ITable";
 export interface ITableLayoutProps extends IProp {
     onChange?(e: any): any;
 
-    data?: (props: ITableRow) => ITableRow;
+    data?: ITableLayoutPropsData;
     columns: ITableColumn[];
     rows: ITableRow[];
 }
+
+export type ITableLayoutPropsData = (props: ITableRow) => ITableRow;

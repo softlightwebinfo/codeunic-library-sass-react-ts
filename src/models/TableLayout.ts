@@ -10,11 +10,13 @@ export class TableMessageAvatar implements IMessageAvatarComponentProps {
     style: IStyle;
     subTitle: string;
     title: string;
+    src: string;
 
-    constructor(name: string, title: string, subTitle: string) {
+    constructor(name: string, title: string, subTitle: string, avatar?: string) {
         this.name = name;
         this.title = title;
         this.subTitle = subTitle;
+        this.src = avatar;
     }
 }
 

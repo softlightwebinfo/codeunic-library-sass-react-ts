@@ -3,6 +3,7 @@ import {IStyle} from "../../Interfaces/IStyle";
 import {TOnline} from "../../models";
 
 export interface IAvatarComponentProps {
+    big?: boolean;
     style?: IStyle;
     children: IChildren;
     className?: string;
