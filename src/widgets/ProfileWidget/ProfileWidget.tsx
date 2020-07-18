@@ -12,7 +12,7 @@ export function ProfileWidget(props: IProfileWidgetProps) {
             <AvatarComponent className={bem.Children("avatar")} big src={props.avatar}>{props.name.slice(0, 2).toUpperCase()}</AvatarComponent>
             <DropdownComponent
                 className={bem.Children("settings")}
-                 onChange={props.onChange}
+                onChange={props.onChange}
                 trigger={<ButtonIconComponent hover className={bem.Children("trigger")}><IconComponent icon={"more_vert"}/></ButtonIconComponent>}
                 data={[
                     {label: "Edit", icon: <IconComponent style={{width: 15, height: 15}} icon={"pencil"}/>, value: "1"},

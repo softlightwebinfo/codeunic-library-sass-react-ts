@@ -3,8 +3,6 @@ import {IListAppProps, IListAppState} from "./ListApp.types";
 import "./ListApp.scss";
 import {BEM} from "../../libs";
 import {ButtonIconComponent, GridComponent, IconComponent, TitleRowComponent} from "../..";
-import {IOnClick} from "../../Interfaces/IOnClick";
-import {ProfileWidget} from "../..";
 import {TableLayout} from "../../layouts/TableLayout/TableLayout";
 
 export class ListApp extends React.Component<IListAppProps, IListAppState> {
@@ -21,13 +19,7 @@ export class ListApp extends React.Component<IListAppProps, IListAppState> {
                     className={bm.Children("title-row")}
                     breadcrumb={this.props.breadcrumb}
                     title={this.props.title}
-                    button={{
-                        icon: "plus",
-                        label: "New Employee",
-                        onClick(e: IOnClick): any {
-
-                        }
-                    }}
+                    button={this.props.button}
                     extra={(
                         <>
                             <ButtonIconComponent style={{backgroundColor: !this.state.list && "gainsboro"}} hover onClick={() => this.setState({list: false})}>
@@ -43,11 +35,7 @@ export class ListApp extends React.Component<IListAppProps, IListAppState> {
                     <GridComponent spacing={2} container>
                         {this.props.rows.map((row) => (
                             <GridComponent item xs={12} sm={3} key={row.id}>
-                                <ProfileWidget
-                                    avatar={row.avatar}
-                                    name={row.name}
-                                    category={row.category}
-                                />
+                                {this.props.rowElement(row)}
                             </GridComponent>
                         ))}
                     </GridComponent>

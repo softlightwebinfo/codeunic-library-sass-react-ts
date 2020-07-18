@@ -6,6 +6,7 @@ import {TypographyComponent} from "../..";
 
 export function GroupSmallComponent(props: IGroupSmallComponentProps) {
     const bm = new BEM("GroupSmall-component", {});
+    bm.Append(props.className);
     return (
         <div
             style={props.style}
@@ -15,7 +16,7 @@ export function GroupSmallComponent(props: IGroupSmallComponentProps) {
             <small>
                 {props.data.map((item, index) => {
                     return (
-                        <span className={bm.Children("item")}>
+                        <span key={index} className={bm.Children("item")}>
                             <b>{item.number}</b>
                             {item.label}
                             {props.data.length - 1 != index ? ", " : null}

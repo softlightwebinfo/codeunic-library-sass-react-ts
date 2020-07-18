@@ -3,6 +3,7 @@ import {IColor} from "../../Interfaces/IColor";
 
 export interface IProgressComponentProps extends IProp {
     value?: number;
+    label?: string;
     color?: IColor;
     data?: IProgressComponentProps[];
 }

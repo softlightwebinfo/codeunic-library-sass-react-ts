@@ -77,6 +77,8 @@ export {ContactContComponent} from "./components/ContactContComponent/ContactCon
 export {AlphapetsListComponent} from "./components/AlphapetsListComponent/AlphapetsListComponent";
 export {BreadcrumbComponent} from "./components/BreadcrumbComponent/BreadcrumbComponent";
 export {TitleRowComponent} from "./components/TitleRowComponent/TitleRowComponent";
+export {GroupTitleComponent} from "./components/GroupTitleComponent/GroupTitleComponent";
+export {ProgressLabelComponent} from "./components/ProgressLabelComponent/ProgressLabelComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -102,6 +104,7 @@ export {TableAttendanceLayout} from './layouts/TableAttendanceLayout/TableAttend
 
 //Widgets
 export {ProfileWidget} from './widgets/ProfileWidget/ProfileWidget'
+export {ProjectWidget} from './widgets/ProjectWidget/ProjectWidget'
 
 
 //Apps
