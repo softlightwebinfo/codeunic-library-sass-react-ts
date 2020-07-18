@@ -3,6 +3,7 @@ import {ReactElement} from "react";
 import {IStyle} from "../../Interfaces/IStyle";
 
 export interface IListComponentProps {
+    id?: string;
     horizontal?: boolean;
     className?: string;
     padding?: boolean;

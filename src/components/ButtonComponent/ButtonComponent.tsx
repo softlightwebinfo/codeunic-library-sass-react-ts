@@ -8,7 +8,7 @@ export function ButtonComponent(props: IButtonComponentProps) {
     if (props.isDisabled) classNames.push(`button-component--disabled`);
     classNames.push(`button-component--${props.variant || "contained"}`);
     classNames.push(`button-component--grouped`);
-
+    props.block && classNames.push(`button-component--block`);
     return (
         <button
             onClick={props.onClick}

@@ -1,0 +1,12 @@
+.ContactCont-component {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &--card {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    border-radius: inherit;
+    padding: 10px;
+  }
+}

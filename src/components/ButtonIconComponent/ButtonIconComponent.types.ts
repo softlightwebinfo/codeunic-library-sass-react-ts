@@ -5,4 +5,5 @@ export interface IButtonIconComponentTypes extends IProp {
     component?: string;
     onClick?: (e) => void;
     children: IChildren | IChildren[];
+    hover?: boolean;
 }

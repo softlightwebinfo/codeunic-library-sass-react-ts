@@ -14,7 +14,7 @@ export function DropdownMenuComponent(props: IDropdownMenuComponentProps) {
             className={bm.toString()}
         >
             {props.data.map((item, index) => (
-                <a onClick={e => props.onClick && props.onClick(item)} className={bm.Children("item")}>
+                <a key={index} onClick={e => props.onClick && props.onClick(item)} className={bm.Children("item")}>
                     {
                         // @ts-ignore
                         React.cloneElement(item.icon, {

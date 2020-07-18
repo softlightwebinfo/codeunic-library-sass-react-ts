@@ -41,7 +41,15 @@ export class BEM {
         return `${this._parent}__${name}${extra ? ` ${extra}` : ''}`;
     }
 
-    Modifier(children: string, modifier: string, extra: string = "") {
-        return `${this._parent}__${children} ${this._parent}__${children}--${modifier}${extra ? ` ${extra}` : ''}`;
+    Modifier(children: string, modifier: string, active: boolean, extra: string = "") {
+        let data = [`${this._parent}__${children}`];
+
+        if (active) {
+            data.push(`${this._parent}__${children}--${modifier}`);
+        }
+        if (extra) {
+            data.push(extra);
+        }
+        return data.join(" ");
     }
 }

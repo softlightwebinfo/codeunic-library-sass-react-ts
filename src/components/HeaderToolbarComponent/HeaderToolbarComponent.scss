@@ -1,0 +1,23 @@
+.HeaderToolbar-component {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    .List-component {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

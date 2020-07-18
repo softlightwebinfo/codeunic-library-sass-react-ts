@@ -5,7 +5,9 @@ import {BEM} from "../../libs";
 import {InputFieldComponent} from "../..";
 
 export function InputSearchComponent(props: IInputSearchComponentProps) {
-    const bm = new BEM("InputSearch-component", {});
+    const bm = new BEM("InputSearch-component", {
+        outlined: props.outlined,
+    });
     const {className, onChange, ...rest} = props;
     bm.Append(className);
     return (

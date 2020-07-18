@@ -1,0 +1,32 @@
+.AlphapetsList-component {
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 70px;
+  position: fixed;
+  right: 0;
+  top: 65px;
+  width: 50px;
+
+  &__item {
+    display: block;
+    text-align: center;
+    padding: 2px;
+    color: #333;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__scroll {
+    height: 100%;
+    overflow: auto;
+
+    .ScrollbarsCustom-Track {
+      display: none;
+    }
+  }
+}

@@ -7,3 +7,4 @@ export * from './getInnerSize';
 export * from './uuid';
 export * from './calcThumb';
 export * from './scroll';
+export * from './alphabet';

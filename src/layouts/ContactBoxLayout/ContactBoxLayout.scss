@@ -1,0 +1,18 @@
+@import "../../sass/index";
+
+.ContactBox-layout {
+  display: inline-table;
+  height: 100%;
+  padding: 30px 15px;
+  position: relative;
+  width: 100%;
+
+  &__listMenu {
+    margin-top: 20px;
+  }
+
+  &__contactList {
+    position: relative;
+    padding: 0 70px 0 20px;
+  }
+}

@@ -18,6 +18,16 @@
   transition: .3s ease-out;
   border: 0;
 
+  &__children {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .Icon-component {
+      margin-right: 5px;
+      height: 20px;
+    }
+  }
+
   &#{$then}--outlined, &#{$then}--color {
     box-shadow: none;
     background-color: transparent;
@@ -165,5 +175,9 @@
     &#{$then}:not(:first-child) {
       margin-left: -1px;
     }
+  }
+
+  &--block {
+    width: 100%;
   }
 }

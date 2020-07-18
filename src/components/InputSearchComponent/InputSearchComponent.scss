@@ -61,4 +61,18 @@
       }
     }
   }
+
+  &--outlined {
+    background-color: #f7f7f7;
+    border: 1px solid #e3e3e3;
+    border-radius: 50px;
+
+    .InputSearch-component__input {
+      width: 100%;
+
+      input {
+        font-size: 14px;
+      }
+    }
+  }
 }

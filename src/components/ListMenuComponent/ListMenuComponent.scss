@@ -1,0 +1,29 @@
+@import "../../sass/index";
+
+.ListMenu-component {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    display: block;
+    position: relative;
+    border-left: 3px solid transparent;
+    color: #333;
+    padding: 10px 15px;
+
+
+
+    &--active {
+      color: $color-orange;
+      border-color: #ff9b44;
+    }
+
+    &:hover {
+      background-color: #eee;
+      border-color: #ff9b44;
+      cursor: pointer;
+    }
+  }
+}

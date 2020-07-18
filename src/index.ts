@@ -70,6 +70,11 @@ export {ProfileImageComponent} from "./components/ProfileImageComponent/ProfileI
 export {ListInfoComponent} from "./components/ListInfoComponent/ListInfoComponent";
 export {ChatCallComponent} from "./components/ChatCallComponent/ChatCallComponent";
 export {SeparatorComponent} from "./components/SeparatorComponent/SeparatorComponent";
+export {HeaderToolbarComponent} from "./components/HeaderToolbarComponent/HeaderToolbarComponent";
+export {ContentToolbarComponent} from "./components/ContentToolbarComponent/ContentToolbarComponent";
+export {ListMenuComponent} from "./components/ListMenuComponent/ListMenuComponent";
+export {ContactContComponent} from "./components/ContactContComponent/ContactContComponent";
+export {AlphapetsListComponent} from "./components/AlphapetsListComponent/AlphapetsListComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -89,10 +94,13 @@ export {ChatHeaderLayout} from './layouts/ChatHeaderLayout/ChatHeaderLayout'
 export {ChatFooterLayout} from './layouts/ChatFooterLayout/ChatFooterLayout'
 export {ProfileSidebarLayout} from './layouts/ProfileSidebarLayout/ProfileSidebarLayout'
 export {CallSidebarLayout} from './layouts/CallSidebarLayout/CallSidebarLayout'
+export {ContactBoxLayout} from './layouts/ContactBoxLayout/ContactBoxLayout'
+export {ContactListLayout} from './layouts/ContactListLayout/ContactListLayout'
 
 
 //Apps
 export {ChatApp} from './apps/ChatApp/ChatApp';
+export {ContactsApp} from './apps/ContactsApp/ContactsApp';
 
 export * from "./libs";
 export * from "./utils";
