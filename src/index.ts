@@ -75,6 +75,7 @@ export {ContentToolbarComponent} from "./components/ContentToolbarComponent/Cont
 export {ListMenuComponent} from "./components/ListMenuComponent/ListMenuComponent";
 export {ContactContComponent} from "./components/ContactContComponent/ContactContComponent";
 export {AlphapetsListComponent} from "./components/AlphapetsListComponent/AlphapetsListComponent";
+export {BreadcrumbComponent} from "./components/BreadcrumbComponent/BreadcrumbComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -96,11 +97,13 @@ export {ProfileSidebarLayout} from './layouts/ProfileSidebarLayout/ProfileSideba
 export {CallSidebarLayout} from './layouts/CallSidebarLayout/CallSidebarLayout'
 export {ContactBoxLayout} from './layouts/ContactBoxLayout/ContactBoxLayout'
 export {ContactListLayout} from './layouts/ContactListLayout/ContactListLayout'
+export {TableAttendanceLayout} from './layouts/TableAttendanceLayout/TableAttendanceLayout'
 
 
 //Apps
 export {ChatApp} from './apps/ChatApp/ChatApp';
 export {ContactsApp} from './apps/ContactsApp/ContactsApp';
+export {AttendanceApp} from './apps/AttendanceApp/AttendanceApp';
 
 export * from "./libs";
 export * from "./utils";

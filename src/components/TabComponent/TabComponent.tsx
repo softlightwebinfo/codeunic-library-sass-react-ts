@@ -20,7 +20,7 @@ export function TabComponent(props: ITabComponentProps) {
             <header className={bm.Children("header")}>
                 <ListComponent className={bm.Children("list")} horizontal>
                     {props.tabs.map((item, index) => (
-                        <li onClick={() => onClick(index)} key={index} className={(index !== active) ? bm.Children("tab") : bm.Modifier("tab", "active")}>
+                        <li onClick={() => onClick(index)} key={index} className={(index !== active) ? bm.Children("tab") : bm.Modifier("tab", "active", true)}>
                             {item}
                         </li>
                     ))}

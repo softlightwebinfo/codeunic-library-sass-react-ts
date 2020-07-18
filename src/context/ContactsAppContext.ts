@@ -6,6 +6,8 @@ import {IContactsAppState} from "../apps/ContactsApp/ContactsApp.types";
  */
 const ContactsAppContext = React.createContext<IContactsAppState>({
     contacts: [],
+    goTo(item: any): void {
+    }
 });
 ContactsAppContext.displayName = 'ContactsAppContext';
 export default ContactsAppContext;

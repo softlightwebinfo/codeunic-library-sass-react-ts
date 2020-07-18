@@ -8,3 +8,4 @@ export * from './uuid';
 export * from './calcThumb';
 export * from './scroll';
 export * from './alphabet';
+export * from './rand';

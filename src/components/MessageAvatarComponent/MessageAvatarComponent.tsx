@@ -12,7 +12,7 @@ export function MessageAvatarComponent(props: IMessageAvatarComponentProps) {
             style={props.style}
             className={bm.toString()}
         >
-            <AvatarComponent src={props.src} className={bm.Children("avatar")}>{props.name}</AvatarComponent>
+            <AvatarComponent mini={props.mini} src={props.src} className={bm.Children("avatar")}>{props.name}</AvatarComponent>
             <div className={bm.Children("right")}>
                 <TypographyComponent variant={"body1"}>{props.title}</TypographyComponent>
                 <TypographyComponent variant={"caption"} color={"gray"}>{props.subTitle}</TypographyComponent>

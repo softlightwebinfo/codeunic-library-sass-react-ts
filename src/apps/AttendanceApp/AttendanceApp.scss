@@ -1,0 +1,14 @@
+@import "../../sass/index";
+
+.Attendance-app {
+  background-color: #f7f7f7;
+  padding: 40px;
+
+  &__title {
+    margin-bottom: 5px;
+  }
+
+  &__breadcrumb.Breadcrumb-component {
+    margin-bottom: 20px;
+  }
+}

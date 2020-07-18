@@ -1,0 +1,11 @@
+@import "../../sass/index";
+
+.TableAttendance-layout {
+  &__check {
+    color: $color-success;
+  }
+
+  &__uncheck {
+    color: $color-danger;
+  }
+}

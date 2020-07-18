@@ -1,0 +1,37 @@
+.Breadcrumb-component {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  border-radius: .25rem;
+  background-color: transparent;
+  color: #6c757d;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    a {
+      color: #333;
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    &--active {
+      color: #6c757d;
+    }
+
+    & + & {
+      padding-left: .5rem;
+
+      &::before {
+        display: inline-block;
+        padding-right: .5rem;
+        color: #6c757d;
+        content: "/";
+      }
+    }
+  }
+}
