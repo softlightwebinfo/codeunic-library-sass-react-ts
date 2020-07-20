@@ -1,0 +1,13 @@
+.TaskList-layout {
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+}

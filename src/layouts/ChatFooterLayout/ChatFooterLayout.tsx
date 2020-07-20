@@ -14,7 +14,7 @@ export function ChatFooterLayout(props: IChatFooterLayoutProps) {
                 </ButtonIconComponent>
                 <div className={bem.Children("group")}>
                     <div className={bem.Children("input-group")}>
-                        <textarea name="message" cols={30} rows={2} onChange={props.onChange}/>
+                        <textarea  placeholder={props.placeholder} name="message" cols={30} rows={2} onChange={props.onChange}/>
                         <ButtonComponent onClick={props.onClickSend}>
                             <IconComponent icon={"send"}/>
                         </ButtonComponent>

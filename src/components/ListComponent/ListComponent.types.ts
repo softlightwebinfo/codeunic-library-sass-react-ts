@@ -9,6 +9,6 @@ export interface IListComponentProps {
     padding?: boolean;
     ariaLabel?: string;
     component?: string;
-    children: IChildren | ReactElement[];
+    children: IChildren | ReactElement[] | any[];
     style?: IStyle;
 }

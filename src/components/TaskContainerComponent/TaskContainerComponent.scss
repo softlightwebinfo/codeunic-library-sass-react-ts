@@ -1,0 +1,51 @@
+.TaskContainer-component {
+  $then: &;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 8px 15px;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-bottom: none;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: background 200ms ease;
+  -moz-transition: background 200ms ease;
+  -ms-transition: background 200ms ease;
+  -o-transition: background 200ms ease;
+  transition: background 200ms ease;
+
+  &__check {
+    margin-right: 20px;
+  }
+
+  &__title {
+    flex: 1;
+  }
+
+  &__actions {
+    display: none;
+  }
+
+  &:hover {
+    background: #EBEEEF;
+
+    #{$then}__actions {
+      display: flex;
+    }
+  }
+
+  &--check {
+    background: #f9f9f9;
+  }
+
+  &--selected {
+    background-color: sandybrown;
+    color: white;
+
+    &:hover {
+      background-color: sandybrown;
+      color: white;
+    }
+  }
+}

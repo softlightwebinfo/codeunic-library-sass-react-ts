@@ -18,12 +18,18 @@ import setting from './assets/cog';
 import attachment from './assets/attachment';
 import send from './assets/send';
 import pencil from './assets/pencil';
-import close from './assets/uncheck';
+import close from './assets/cross';
 import grid from './assets/grid';
 import trash from './assets/trash';
+import tick from './assets/tick';
+import user from './assets/user';
+import eye from './assets/eye';
+import calendar from './assets/calendar-full';
+import subject from './assets/subject';
+import bold from "./assets/bold";
+import file from "./assets/file-empty";
 
 import {BEM} from "../../libs";
-import bold from "./assets/bold";
 
 export const icons = {
     alarm,
@@ -47,6 +53,12 @@ export const icons = {
     grid,
     send,
     trash,
+    tick,
+    user,
+    calendar,
+    eye,
+    subject,
+    file,
 };
 
 export function IconComponent(props: IIconComponentProps) {

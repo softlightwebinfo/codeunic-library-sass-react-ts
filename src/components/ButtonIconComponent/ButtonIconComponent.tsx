@@ -6,6 +6,7 @@ import {BEM} from "../../libs";
 export function ButtonIconComponent(props: IButtonIconComponentTypes) {
     const bm = new BEM("ButtonIcon-component", {
         hover: props.hover,
+        action: props.action,
     });
     const Component = props.component || "button";
     bm.Append(props.className);

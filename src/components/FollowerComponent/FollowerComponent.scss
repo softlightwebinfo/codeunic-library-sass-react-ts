@@ -1,0 +1,16 @@
+.Follower-component {
+  display: flex;
+  align-items: center;
+
+  &__label {
+    margin-right: 10px;
+  }
+
+  &__plus {
+    color: #000;
+  }
+
+  &__avatar {
+    margin-right: 5px;
+  }
+}

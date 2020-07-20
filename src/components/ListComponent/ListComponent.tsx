@@ -14,6 +14,7 @@ export function ListComponent(props: IListComponentProps) {
     return (
         // @ts-ignore
         <Component
+            style={props.style}
             id={props.id}
             aria-label={props.ariaLabel}
             className={bm.toString()}

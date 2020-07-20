@@ -1,0 +1,51 @@
+.TaskHeader-component {
+  $then: &;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  flex: 0 1 180px;
+  padding: 5px 10px 5px 5px;
+  position: relative;
+  color: #333;
+  display: flex;
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__close {
+    align-items: center;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    width: 20px;
+
+    .Icon-component {
+      height: 12px;
+      width: 12px;
+    }
+
+    #{$then}:hover & {
+      visibility: visible;
+    }
+
+    &:hover {
+      background-color: darken(#e3e3e3, 5);
+    }
+  }
+
+  &:hover {
+    border-color: #e3e3e3;
+    cursor: pointer;
+  }
+}

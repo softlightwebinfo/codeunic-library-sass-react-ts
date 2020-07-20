@@ -1,0 +1,52 @@
+@import "../../sass/index";
+
+.MainMaster-layout {
+  position: relative;
+
+  &__main {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding-bottom: inherit;
+    padding-top: inherit;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__wrapper {
+    display: table;
+    height: 100%;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  &__left,
+  &__right {
+    display: table-cell;
+    height: 100%;
+    float: none;
+    padding: 0;
+    position: static;
+    vertical-align: top;
+    width: 75%;
+  }
+
+  &__left {
+    width: 58.3333%;
+  }
+
+  &__right {
+    width: 41.6667%;
+    border-left: 1px solid #eaeaea;
+  }
+
+  &__left-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: auto;
+  }
+}

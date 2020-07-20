@@ -79,6 +79,14 @@ export {BreadcrumbComponent} from "./components/BreadcrumbComponent/BreadcrumbCo
 export {TitleRowComponent} from "./components/TitleRowComponent/TitleRowComponent";
 export {GroupTitleComponent} from "./components/GroupTitleComponent/GroupTitleComponent";
 export {ProgressLabelComponent} from "./components/ProgressLabelComponent/ProgressLabelComponent";
+export {NavbarToolbarComponent} from "./components/NavbarToolbarComponent/NavbarToolbarComponent";
+export {TaskContainerComponent} from "./components/TaskContainerComponent/TaskContainerComponent";
+export {CheckComponent} from "./components/CheckComponent/CheckComponent";
+export {FollowerComponent} from "./components/FollowerComponent/FollowerComponent";
+export {TaskHeaderComponent} from "./components/TaskHeaderComponent/TaskHeaderComponent";
+export {GroupIconComponent} from "./components/GroupIconComponent/GroupIconComponent";
+export {TaskInfoLineComponent} from "./components/TaskInfoLineComponent/TaskInfoLineComponent";
+export {ChatBubbleComponent} from "./components/ChatBubbleComponent/ChatBubbleComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -101,6 +109,11 @@ export {CallSidebarLayout} from './layouts/CallSidebarLayout/CallSidebarLayout'
 export {ContactBoxLayout} from './layouts/ContactBoxLayout/ContactBoxLayout'
 export {ContactListLayout} from './layouts/ContactListLayout/ContactListLayout'
 export {TableAttendanceLayout} from './layouts/TableAttendanceLayout/TableAttendanceLayout'
+export {MainMasterLayout} from './layouts/MainMasterLayout/MainMasterLayout'
+export {TaskListLayout} from './layouts/TaskListLayout/TaskListLayout'
+export {DetailCommentTaskLayout} from './layouts/DetailCommentTaskLayout/DetailCommentTaskLayout'
+export {TaskHeaderLayout} from './layouts/TaskHeaderLayout/TaskHeaderLayout'
+export {TaskCommentsLayout} from './layouts/TaskCommentsLayout/TaskCommentsLayout'
 
 //Widgets
 export {ProfileWidget} from './widgets/ProfileWidget/ProfileWidget'
@@ -112,6 +125,7 @@ export {ChatApp} from './apps/ChatApp/ChatApp';
 export {ContactsApp} from './apps/ContactsApp/ContactsApp';
 export {AttendanceApp} from './apps/AttendanceApp/AttendanceApp';
 export {ListApp} from './apps/ListApp/ListApp';
+export {TaskApp} from './apps/TaskApp/TaskApp';
 
 export * from "./libs";
 export * from "./utils";
