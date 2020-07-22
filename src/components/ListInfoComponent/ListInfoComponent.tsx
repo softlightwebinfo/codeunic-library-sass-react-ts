@@ -6,6 +6,7 @@ import {TypographyComponent} from "../..";
 
 export function ListInfoComponent(props: IListInfoComponentProps) {
     const bm = new BEM("ListInfo-component", {});
+    bm.Append(props.className);
     return (
         <ul
             style={props.style}

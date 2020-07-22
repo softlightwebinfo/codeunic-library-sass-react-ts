@@ -87,6 +87,8 @@ export {TaskHeaderComponent} from "./components/TaskHeaderComponent/TaskHeaderCo
 export {GroupIconComponent} from "./components/GroupIconComponent/GroupIconComponent";
 export {TaskInfoLineComponent} from "./components/TaskInfoLineComponent/TaskInfoLineComponent";
 export {ChatBubbleComponent} from "./components/ChatBubbleComponent/ChatBubbleComponent";
+export {InvoiceComponent} from "./components/InvoiceComponent/InvoiceComponent";
+export {InvoiceDetailsComponent} from "./components/InvoiceComponent/InvoiceDetailsComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -114,6 +116,7 @@ export {TaskListLayout} from './layouts/TaskListLayout/TaskListLayout'
 export {DetailCommentTaskLayout} from './layouts/DetailCommentTaskLayout/DetailCommentTaskLayout'
 export {TaskHeaderLayout} from './layouts/TaskHeaderLayout/TaskHeaderLayout'
 export {TaskCommentsLayout} from './layouts/TaskCommentsLayout/TaskCommentsLayout'
+export {InvoiceLayout} from './layouts/InvoiceLayout/InvoiceLayout'
 
 //Widgets
 export {ProfileWidget} from './widgets/ProfileWidget/ProfileWidget'

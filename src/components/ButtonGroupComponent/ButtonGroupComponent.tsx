@@ -8,10 +8,11 @@ export function ButtonGroupComponent(props: IButtonGroupComponentProps) {
         <div
             className={classNames.join(" ")}
         >
-            {React.Children.map(props.children, (Child) => {
+            {React.Children.map(props.children, (Child, index) => {
                 // @ts-ignore
                 return React.cloneElement(Child, {
                     grouped: true,
+                    onClick: e => props.onClick(e, index),
                 });
             })}
         </div>

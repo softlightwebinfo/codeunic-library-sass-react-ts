@@ -7,7 +7,7 @@ import {IGridColumns} from "../../Interfaces/IGridColumns";
 import {ReactElement} from "react";
 
 export interface IGridComponentProps extends IGridColumns {
-    children: IChildren | ReactElement[];
+    children?: IChildren | ReactElement[];
     container?: boolean;
     item?: boolean;
     spacing?: ISpacing;
