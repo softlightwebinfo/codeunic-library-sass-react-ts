@@ -1,0 +1,17 @@
+.AvatarList-layout {
+  align-items: center;
+  display: flex;
+  padding: 0 15px;
+  width: auto;
+  &__avatar {
+    $w: 35px;
+    margin-left: -20px;
+    height: $w;
+    width: $w;
+    border: 3px solid #e7e7e7;
+
+    &:first-of-type {
+      margin-left: 0 !important;
+    }
+  }
+}
