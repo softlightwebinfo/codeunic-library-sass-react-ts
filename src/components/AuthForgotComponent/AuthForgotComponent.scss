@@ -1,0 +1,28 @@
+.AuthLogin-component {
+  &__title {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  &__subTitle {
+    color: #4c4c4c;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__forgot {
+    color: #8e8e8e;
+  }
+
+  &__other-screen {
+    margin-left: 10px;
+    color: #667eea;
+  }
+
+  &__footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}

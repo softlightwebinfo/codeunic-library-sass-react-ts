@@ -1,0 +1,55 @@
+.Avatar-component {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.25rem;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  user-select: none;
+  border-radius: 50%;
+  justify-content: center;
+  color: #121212;
+  background-color: #757575;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  &__status {
+    bottom: 0;
+    right: -3px;
+    position: absolute;
+  }
+
+  &--status {
+    overflow: initial;
+  }
+
+  &--mini {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  &--big {
+    cursor: pointer;
+    height: 80px;
+    position: relative;
+    width: 80px;
+  }
+}
+
+.Avatar-user-component {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin-left: 10px;
+    color: white;
+  }
+}
