@@ -1,20 +1,27 @@
 import * as React from "react";
-import {IAppBarComponentProps} from "./AppBarComponent.types";
-import "./AppBarComponent.scss";
+import {IPageComponentProps} from "./PageComponent.types";
+import "./PageComponent.scss";
 import {BEM} from "../../libs";
+import {useEffect} from "react";
 
-export function PageLayoutComponent(props: IAppBarComponentProps) {
-    const bm = new BEM("AppBar-component", {
-        position: props.position,
-        color: props.color || "primary",
-    });
+export function PageComponent(props: IPageComponentProps) {
+    const bm = new BEM("Page-component", {});
     bm.Append(props.className);
+    useEffect(() => {
+        let classname = "Page-body-component";
+        if (typeof document != "undefined") {
+            document.body.classList.add(classname);
+        }
+        return () => {
+            document.body.classList.remove(classname)
+        }
+    });
     return (
-        <header
+        <div
             style={props.style}
             className={bm.toString()}
         >
             {props.children}
-        </header>
+        </div>
     );
 }

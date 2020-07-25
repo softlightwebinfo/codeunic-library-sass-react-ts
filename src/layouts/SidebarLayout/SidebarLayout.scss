@@ -1,17 +1,39 @@
-.AvatarList-layout {
-  align-items: center;
-  display: flex;
-  padding: 0 15px;
-  width: auto;
-  &__avatar {
-    $w: 35px;
-    margin-left: -20px;
-    height: $w;
-    width: $w;
-    border: 3px solid #e7e7e7;
+.Sidebar-layout {
+  $all: 225px;
+  @media only screen and (max-width: 991.98px) {
+    margin-left: -#{$all};
+    width: $all;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 1041;
+  }
 
-    &:first-of-type {
-      margin-left: 0 !important;
+  &--miniSidebar {
+    @media only screen and (min-width: 991px) {
+      width: 60px;
+      overflow: hidden;
+      .Typography-component.Typography-component--caption {
+        display: none;
+      }
+      .SidebarMenuItem-component__arrow {
+        display: none;
+      }
+      .ScrollbarsCustom-Track {
+        display: none;
+      }
+      &:hover {
+        width: $all;
+
+        .Typography-component.Typography-component--caption,
+        .SidebarMenuItem-component__arrow,
+        .ScrollbarsCustom-Track {
+          display: initial;
+        }
+      }
+    }
+    @media only screen and (max-width: 991.98px) {
+      margin-left: initial;
     }
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
-import {BadgeComponent} from './BadgeComponent';
+import {NotificationComponent} from './NotificationComponent';
 
 // @ts-ignore
 export default {
-    title: "Components|Badge"
+    title: "Components|Notification"
 };
 
-export const Default = () => <BadgeComponent badgeContent={4}/>;
+export const Default = () => <NotificationComponent />;

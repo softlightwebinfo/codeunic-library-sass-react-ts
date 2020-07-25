@@ -1,7 +1,7 @@
 import * as React from "react";
 import {ITableLayoutProps} from "./TableLayout.types";
 import "./TableLayout.scss";
-import {BEM, DotComponent, DropdownComponent, IconComponent, MessageAvatarComponent, ProgressComponent, TableColComponent, TableComponent, TableRowComponent} from "../..";
+import {BEM, DotComponent, DropdownComponent, IconComponent, LabelComponent, MessageAvatarComponent, ProgressComponent, TableColComponent, TableComponent, TableLabel, TableRowComponent} from "../..";
 import {ETableColumnType, ITableColumn, ITableRow} from "../../Interfaces/ITable";
 import {IMessageAvatarComponentProps} from "../../components/MessageAvatarComponent/MessageAvatarComponent.types";
 import {GroupSmallComponent} from "../../components/GroupSmallComponent/GroupSmallComponent";
@@ -14,6 +14,9 @@ export function TableLayout(props: ITableLayoutProps) {
     bem.Append(props.className);
     const contentData = (item: ITableRow, col: ITableColumn) => {
         switch (col.type) {
+            case ETableColumnType.LABEL:
+                let _dataItem = item[col.key] as TableLabel;
+                return <LabelComponent theme={_dataItem.theme} name={_dataItem.name}/>;
             case ETableColumnType.GROUP_SMALL:
                 const dataItem = item[col.key] as IGroupSmallComponentProps;
                 return (
@@ -53,6 +56,7 @@ export function TableLayout(props: ITableLayoutProps) {
                         ]}
                     />
                 );
+
             case ETableColumnType.COMPONENT:
                 return item[col.key];
             case ETableColumnType.STRING:

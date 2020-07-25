@@ -1,10 +1,10 @@
 import * as React from 'react';
-import {IChatAppState} from "../Interfaces/IChatAppState";
+import {IDashboardAppState} from "../apps/DashboardApp/DashboardApp.types";
 
 /**
  * @ignore - internal component.
  */
-const ChatAppContext = React.createContext<IChatAppState>({});
-ChatAppContext.displayName = 'ChatAppContext';
-export default ChatAppContext;
+const DashboardAppContext = React.createContext<IDashboardAppState>({miniSidebar: false});
+DashboardAppContext.displayName = 'DashboardAppContext';
+export default DashboardAppContext;
 

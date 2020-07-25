@@ -43,3 +43,13 @@
     width: 80px;
   }
 }
+
+.Avatar-user-component {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin-left: 10px;
+    color: white;
+  }
+}

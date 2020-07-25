@@ -1,55 +1,28 @@
-.Avatar-component {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  font-size: 1.25rem;
-  align-items: center;
-  flex-shrink: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  user-select: none;
-  border-radius: 50%;
-  justify-content: center;
-  color: #121212;
-  background-color: #757575;
-
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+.AuthLogin-component {
+  &__title {
+    margin-bottom: 5px;
+    text-align: center;
   }
 
-  &__status {
-    bottom: 0;
-    right: -3px;
-    position: absolute;
+  &__subTitle {
+    color: #4c4c4c;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
-  &--status {
-    overflow: initial;
+  &__forgot {
+    color: #8e8e8e;
   }
 
-  &--mini {
-    width: 24px;
-    height: 24px;
-    font-size: 10px;
-  }
-
-  &--big {
-    cursor: pointer;
-    height: 80px;
-    position: relative;
-    width: 80px;
-  }
-}
-
-.Avatar-user-component {
-  display: flex;
-  align-items: center;
-
-  &__name {
+  &__other-screen {
     margin-left: 10px;
-    color: white;
+    color: #667eea;
+  }
+
+  &__footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }

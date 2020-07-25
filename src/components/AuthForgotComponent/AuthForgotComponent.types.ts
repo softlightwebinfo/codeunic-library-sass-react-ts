@@ -1,6 +1,7 @@
 import {IOnChange, IProp, ITitleSubtitle} from "../../Interfaces";
+import {ReactElement} from "react";
 
-export interface IAuthLoginComponentProps extends IProp, ITitleSubtitle {
+export interface IAuthForgotComponentProps extends IProp, ITitleSubtitle {
     textButton?: string;
     textForgot?: string;
 
@@ -9,11 +10,9 @@ export interface IAuthLoginComponentProps extends IProp, ITitleSubtitle {
     textOtherScreen: string;
     routeOtherScreen?: string;
     footerAccountText: string;
-    routeForgotPassword?: string;
     emailValue: string;
-    passwordValue: string;
-    componentLinkOtherScreen?: string;
-    componentForgotPassword?: string;
+
+    componentLinkOtherScreen?(props: IAuthForgotComponentProps, children: ReactElement): ReactElement;
 
     onSubmit(e: any): any;
 }

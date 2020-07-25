@@ -4,9 +4,7 @@ import {IIconAsset} from "../../../Interfaces/IIconAsset";
 export default (props: IIconAsset) => (
     <svg xlinkTitle={props.title} style={props.style} className={props.className} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 490.688 490.688" width={props.width} height={props.height} xmlSpace="preserve">
-        <path style={{
-            fill: '#FFC107'
-        }} d="M472.328,120.529L245.213,347.665L18.098,120.529c-4.237-4.093-10.99-3.975-15.083,0.262
+        <path d="M472.328,120.529L245.213,347.665L18.098,120.529c-4.237-4.093-10.99-3.975-15.083,0.262
             c-3.992,4.134-3.992,10.687,0,14.82l234.667,234.667c4.165,4.164,10.917,4.164,15.083,0l234.667-234.667
             c4.237-4.093,4.354-10.845,0.262-15.083c-4.093-4.237-10.845-4.354-15.083-0.262c-0.089,0.086-0.176,0.173-0.262,0.262
             L472.328,120.529z"/>

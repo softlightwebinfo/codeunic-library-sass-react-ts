@@ -1,6 +1,7 @@
 import * as React from 'react';
-import TaskAppContext from "./TaskAppContext";
+import DashboardAppContext from "./DashboardAppContext";
+import {IDashboardAppState} from "../apps/DashboardApp/DashboardApp.types";
 
-export default function useTaskAppContext() {
-    return React.useContext(TaskAppContext);
+export default function useDashboardAppContext() {
+    return React.useContext(DashboardAppContext);
 }

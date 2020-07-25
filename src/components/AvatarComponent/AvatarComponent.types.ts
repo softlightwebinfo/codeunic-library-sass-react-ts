@@ -4,6 +4,7 @@ import {TOnline} from "../../models";
 
 export interface IAvatarComponentProps {
     big?: boolean;
+    user?: boolean;
     style?: IStyle;
     children: IChildren;
     className?: string;

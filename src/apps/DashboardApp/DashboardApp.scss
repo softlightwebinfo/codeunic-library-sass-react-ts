@@ -1,14 +1,21 @@
 @import "../../sass/index";
 
-.Attendance-app {
-  background-color: #f7f7f7;
-  padding: 40px;
-
-  &__title {
-    margin-bottom: 5px;
+.Dashboard-app {
+  &__wrapper {
+    left: 0;
+    margin-left: 230px;
+    padding: 40px;
+    padding-top: 90px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    @media only screen and (min-width: 991px) {
+      &--miniSidebar {
+        margin-left: 60px;
+      }
+    }
   }
 
-  &__breadcrumb.Breadcrumb-component {
+  &__title {
     margin-bottom: 20px;
   }
 }

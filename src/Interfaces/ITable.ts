@@ -13,6 +13,7 @@ export interface ITableRow {
 }
 
 export enum ETableColumnType {
+    LABEL,
     GROUP_SMALL,
     PROGRESS,
     ACTION,

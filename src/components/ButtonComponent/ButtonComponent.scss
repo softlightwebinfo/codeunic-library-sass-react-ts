@@ -17,11 +17,13 @@
   letter-spacing: .5px;
   transition: .3s ease-out;
   border: 0;
+  display: flex;
 
   &__children {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .Icon-component {
       margin-right: 5px;
       height: 20px;
@@ -40,7 +42,7 @@
 
   @each $key, $value in $color-array {
     &--#{$key} {
-      background-color: map_get($value, "normal");
+      background: map_get($value, "normal");
       color: #fff;
 
       &#{$then}--outlined, &#{$then}--color {
@@ -179,5 +181,19 @@
 
   &--block {
     width: 100%;
+  }
+
+  &--big {
+    justify-content: center;
+    border: 0;
+    border-radius: 4px;
+    display: block;
+    font-size: 22px;
+    padding: 10px 26px;
+    width: 100%;
+    height: initial;
+    &:hover{
+      opacity: .8;
+    }
   }
 }

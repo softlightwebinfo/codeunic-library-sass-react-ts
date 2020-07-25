@@ -8,7 +8,7 @@ import useComponentVisible from "../../hooks/useComponentVisible";
 export function DropdownComponent(props: IDropdownComponentProps) {
     const {ref, isComponentVisible, setIsComponentVisible} = useComponentVisible(false);
     const bm = new BEM("Dropdown-component", {
-        open: open,
+        open: props.open,
     });
     bm.Append(props.className);
     const onClick = (e) => {
@@ -37,6 +37,14 @@ export function DropdownComponent(props: IDropdownComponentProps) {
         }
         return "-- Select --"
     };
+    let Menu = null;
+    if (props.menu) {
+        Menu = React.cloneElement(props.menu(this), {
+            onClick: onSelected,
+            className: bm.Children("menu"),
+            open: isComponentVisible,
+        });
+    }
     return (
         <div
             ref={ref}
@@ -51,7 +59,7 @@ export function DropdownComponent(props: IDropdownComponentProps) {
             {props.trigger && (
                 <span className={bm.Children("trigger-custom")} onClick={onClick}>{props.trigger}</span>
             )}
-            <DropdownMenuComponent onClick={onSelected} className={bm.Children("menu")} open={isComponentVisible} data={props.data}/>
+            {props.menu ? Menu : (<DropdownMenuComponent onClick={onSelected} className={bm.Children("menu")} open={isComponentVisible} data={props.data}/>)}
         </div>
     );
 }

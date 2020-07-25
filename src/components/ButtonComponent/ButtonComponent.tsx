@@ -11,15 +11,19 @@ export function ButtonComponent(props: IButtonComponentProps) {
         grouped: props.grouped,
         block: props.block,
         rounded: props.rounded,
+        big: props.big,
     });
     bm.Append(props.className);
+    const Component = props.component || "button";
     return (
-        <button
+        // @ts-ignore
+        <Component
             onClick={props.onClick}
             style={props.style}
             className={bm.toString()}
+            type={props.type || "button"}
         >
             <span className={bm.Children("children")}>{props.children}</span>
-        </button>
+        </Component>
     );
 }

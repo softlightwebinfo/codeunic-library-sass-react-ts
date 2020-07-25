@@ -1,17 +1,55 @@
-.AvatarList-layout {
-  align-items: center;
-  display: flex;
-  padding: 0 15px;
-  width: auto;
-  &__avatar {
-    $w: 35px;
-    margin-left: -20px;
-    height: $w;
-    width: $w;
-    border: 3px solid #e7e7e7;
+.AppBar-layout {
+  background: #ff9b44;
+  background: -moz-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: -webkit-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: -ms-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
+  background: linear-gradient(to right, #ff9b44 0%, #fc6075 100%);
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  height: 60px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1002;
 
-    &:first-of-type {
-      margin-left: 0 !important;
+  &__left {
+    float: left;
+    height: 60px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    width: 230px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &__logo {
+    display: inline-block;
+    line-height: 60px;
+
+    img {
+      vertical-align: middle;
+      border-style: none;
+      $w: 40px;
+      width: $w;
+      height: $w;
+    }
+  }
+
+  &__toolbar {
+    padding: 0;
+  }
+
+  &__title {
+    flex: 1;
+  }
+
+  &__lang {
+    .Dropdown-component__trigger {
+      background-color: transparent;
+      border: 0;
+      color: white;
     }
   }
 }

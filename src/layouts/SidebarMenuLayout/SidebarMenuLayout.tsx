@@ -1,19 +1,37 @@
 import * as React from "react";
-import {IAvatarListLayoutProps} from "./AvatarListLayout.types";
-import "./AvatarListLayout.scss";
+import {ISidebarMenuLayoutProps, ISidebarMenuLayoutPropsMenu} from "./SidebarMenuLayout.types";
+import "./SidebarMenuLayout.scss";
 import {BEM} from "../../libs";
-import {AvatarComponent, ListComponent} from "../..";
+import useDashboardAppContext from "../../context/useDashboardAppContext";
+import {ListComponent} from "../..";
+import {SidebarMenuItemComponent} from "../../components/SidebarMenuComponent/SidebarMenuItemComponent";
 
-export function AvatarListLayout(props: IAvatarListLayoutProps) {
-    const bem = new BEM("AvatarList-layout", {});
+export function SidebarMenuLayout(props: ISidebarMenuLayoutProps) {
+    const bem = new BEM("SidebarMenu-layout", {});
     bem.Append(props.className);
+    const use = useDashboardAppContext();
+
+    const Menu = (menu: ISidebarMenuLayoutPropsMenu[]) => {
+        return menu.map((value, index) => (
+            <ListComponent component={"ul"} padding={false} key={index}>
+                <SidebarMenuItemComponent
+                    {...value}
+                    name={value.name}
+                    arrow={!!value.menu.length}
+                    onClick={() => {
+                        if (value.menu.length) {
+                            value.active = !value.active;
+                            use.setToggleItemMenu();
+                        }
+                    }}
+                />
+                {value.menu && <div className={bem.Modifier("sublist", "active", value.active)}>{Menu(value.menu)}</div>}
+            </ListComponent>
+        ));
+    };
     return (
-        <ListComponent className={bem.toString()}>
-            {props.data.map((item, index) => (
-                <AvatarComponent className={bem.Children("avatar")} {...item} key={index}>
-                    {item.children}
-                </AvatarComponent>
-            ))}
-        </ListComponent>
+        <div style={props.style} className={bem.toString()}>
+            {Menu(use.menu)}
+        </div>
     );
 }

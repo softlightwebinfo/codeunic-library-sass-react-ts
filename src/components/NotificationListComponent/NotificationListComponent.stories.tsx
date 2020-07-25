@@ -1,13 +1,11 @@
 import React from "react";
-import {AvatarComponent} from './AvatarComponent';
+import {NotificationListComponent} from './NotificationListComponent';
 
 // @ts-ignore
 export default {
-    title: "Components|Avatar"
+    title: "Components|NotificationList"
 };
 
 export const Default = () => (
-    <AvatarComponent>
-        EL
-    </AvatarComponent>
+    <NotificationListComponent/>
 );

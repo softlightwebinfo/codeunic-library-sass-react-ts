@@ -8,6 +8,7 @@ export function AppBarComponent(props: IAppBarComponentProps) {
         position: props.position,
         color: props.color || "primary",
     });
+    bm.Append(props.className);
     return (
         <header
             style={props.style}

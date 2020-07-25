@@ -1,13 +1,6 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {IStyle} from "../../Interfaces/IStyle";
-import {TOnline} from "../../models";
+import {IProp} from "../../Interfaces/IProp";
+import {INotificationComponentProps} from "../NotificationComponent/NotificationComponent.types";
 
-export interface IAvatarComponentProps {
-    big?: boolean;
-    style?: IStyle;
-    children: IChildren;
-    className?: string;
-    mini?: boolean;
-    src?: string;
-    status?: TOnline;
+export interface INotificationListComponentProps extends IProp {
+    data: INotificationComponentProps[];
 }

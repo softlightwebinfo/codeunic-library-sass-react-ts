@@ -5,5 +5,5 @@ export interface IContainerComponentProps {
     maxWidth?: ISize;
     fixed?: boolean;
     disableGutters?: boolean;
-    children: IChildren;
+    children: IChildren | IChildren[];
 }

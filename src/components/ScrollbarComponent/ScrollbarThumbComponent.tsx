@@ -1,7 +1,7 @@
 import * as React from "react";
 import {DragCallbackData, ScrollbarThumbProps} from "./ScrollbarThumbComponent.types";
 //import "./ScrollbarThumbComponent.scss";
-import {AXIS_DIRECTION, AXIS_DIRECTION_PROP_TYPE} from "../../Interfaces/IElementPropsWithElementRefAndRenderer";
+import {AXIS_DIRECTION} from "../../Interfaces";
 import PropTypes from 'prop-types';
 import {DraggableCore, DraggableData, DraggableEvent} from "react-draggable";
 import {cnb} from "cnbuilder";
@@ -13,8 +13,6 @@ declare var global: {
 
 export class ScrollbarThumbComponent extends React.Component<ScrollbarThumbProps, {}> {
     static propTypes = {
-        axis: AXIS_DIRECTION_PROP_TYPE,
-
         onDrag: PropTypes.func,
         onDragStart: PropTypes.func,
         onDragEnd: PropTypes.func,

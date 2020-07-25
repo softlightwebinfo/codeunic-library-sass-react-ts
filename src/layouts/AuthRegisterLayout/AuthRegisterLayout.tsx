@@ -1,11 +1,11 @@
 import * as React from "react";
-import {IAuthLoginLayoutProps} from "./AuthLoginLayout.types";
-import "./AuthLoginLayout.scss";
+import {IAuthRegisterLayoutProps} from "./AuthRegisterLayout.types";
+import "./AuthRegisterLayout.scss";
 import {BEM} from "../../libs";
-import {AuthLoginComponent, ButtonComponent, ContainerComponent, PageComponent} from "../..";
+import {AuthRegisterComponent, ButtonComponent, ContainerComponent, PageComponent} from "../..";
 
-export function AuthLoginLayout(props: IAuthLoginLayoutProps) {
-    const bem = new BEM("AuthLogin-layout", {});
+export function AuthRegisterLayout(props: IAuthRegisterLayoutProps) {
+    const bem = new BEM("AuthRegister-layout", {});
     bem.Append(props.className);
     const {extras = []} = props;
     return (
@@ -22,7 +22,7 @@ export function AuthLoginLayout(props: IAuthLoginLayoutProps) {
                             <img src={props.logo} alt={"logo"} title={props.logoTitle}/>
                         </a>
                     </div>
-                    <AuthLoginComponent
+                    <AuthRegisterComponent
                         textButton={props.textButton}
                         textForgot={props.textForgot}
                         onChange={props.onChange}
@@ -37,6 +37,8 @@ export function AuthLoginLayout(props: IAuthLoginLayoutProps) {
                         componentLinkOtherScreen={props.componentLinkOtherScreen}
                         routeOtherScreen={props.routeOtherScreen}
                         routeForgotPassword={props.routeForgotPassword}
+                        nameValue={props.nameValue}
+                        repeatPasswordValue={props.repeatPasswordValue}
                     />
                 </ContainerComponent>
             </div>

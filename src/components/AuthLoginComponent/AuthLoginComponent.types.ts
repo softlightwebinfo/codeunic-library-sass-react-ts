@@ -1,14 +1,22 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {IStyle} from "../../Interfaces/IStyle";
-import {TOnline} from "../../models";
+import {IOnChange, IProp, ITitleSubtitle} from "../../Interfaces";
+import {ReactElement} from "react";
 
-export interface IAvatarComponentProps {
-    big?: boolean;
-    user?: boolean;
-    style?: IStyle;
-    children: IChildren;
-    className?: string;
-    mini?: boolean;
-    src?: string;
-    status?: TOnline;
+export interface IAuthLoginComponentProps extends IProp, ITitleSubtitle {
+    textButton?: string;
+    textForgot?: string;
+
+    onChange(e: IOnChange): any;
+
+    textOtherScreen: string;
+    routeOtherScreen?: string;
+    footerAccountText: string;
+    routeForgotPassword?: string;
+    emailValue: string;
+    passwordValue: string;
+
+    componentForgotPassword?(props: IAuthLoginComponentProps, children: ReactElement): ReactElement;
+
+    componentLinkOtherScreen?(props: IAuthLoginComponentProps, children: ReactElement): ReactElement;
+
+    onSubmit(e: any): any;
 }

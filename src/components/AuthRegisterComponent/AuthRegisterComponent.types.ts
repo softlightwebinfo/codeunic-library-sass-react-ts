@@ -1,6 +1,9 @@
 import {IOnChange, IProp, ITitleSubtitle} from "../../Interfaces";
+import {ReactElement} from "react";
 
-export interface IAuthLoginComponentProps extends IProp, ITitleSubtitle {
+export interface IAuthRegisterComponentProps extends IProp, ITitleSubtitle {
+    repeatPasswordValue: string;
+    nameValue: string;
     textButton?: string;
     textForgot?: string;
 
@@ -12,7 +15,9 @@ export interface IAuthLoginComponentProps extends IProp, ITitleSubtitle {
     routeForgotPassword?: string;
     emailValue: string;
     passwordValue: string;
-    componentLinkOtherScreen?: string;
+
+    componentLinkOtherScreen?(props: IAuthRegisterComponentProps, children: ReactElement): ReactElement;
+
     componentForgotPassword?: string;
 
     onSubmit(e: any): any;

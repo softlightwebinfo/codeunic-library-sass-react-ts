@@ -3,11 +3,14 @@ import {ITextFieldComponentProps} from "./TextFieldComponent.types";
 import "./TextFieldComponent.scss";
 import {BEM} from "../../libs";
 import {FormControlComponent, InputFieldComponent} from "../..";
-import {InputLabelComponent} from "../InputLabelComponent/InputLabelComponent";
+import {InputLabelComponent} from "../..";
 import {useState} from "react";
 
 export function TextFieldComponent(props: ITextFieldComponentProps) {
-    const bm = new BEM("TextField-component", {});
+    const bm = new BEM("TextField-component", {
+        outline: props.outline,
+    });
+    bm.Append(props.className);
     const label = props.label;
     const [isUp, setIsUp] = useState(false);
     const [focus, setFocus] = useState(false);

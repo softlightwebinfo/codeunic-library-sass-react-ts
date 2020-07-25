@@ -1,10 +1,16 @@
 import {IOnChange, IProp, ITitleSubtitle} from "../../Interfaces";
+import {ReactElement} from "react";
+import {IAuthRegisterComponentProps} from "../../components/AuthRegisterComponent/AuthRegisterComponent.types";
 
-export interface IAuthLoginLayoutProps extends IProp, ITitleSubtitle {
+export interface IAuthRegisterLayoutProps extends IProp, ITitleSubtitle {
+    repeatPasswordValue: string;
+    nameValue: string;
     textButton?: string;
     textForgot?: string;
     routeOtherScreen?: string;
-    componentLinkOtherScreen?: string;
+
+    componentLinkOtherScreen?(props: IAuthRegisterComponentProps, children: ReactElement): ReactElement;
+
     textOtherScreen: string;
     footerAccountText: string;
     routeForgotPassword?: string;
@@ -17,11 +23,11 @@ export interface IAuthLoginLayoutProps extends IProp, ITitleSubtitle {
     logo: string;
     logoTitle: string;
     routeLogo: string;
-    extras?: IAuthLoginLayoutPropsExtras[];
+    extras?: IAuthRegisterLayoutPropsExtras[];
 
     onChange(e: IOnChange): any;
 }
 
-export type IAuthLoginLayoutPropsExtras = {
+export type IAuthRegisterLayoutPropsExtras = {
     label: string;
 }

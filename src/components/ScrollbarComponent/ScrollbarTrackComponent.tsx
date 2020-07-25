@@ -1,15 +1,13 @@
 import * as React from "react";
 import {ScrollbarTrackProps} from "./ScrollbarTrackComponent.types";
 //import "./ScrollbarTrackComponent.scss";
-import {AXIS_DIRECTION, AXIS_DIRECTION_PROP_TYPE} from "../../Interfaces/IElementPropsWithElementRefAndRenderer";
+import {AXIS_DIRECTION} from "../../Interfaces";
 import {cnb} from "cnbuilder";
 import {isFun, isUndef, renderDivWithRenderer} from "../../utils";
 import PropTypes from 'prop-types';
 
 export class ScrollbarTrackComponent extends React.Component<ScrollbarTrackProps, {}> {
     static propTypes = {
-        axis: AXIS_DIRECTION_PROP_TYPE,
-
         onClick: PropTypes.func,
 
         elementRef: PropTypes.func,

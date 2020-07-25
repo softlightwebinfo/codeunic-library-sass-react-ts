@@ -1,10 +1,12 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {ITheme} from "../../Interfaces/ITheme";
 import {IProp} from "../../Interfaces/IProp";
+import {IOnClick} from "../../Interfaces/IOnClick";
 
-export interface IBadgeComponentProps extends IProp{
-    theme?: ITheme;
-    right?: boolean;
-    badgeContent: number;
-    children?: IChildren;
+export interface INotificationComponentProps extends IProp {
+    onClick?(e: IOnClick): any;
+
+    component?: string;
+    date: string;
+    description: string;
+    name: string;
+    avatar: string;
 }

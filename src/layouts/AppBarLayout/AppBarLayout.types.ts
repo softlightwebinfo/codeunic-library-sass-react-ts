@@ -1,6 +1,25 @@
-import {IAvatarComponentProps} from "../../components/AvatarComponent/AvatarComponent.types";
+import {IProp} from "../../Interfaces/IProp";
+import {IInputSearchComponentProps} from "../../components/InputSearchComponent/InputSearchComponent.types";
+import {INotificationComponentProps} from "../../components/NotificationComponent/NotificationComponent.types";
+import {IDropdownDataComponent} from "../../components/DropdownComponent/DropdownComponent.types";
+import {TOnline} from "../../models";
 
-export interface IAvatarListLayoutProps {
-    data: IAvatarComponentProps[];
-    className?: string;
+export interface IAppBarLayoutProps extends IProp {
+    lang: number;
+    menuLogin?: IDropdownDataComponent[];
+    login?: IAppBarLayoutPropsLogin;
+    isLogin?: boolean;
+    langData?: IDropdownDataComponent[];
+    messages?: INotificationComponentProps[];
+    logo: string;
+    routeLogo: string;
+    title: string;
+    search?: IInputSearchComponentProps;
+    notifications?: INotificationComponentProps[];
 }
+
+export type IAppBarLayoutPropsLogin = {
+    status: TOnline;
+    avatar: string;
+    name: string;
+};

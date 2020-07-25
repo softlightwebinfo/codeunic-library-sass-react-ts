@@ -1,19 +1,24 @@
 import * as React from "react";
-import {IAvatarListLayoutProps} from "./AvatarListLayout.types";
-import "./AvatarListLayout.scss";
+import {ISidebarLayoutProps} from "./SidebarLayout.types";
+import "./SidebarLayout.scss";
 import {BEM} from "../../libs";
-import {AvatarComponent, ListComponent} from "../..";
+import {ScrollbarComponent, SidebarComponent, SidebarMenuLayout} from "../..";
+import useDashboardAppContext from "../../context/useDashboardAppContext";
 
-export function AvatarListLayout(props: IAvatarListLayoutProps) {
-    const bem = new BEM("AvatarList-layout", {});
+export function SidebarLayout(props: ISidebarLayoutProps) {
+    const use = useDashboardAppContext();
+    const bem = new BEM("Sidebar-layout", {
+        miniSidebar: use.miniSidebar,
+    });
     bem.Append(props.className);
+    const menuSelect = () => {
+
+    };
     return (
-        <ListComponent className={bem.toString()}>
-            {props.data.map((item, index) => (
-                <AvatarComponent className={bem.Children("avatar")} {...item} key={index}>
-                    {item.children}
-                </AvatarComponent>
-            ))}
-        </ListComponent>
+        <SidebarComponent style={props.style} className={bem.toString()}>
+            <ScrollbarComponent>
+                <SidebarMenuLayout/>
+            </ScrollbarComponent>
+        </SidebarComponent>
     );
 }

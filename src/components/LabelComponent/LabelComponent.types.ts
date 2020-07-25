@@ -1,14 +1,7 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {IStyle} from "../../Interfaces/IStyle";
-import {TOnline} from "../../models";
+import {IProp} from "../../Interfaces/IProp";
+import {ITheme} from "../../Interfaces/ITheme";
 
-export interface IAvatarComponentProps {
-    big?: boolean;
-    user?: boolean;
-    style?: IStyle;
-    children: IChildren;
-    className?: string;
-    mini?: boolean;
-    src?: string;
-    status?: TOnline;
+export interface ILabelComponentProps extends IProp {
+    theme: ITheme;
+    name: string;
 }

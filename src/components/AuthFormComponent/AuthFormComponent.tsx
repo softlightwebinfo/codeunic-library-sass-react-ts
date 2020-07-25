@@ -1,20 +1,22 @@
 import * as React from "react";
-import {IAppBarComponentProps} from "./AppBarComponent.types";
-import "./AppBarComponent.scss";
+import {IAuthFormComponentProps} from "./AuthFormComponent.types";
+import "./AuthFormComponent.scss";
 import {BEM} from "../../libs";
 
-export function AppBarComponent(props: IAppBarComponentProps) {
-    const bm = new BEM("AppBar-component", {
-        position: props.position,
-        color: props.color || "primary",
-    });
+export function AuthFormComponent(props: IAuthFormComponentProps) {
+    const bm = new BEM("AuthForm-component", {});
     bm.Append(props.className);
+    const Component = props.component || "div";
     return (
-        <header
+        <div
             style={props.style}
             className={bm.toString()}
         >
-            {props.children}
-        </header>
+            <
+                // @ts-ignore
+                Component onSubmit={props.onSubmit} className={bm.Children("wrapper")}>
+                {props.children}
+            </Component>
+        </div>
     );
 }

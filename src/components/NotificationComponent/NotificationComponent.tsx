@@ -1,22 +1,26 @@
 import * as React from "react";
-import {IBadgeComponentProps} from "./BadgeComponent.types";
-import "./BadgeComponent.scss";
+import {INotificationComponentProps} from "./NotificationComponent.types";
+import "./NotificationComponent.scss";
 import {BEM} from "../../libs";
+import {AvatarComponent, TypographyComponent} from "../..";
 
-export function BadgeComponent(props: IBadgeComponentProps) {
-    const bm = new BEM("Badge-component", {
-        right: props.right != undefined ? props.right : !!props.children,
-        color: props.theme ? props.theme : "secondary",
-        relative: !props.children,
-    });
+export function NotificationComponent(props: INotificationComponentProps) {
+    const bm = new BEM("Notification-component", {});
     bm.Append(props.className);
+    const Component = props.component || "div";
     return (
-        <div
+        // @ts-ignore
+        <Component
             style={props.style}
             className={bm.toString()}
+            onClick={props.onClick}
         >
-            {props.children}
-            <span className={"Badge-component__badge"}>{props.badgeContent}</span>
-        </div>
+            <AvatarComponent className={bm.Children("avatar")} src={props.avatar}>{props.name.slice(0, 2)}</AvatarComponent>
+            <div className={bm.Children("content")}>
+                <TypographyComponent className={bm.Children("author")}>{props.name}</TypographyComponent>
+                <TypographyComponent className={bm.Children("time")}>{props.date}</TypographyComponent>
+                <TypographyComponent className={bm.Children("content")}>{props.description}</TypographyComponent>
+            </div>
+        </Component>
     );
 }

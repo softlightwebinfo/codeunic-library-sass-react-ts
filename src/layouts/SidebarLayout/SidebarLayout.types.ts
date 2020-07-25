@@ -1,6 +1,5 @@
-import {IAvatarComponentProps} from "../../components/AvatarComponent/AvatarComponent.types";
+import {IProp} from "../../Interfaces/IProp";
 
-export interface IAvatarListLayoutProps {
-    data: IAvatarComponentProps[];
-    className?: string;
+export interface ISidebarLayoutProps extends IProp{
+
 }

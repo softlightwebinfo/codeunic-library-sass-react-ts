@@ -1,18 +1,13 @@
 import React from "react";
-import {AvatarListLayout} from './AvatarListLayout';
+import {SidebarLayout} from './SidebarLayout';
 
 // @ts-ignore
 export default {
-    title: "Layouts|AvatarList"
+    title: "Layouts|Sidebar"
 };
 
 export const Default = () => (
-    <AvatarListLayout
-        data={[
-            {children: "R"},
-            {children: "RM"},
-            {children: "ER"},
-            {children: "ES"},
-        ]}
+    <SidebarLayout
+
     />
 );

@@ -1,30 +1,72 @@
 import * as React from "react";
-import {IAttendanceAppProps, IAttendanceAppState} from "./AttendanceApp.types";
-import "./AttendanceApp.scss";
-import AttendanceAppContext from "../../context/AttendanceAppContext";
-import {BEM, BreadcrumbComponent, TypographyComponent} from "../..";
-import {TableAttendanceLayout} from "../..";
-import moment from "moment";
+import {IDashboardAppProps, IDashboardAppState} from "./DashboardApp.types";
+import "./DashboardApp.scss";
+import DashboardAppContext from "../../context/DashboardAppContext";
+import {BEM} from "../../libs";
+import {AppBarLayout, SidebarLayout, TitleRowComponent} from "../..";
+import useResizeHeight from "../../hooks/useResizeHeight";
 
-export class AttendanceApp extends React.Component<IAttendanceAppProps, IAttendanceAppState> {
-    public state: IAttendanceAppState = {
-        date: moment(),
-        rows: this.props.rows,
+export const Content = ({className, children}) => {
+    let height = useResizeHeight();
+
+    return (
+        <div style={{minHeight: height.height}} className={className}>
+            {children}
+        </div>
+    )
+};
+
+export class DashboardApp extends React.Component<IDashboardAppProps, IDashboardAppState> {
+    public state: IDashboardAppState = {
+        miniSidebar: false,
+        setToggleSidebar: (): void => {
+            this.setState(e => ({miniSidebar: !e.miniSidebar}));
+        },
+        searchValue: "",
+        menu: this.props.menu,
+        setToggleItemMenu: (): void => {
+            this.setState({menu: this.state.menu});
+        }
     };
 
     render() {
-        const bm = new BEM('Attendance-app', {});
+        const bm = new BEM('Dashboard-app', {});
         return (
-            <AttendanceAppContext.Provider value={this.state}>
+            <DashboardAppContext.Provider value={this.state}>
                 <div className={bm.toString()}>
-                    <TypographyComponent className={bm.Children("title")} component={"h3"} variant={"h4"}>{this.props.title}</TypographyComponent>
-                    <BreadcrumbComponent
-                        className={bm.Children("breadcrumb")}
-                        data={this.props.breadcrumb}
+                    <AppBarLayout
+                        title={this.props.header.title}
+                        logo={this.props.header.logo}
+                        routeLogo={this.props.header.routeLogo}
+                        search={{
+                            placeholder: this.props.header.search.placeholder,
+                            value: this.state.searchValue,
+                            onChange: (e) => {
+                                this.setState({searchValue: e.target.value});
+                            }
+                        }}
+                        notifications={this.props.header.notifications}
+                        messages={this.props.header.messages}
+                        langData={this.props.header.langData}
+                        menuLogin={this.props.header.menuLogin}
+                        isLogin={this.props.header.isLogin}
+                        login={this.props.header.login}
+                        lang={this.props.header.lang}
                     />
-                    <TableAttendanceLayout/>
+                    <SidebarLayout/>
+                    <Content className={bm.Modifier("wrapper", "miniSidebar", this.state.miniSidebar)}>
+                        {this.props.title && (
+                            <TitleRowComponent
+                                className={bm.Children("title")}
+                                breadcrumb={this.props.title.breadcrumb}
+                                title={this.props.title.title}
+                                extra={this.props.title.extra}
+                            />
+                        )}
+                        {this.props.children}
+                    </Content>
                 </div>
-            </AttendanceAppContext.Provider>
+            </DashboardAppContext.Provider>
         );
     }
 }

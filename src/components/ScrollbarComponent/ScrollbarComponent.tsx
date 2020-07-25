@@ -4,7 +4,7 @@ import {ScrollbarProps, ScrollbarState} from "./ScrollbarComponent.types";
 import {cnb} from "cnbuilder";
 import {DraggableData} from "react-draggable";
 import {zoomLevel} from "zoom-level";
-import {AXIS_DIRECTION, IElementPropsWithElementRefAndRenderer, ScrollState, TRACK_CLICK_BEHAVIOR, TRACK_CLICK_BEHAVIOR_PROP_TYPE} from "../../Interfaces/IElementPropsWithElementRefAndRenderer";
+import {AXIS_DIRECTION, IElementPropsWithElementRefAndRenderer, ScrollState, TRACK_CLICK_BEHAVIOR} from "../../Interfaces";
 import PropTypes from 'prop-types';
 import Emittr from "../../libs/Emittr";
 import {isNum, isUndef, uuid, getScrollbarWidth, renderDivWithRenderer, calcThumbSize, getInnerHeight, calcThumbOffset, shouldReverseRtlScroll, getInnerWidth, isFun, calcScrollForThumbOffset} from "../../utils";
@@ -68,8 +68,6 @@ export class ScrollbarComponent extends React.Component<ScrollbarProps, Scrollba
         removeTracksWhenNotUsed: PropTypes.bool,
         removeTrackYWhenNotUsed: PropTypes.bool,
         removeTrackXWhenNotUsed: PropTypes.bool,
-
-        trackClickBehavior: TRACK_CLICK_BEHAVIOR_PROP_TYPE,
 
         scrollbarWidth: PropTypes.number,
         fallbackScrollbarWidth: PropTypes.number,

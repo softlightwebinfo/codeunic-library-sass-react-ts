@@ -1,26 +1,28 @@
 import React from "react";
-import {AuthLoginLayout} from './AuthLoginLayout';
+import {AuthRegisterLayout} from './AuthRegisterLayout';
 
 // @ts-ignore
 export default {
-    title: "Layouts|AuthLogin"
+    title: "Layouts|AuthRegister"
 };
 
 export const Default = () => (
-    <AuthLoginLayout
+    <AuthRegisterLayout
         logo={"https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png"}
         routeLogo={"/"}
         logoTitle={"Logo"}
         extras={[
             {label: "Apply Job"},
         ]}
-        title={"Login"}
+        title={"Register"}
         subTitle={"Access to our dashboard"}
         emailValue={"rafael.gonzalez.1737@gmail.com"}
         passwordValue={"1234"}
         onSubmit={(e) => console.log(e)}
-        footerAccountText={"Don't have an account yet?"}
-        textOtherScreen={"Register"}
+        footerAccountText={"Already have an account?"}
+        textOtherScreen={"Login"}
         onChange={e => console.log(e)}
+        repeatPasswordValue={"1234"}
+        nameValue={"Rafa"}
     />
 );

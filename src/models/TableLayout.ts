@@ -3,6 +3,7 @@ import {IStyle} from "../Interfaces/IStyle";
 import {IGroupSmallComponentProps, IGroupSmallComponentPropsData} from "../components/GroupSmallComponent/GroupSmallComponent.types";
 import {IProgressComponentProps} from "../components/ProgressComponent/ProgressComponent.types";
 import {IColor} from "../Interfaces/IColor";
+import {ITheme} from "../Interfaces/ITheme";
 
 export class TableMessageAvatar implements IMessageAvatarComponentProps {
     className: string;
@@ -45,4 +46,14 @@ export class TableProgress implements IProgressComponentProps {
         this.color = color;
     }
 
+}
+
+export class TableLabel {
+    name: string;
+    theme: ITheme;
+
+    constructor(name: string, theme: ITheme = "danger") {
+        this.name = name;
+        this.theme = theme;
+    }
 }

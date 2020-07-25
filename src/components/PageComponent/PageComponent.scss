@@ -1,5 +1,14 @@
 @import "../../sass/index";
 
-.PageLayout-component {
+.Page-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
 
+.Page-body-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

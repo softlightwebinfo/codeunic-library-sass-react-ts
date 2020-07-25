@@ -1,11 +1,25 @@
 import React from "react";
-import {AuthLoginComponent} from './AuthLoginComponent';
+import {AuthRegisterComponent} from './AuthRegisterComponent';
 
 // @ts-ignore
 export default {
-    title: "Components|AuthLogin"
+    title: "Components|AuthRegister"
 };
 
 export const Default = () => (
-    <AuthLoginComponent/>
+    <AuthRegisterComponent
+        nameValue={"Rafa"}
+        repeatPasswordValue={"1234"}
+        title={"Register"}
+        subTitle={"Access to our dashboard"}
+        onChange={e => console.log(e)}
+        emailValue={"rafael.gonzalez.1737@gmail.com"}
+        passwordValue={"1234"}
+        onSubmit={e => console.log(e)}
+        footerAccountText={"Already have an account?"}
+        textOtherScreen={"Login"}
+        componentLinkOtherScreen={(props, children) => {
+            return <span>{children}</span>
+        }}
+    />
 );

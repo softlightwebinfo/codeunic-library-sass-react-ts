@@ -1,10 +1,9 @@
 import {IProp} from "../../Interfaces/IProp";
-import {IDropdownDataComponent} from "../../components/DropdownComponent/DropdownComponent.types";
+import {IChildren} from "../../Interfaces/IChildren";
 
-export interface IProfileWidgetProps extends IProp {
-    onChange?(e: IDropdownDataComponent): void;
-
-    name: string;
-    category: string;
-    avatar: string;
+export interface IDropDownMenuWidgetProps extends IProp {
+    children: IChildren | IChildren[] | any[];
+    textFooter: string;
+    title: string;
+    open?: boolean;
 }

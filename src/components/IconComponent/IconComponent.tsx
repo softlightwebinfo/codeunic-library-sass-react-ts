@@ -28,11 +28,15 @@ import calendar from './assets/calendar-full';
 import subject from './assets/subject';
 import bold from "./assets/bold";
 import file from "./assets/file-empty";
+import chat from "./assets/bubble";
+import cart from "./assets/cart";
+import arrowBottom from "./assets/arrow";
 
 import {BEM} from "../../libs";
 
 export const icons = {
     alarm,
+    cart,
     menu,
     more_vert,
     favorite,
@@ -59,6 +63,8 @@ export const icons = {
     eye,
     subject,
     file,
+    chat,
+    arrowBottom,
 };
 
 export function IconComponent(props: IIconComponentProps) {

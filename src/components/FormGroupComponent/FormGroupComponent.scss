@@ -2,4 +2,8 @@
 
 .FormGroup-component {
   @include FormGroup;
+
+  &--form {
+    margin-bottom: 20px;
+  }
 }

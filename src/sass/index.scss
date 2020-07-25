@@ -31,6 +31,9 @@ $color-orange_hover: #ff851a;
 $color-gray: gray;
 $color-gray_hover: gray;
 
+$color-mix-purple: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+$color-mix-purple_hover: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+
 $color-array: (
         default:(
                 normal:$default,
@@ -71,6 +74,10 @@ $color-array: (
         gray:(
                 normal:$color-gray,
                 hover:$color-gray_hover,
+        ),
+        mixPurple:(
+                normal:$color-mix-purple,
+                hover:$color-mix-purple_hover,
         )
 );
 $variations: (
@@ -298,4 +305,52 @@ $variations: (
   background: -webkit-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
   background: -ms-linear-gradient(left, #ff9b44 0%, #fc6075 100%);
   background: linear-gradient(to right, #ff9b44 0%, #fc6075 100%);
+}
+
+@mixin DropdownMenu {
+  z-index: 1000;
+  margin: .125rem 0 0;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transform-origin: left top 0;
+  box-shadow: inherit;
+  background-color: #fff;
+  bottom: auto;
+  font-size: 13px;
+  min-width: 120px;
+  padding: 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    padding: 5px 10px;
+
+    &:hover {
+      color: #16181b;
+      text-decoration: none;
+      background-color: #f8f9fa;
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+
+  &--open {
+    display: flex;
+    flex-direction: column;
+  }
 }

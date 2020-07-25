@@ -1,13 +1,14 @@
 import React from "react";
-import {AvatarComponent} from './AvatarComponent';
+import {LabelComponent} from './LabelComponent';
 
 // @ts-ignore
 export default {
-    title: "Components|Avatar"
+    title: "Components|Label"
 };
 
 export const Default = () => (
-    <AvatarComponent>
-        EL
-    </AvatarComponent>
+    <LabelComponent
+        name={"Partially Paid"}
+        theme={"success"}
+    />
 );

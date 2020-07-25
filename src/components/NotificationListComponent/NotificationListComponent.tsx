@@ -1,28 +1,27 @@
 import * as React from "react";
-import {IAvatarComponentProps} from "./AvatarComponent.types";
-import "./AvatarComponent.scss";
+import {INotificationListComponentProps} from "./NotificationListComponent.types";
+import "./NotificationListComponent.scss";
 import {BEM} from "../../libs";
-import {isUndef} from "../../utils";
-import {StatusComponent} from "../..";
+import {ListComponent, NotificationComponent} from "../..";
 
-export function AvatarComponent(props: IAvatarComponentProps) {
-    const bm = new BEM("Avatar-component", {
-        mini: props.mini,
-        status: !!props.status,
-        big: props.big,
-    });
+export function NotificationListComponent(props: INotificationListComponentProps) {
+    const bm = new BEM("NotificationList-component", {});
     bm.Append(props.className);
     return (
-        <div
+        <ListComponent
             style={props.style}
             className={bm.toString()}
         >
-            {props.src ? (
-                <img src={props.src} alt={props.children.toString()} title={props.children.toString()}/>
-            ) : props.children}
-            {!isUndef(props.status) && (
-                <StatusComponent className={bm.Children("status")} status={props.status}/>
-            )}
-        </div>
+            {props.data.map((item, index) => (
+                <NotificationComponent
+                    component={"li"}
+                    key={index}
+                    avatar={item.avatar}
+                    name={item.name}
+                    description={item.description}
+                    date={item.date}
+                />
+            ))}
+        </ListComponent>
     );
 }

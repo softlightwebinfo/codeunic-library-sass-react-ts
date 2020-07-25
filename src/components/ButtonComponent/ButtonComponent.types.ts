@@ -1,9 +1,12 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {ITheme} from "../../Interfaces/ITheme";
-import {IStyle} from "../../Interfaces/IStyle";
+import {IChildren} from "../../Interfaces";
+import {ITheme} from "../../Interfaces";
+import {IStyle} from "../../Interfaces";
 import {MouseEvent} from 'react';
 
 export interface IButtonComponentProps {
+    type?: "submit" | "button";
+    big?: boolean;
+    component?: string;
     rounded?: boolean;
     className?: string;
     block?: boolean;

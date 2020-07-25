@@ -1,20 +1,27 @@
 import {IProp} from "../../Interfaces/IProp";
+import {ISidebarMenuLayoutPropsMenu} from "../../layouts/SidebarMenuLayout/SidebarMenuLayout.types";
+import {IAppBarLayoutProps} from "../../layouts/AppBarLayout/AppBarLayout.types";
 import {IBreadcrumbComponentPropsData} from "../../components/BreadcrumbComponent/BreadcrumbComponent.types";
-import {Moment} from "moment";
+import {ReactElement} from "react";
 
-export interface IAttendanceAppProps extends IProp {
+export interface IDashboardAppProps extends IProp {
+    menu: ISidebarMenuLayoutPropsMenu[];
+    header: IAppBarLayoutProps;
+    title?: IDashboardAppPropsTitle;
+}
+
+export interface IDashboardAppState {
+    menu?: ISidebarMenuLayoutPropsMenu[];
+    miniSidebar?: boolean;
+    searchValue?: string;
+
+    setToggleSidebar?(): void;
+
+    setToggleItemMenu?(): void;
+}
+
+export type IDashboardAppPropsTitle = {
     breadcrumb: IBreadcrumbComponentPropsData[];
     title: string;
-    rows: IAttendanceAppPropsRow[];
-}
-
-export interface IAttendanceAppState {
-    date: Moment;
-    rows: IAttendanceAppPropsRow[];
-}
-
-export interface IAttendanceAppPropsRow {
-    name: string;
-    avatar: string;
-    days: { [p: number]: boolean }
-}
+    extra?: ReactElement;
+};
