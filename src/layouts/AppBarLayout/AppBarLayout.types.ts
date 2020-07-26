@@ -1,4 +1,4 @@
-import {IProp} from "../../Interfaces/IProp";
+import {IProp} from "../../Interfaces";
 import {IInputSearchComponentProps} from "../../components/InputSearchComponent/InputSearchComponent.types";
 import {INotificationComponentProps} from "../../components/NotificationComponent/NotificationComponent.types";
 import {IDropdownDataComponent} from "../../components/DropdownComponent/DropdownComponent.types";
@@ -19,6 +19,7 @@ export interface IAppBarLayoutProps extends IProp {
 }
 
 export type IAppBarLayoutPropsLogin = {
+    onChange?(e: IDropdownDataComponent): void;
     status: TOnline;
     avatar: string;
     name: string;

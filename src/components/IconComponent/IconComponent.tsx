@@ -29,8 +29,14 @@ import subject from './assets/subject';
 import bold from "./assets/bold";
 import file from "./assets/file-empty";
 import chat from "./assets/bubble";
+import size from "./assets/size";
 import cart from "./assets/cart";
+import drum from "./assets/drum";
+import ampGuitar from "./assets/ampGuitar";
+import ampBass from "./assets/ampBass";
 import arrowBottom from "./assets/arrow";
+import mixer from "./assets/mixer";
+import microphone from "./assets/microphone";
 
 import {BEM} from "../../libs";
 
@@ -39,6 +45,7 @@ export const icons = {
     cart,
     menu,
     more_vert,
+    size,
     favorite,
     share,
     arrow,
@@ -65,6 +72,11 @@ export const icons = {
     file,
     chat,
     arrowBottom,
+    drum,
+    microphone,
+    ampGuitar,
+    ampBass,
+    mixer,
 };
 
 export function IconComponent(props: IIconComponentProps) {

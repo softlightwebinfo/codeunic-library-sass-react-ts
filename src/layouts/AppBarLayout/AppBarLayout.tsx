@@ -99,6 +99,7 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                             className={bem.Children("log")}
                             value={2}
                             data={props.menuLogin}
+                            onChange={props.login.onChange}
                             trigger={(
                                 <AvatarComponent mini user status={props.login.status} src={props.login.avatar}>{props.login.name}</AvatarComponent>
                             )}

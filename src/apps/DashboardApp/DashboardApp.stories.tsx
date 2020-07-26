@@ -18,8 +18,8 @@ import {
     TableMessageAvatar,
     TableProgress
 } from "../..";
-import {TableLayout} from "../../layouts/TableLayout/TableLayout";
-import {ETableColumnType} from "../../Interfaces/ITable";
+import {TableLayout} from "../..";
+import {ETableColumnType} from "../../Interfaces";
 // @ts-ignore
 export default {
     title: "Apps|Dashboard"
