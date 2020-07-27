@@ -4,5 +4,5 @@ import {ReactElement} from "react";
 export interface IFormGroupComponentProps extends IProp {
     form?: boolean;
     row?: boolean;
-    children: IChildren | ReactElement[];
+    children?: IChildren | ReactElement[];
 }

@@ -5,6 +5,7 @@ import DashboardAppContext from "../../context/DashboardAppContext";
 import {BEM} from "../../libs";
 import {AppBarLayout, SidebarLayout, TitleRowComponent} from "../..";
 import useResizeHeight from "../../hooks/useResizeHeight";
+import {ISidebarMenuLayoutPropsMenu} from "../../layouts/SidebarMenuLayout/SidebarMenuLayout.types";
 
 export const Content = ({className, children}) => {
     let height = useResizeHeight();
@@ -26,6 +27,9 @@ export class DashboardApp extends React.Component<IDashboardAppProps, IDashboard
         menu: this.props.menu,
         setToggleItemMenu: (): void => {
             this.setState({menu: this.state.menu});
+        },
+        onClickItemSidebar: (value: ISidebarMenuLayoutPropsMenu): void => {
+            this.props.onClickItemSidebar && this.props.onClickItemSidebar(value);
         }
     };
 

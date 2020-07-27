@@ -98,6 +98,7 @@ export {PageComponent} from "./components/PageComponent/PageComponent";
 export {AuthLoginComponent} from "./components/AuthLoginComponent/AuthLoginComponent";
 export {AuthForgotComponent} from "./components/AuthForgotComponent/AuthForgotComponent";
 export {AuthRegisterComponent} from "./components/AuthRegisterComponent/AuthRegisterComponent";
+export {FormComponent} from "./components/FormComponent/FormComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
@@ -133,6 +134,7 @@ export {TableLayout} from './layouts/TableLayout/TableLayout'
 export {AuthLoginLayout} from './layouts/AuthLoginLayout/AuthLoginLayout'
 export {AuthForgotLayout} from './layouts/AuthForgotLayout/AuthForgotLayout'
 export {AuthRegisterLayout} from './layouts/AuthRegisterLayout/AuthRegisterLayout'
+export {FormLayout} from './layouts/FormLayout/FormLayout'
 
 //Widgets
 export {ProfileWidget} from './widgets/ProfileWidget/ProfileWidget'

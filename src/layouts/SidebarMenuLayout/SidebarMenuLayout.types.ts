@@ -11,4 +11,5 @@ export type ISidebarMenuLayoutPropsMenu = {
     name: string;
     icon?: ReactElement;
     header?: boolean;
+    id?: string;
 }

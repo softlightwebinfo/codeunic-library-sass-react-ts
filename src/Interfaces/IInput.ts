@@ -1,1 +1,1 @@
-export type IInput = "text" | "tel" | "email" | "password" | "number";
+export type IInput = "text" | "tel" | "email" | "password" | "number" | "file";

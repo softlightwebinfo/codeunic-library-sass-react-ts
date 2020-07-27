@@ -2,9 +2,11 @@ import * as React from "react";
 import {ITextFieldComponentProps} from "./TextFieldComponent.types";
 import "./TextFieldComponent.scss";
 import {BEM} from "../../libs";
-import {FormControlComponent, InputFieldComponent} from "../..";
+import {FormControlComponent, InputFieldComponent, isUndef} from "../..";
 import {InputLabelComponent} from "../..";
 import {useState} from "react";
+import useFormLayout from "../../context/useFormLayout";
+import {GetFile} from "../../libs/Images";
 
 export function TextFieldComponent(props: ITextFieldComponentProps) {
     const bm = new BEM("TextField-component", {
@@ -15,6 +17,16 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
     const [isUp, setIsUp] = useState(false);
     const [focus, setFocus] = useState(false);
     const [content, setContent] = useState(false);
+    let value;
+    if (props.type !== "file") {
+        value = props.value;
+    }
+    const use = useFormLayout();
+    if (use) {
+        if (props.type !== "file") {
+            value = isUndef(use.values[props.id]) ? props.value : use.values[props.id];
+        }
+    }
     const onFocus = (e) => {
         setIsUp(true);
         setFocus(true);
@@ -30,7 +42,21 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
 
     const onChange = (e) => {
         setContent(!!e.target.value);
-        props.onChange && props.onChange(e);
+        let value = e.target.value;
+        if (props.type == "file") {
+            GetFile(e, (d, url) => {
+                use.addValue(props.id, {
+                    file: d,
+                    url: url,
+                }, props);
+                props.onChange && props.onChange(e);
+            });
+        } else {
+            if (use) {
+                use.addValue(props.id, value, props);
+                props.onChange && props.onChange(e);
+            }
+        }
     };
     const InputElement = (
         <InputFieldComponent
@@ -38,7 +64,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
             aria-describedby={props.helperTextId}
             autoComplete={props.autoComplete}
             autoFocus={props.autoFocus}
-            value={props.value}
+            value={value}
             fullWidth={props.fullWidth}
             multiline={props.multiline}
             name={props.name}

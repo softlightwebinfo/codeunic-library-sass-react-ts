@@ -19,6 +19,7 @@ export function SidebarMenuLayout(props: ISidebarMenuLayoutProps) {
                     name={value.name}
                     arrow={!!value.menu.length}
                     onClick={() => {
+                        use.onClickItemSidebar(value);
                         if (value.menu.length) {
                             value.active = !value.active;
                             use.setToggleItemMenu();

@@ -1,0 +1,5 @@
+@import "../../sass/index";
+
+.Select-component {
+  @include Input();
+}
