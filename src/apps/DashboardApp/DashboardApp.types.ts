@@ -21,7 +21,7 @@ export interface IDashboardAppState {
 
     setToggleItemMenu?(): void;
 
-    onClickItemSidebar(value: ISidebarMenuLayoutPropsMenu): void;
+    onClickItemSidebar?(value: ISidebarMenuLayoutPropsMenu): void;
 }
 
 export type IDashboardAppPropsTitle = {

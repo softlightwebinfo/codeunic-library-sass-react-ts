@@ -1,5 +1,5 @@
 import {IProp} from "../../Interfaces";
-import {Form} from "../../models/Form/Form";
+import {Form} from "../../models/Form";
 
 export interface IFormLayoutProps extends IProp {
     form: Form;
@@ -10,7 +10,7 @@ export interface IFormLayoutProps extends IProp {
 }
 
 export interface IFormLayoutState {
-    values: { [p: string]: any },
+    values?: { [p: string]: any },
 
     addValue?(id: string, value: any, then: any): any;
 }

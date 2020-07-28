@@ -4,7 +4,7 @@ import "./TextFieldComponent.scss";
 import {BEM} from "../../libs";
 import {FormControlComponent, InputFieldComponent, isUndef} from "../..";
 import {InputLabelComponent} from "../..";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import useFormLayout from "../../context/useFormLayout";
 import {GetFile} from "../../libs/Images";
 
@@ -17,6 +17,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
     const [isUp, setIsUp] = useState(false);
     const [focus, setFocus] = useState(false);
     const [content, setContent] = useState(false);
+    const [initial, setInitial] = useState(false);
     let value;
     if (props.type !== "file") {
         value = props.value;
@@ -24,9 +25,17 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
     const use = useFormLayout();
     if (use) {
         if (props.type !== "file") {
-            value = isUndef(use.values[props.id]) ? props.value : use.values[props.id];
+            if (use.values && props.id in use.values) {
+                value = isUndef(use.values[props.id]) ? props.value : use.values[props.id];
+            }
         }
     }
+    useEffect(() => {
+        if (props.type != "file" && !initial) {
+            use.addValue(props.id, isUndef(use.values[props.id]) ? props.value : use.values[props.id], props);
+            setInitial(true);
+        }
+    });
     const onFocus = (e) => {
         setIsUp(true);
         setFocus(true);
