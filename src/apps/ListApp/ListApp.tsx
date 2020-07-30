@@ -14,7 +14,7 @@ export class ListApp extends React.Component<IListAppProps, IListAppState> {
         const bm = new BEM("List-app", {});
         bm.Append(this.props.className);
         return (
-            <div className={bm.toString()}>
+            <div className={bm.toString()} style={this.props.style}>
                 <TitleRowComponent
                     className={bm.Children("title-row")}
                     breadcrumb={this.props.breadcrumb}
@@ -34,7 +34,7 @@ export class ListApp extends React.Component<IListAppProps, IListAppState> {
                 {!this.state.list && (
                     <GridComponent spacing={2} container>
                         {this.props.rows.map((row) => (
-                            <GridComponent item xs={12} sm={3} key={row.id}>
+                            <GridComponent item xs={12} sm={6} md={4} lg={3} xl={3} key={row.id}>
                                 {this.props.rowElement(row)}
                             </GridComponent>
                         ))}
