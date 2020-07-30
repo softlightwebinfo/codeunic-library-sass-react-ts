@@ -42,13 +42,13 @@ export class DashboardApp extends React.Component<IDashboardAppProps, IDashboard
                         title={this.props.header.title}
                         logo={this.props.header.logo}
                         routeLogo={this.props.header.routeLogo}
-                        search={{
+                        search={this.props.header.search ? {
                             placeholder: this.props.header.search.placeholder,
                             value: this.state.searchValue,
                             onChange: (e) => {
                                 this.setState({searchValue: e.target.value});
                             }
-                        }}
+                        } : undefined}
                         notifications={this.props.header.notifications}
                         messages={this.props.header.messages}
                         langData={this.props.header.langData}

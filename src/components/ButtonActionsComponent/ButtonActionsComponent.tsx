@@ -12,6 +12,7 @@ export function ButtonActionsComponent(props: IButtonActionsComponentProps) {
             className={bm.toString()}
         >
             {React.Children.map(props.children, (child, index) => {
+                if(!child) return null;
                 return (
                     <div className={bm.Children("item")} key={index}>
                         {child}

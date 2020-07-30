@@ -1,9 +1,9 @@
 import React from "react";
 import {ListApp} from './ListApp';
-import {ETableColumnType} from "../../Interfaces/ITable";
+import {ETableColumnType} from "../../Interfaces";
 import {TableMessageAvatar} from "../../models";
 import {AvatarComponent, DotComponent, DropdownComponent, GridComponent, ProfileWidget, ProjectWidget, TypographyComponent} from "../..";
-import {IOnClick} from "../../Interfaces/IOnClick";
+import {IOnClick} from "../../Interfaces";
 // @ts-ignore
 export default {
     title: "Apps|List"

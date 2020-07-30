@@ -7,9 +7,7 @@ import useDashboardAppContext from "../../context/useDashboardAppContext";
 
 export function AppBarLayout(props: IAppBarLayoutProps) {
     let use = useDashboardAppContext();
-    const bem = new BEM("AppBar-layout", {
-
-    });
+    const bem = new BEM("AppBar-layout", {});
     bem.Append(props.className);
 
     const toggle = () => {
@@ -37,14 +35,14 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                     <InputSearchComponent {...props.search} custom className={bem.Children("search")} onChange={props.search.onChange}/>
                 )}
                 <ButtonActionsComponent>
-                    {!isUndef(props.langData) && (
+                    {!isUndef(props.langData) ? (
                         <DropdownComponent
                             className={bem.Children("lang")}
                             value={props.lang}
                             data={props.langData}
                         />
-                    )}
-                    {!isUndef(props.notifications) && (
+                    ) : null}
+                    {!isUndef(props.notifications) ? (
                         <DropdownComponent
                             data={[]}
                             trigger={(
@@ -68,8 +66,8 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                                 </DropDownMenuWidget>
                             )}
                         />
-                    )}
-                    {!isUndef(props.messages) && (
+                    ) : null}
+                    {!isUndef(props.messages) ? (
                         <DropdownComponent
                             data={[]}
                             trigger={(
@@ -93,8 +91,8 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                                 </DropDownMenuWidget>
                             )}
                         />
-                    )}
-                    {props.isLogin && (
+                    ) : null}
+                    {props.isLogin ? (
                         <DropdownComponent
                             className={bem.Children("log")}
                             value={2}
@@ -104,7 +102,7 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                                 <AvatarComponent mini user status={props.login.status} src={props.login.avatar}>{props.login.name}</AvatarComponent>
                             )}
                         />
-                    )}
+                    ) : null}
                 </ButtonActionsComponent>
             </ToolbarComponent>
         </AppBarComponent>

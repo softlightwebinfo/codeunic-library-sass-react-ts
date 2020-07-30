@@ -31,7 +31,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
         }
     }
     useEffect(() => {
-        if (props.type != "file" && !initial) {
+        if (props.type != "file" && !initial && use && use.values) {
             use.addValue(props.id, isUndef(use.values[props.id]) ? props.value : use.values[props.id], props);
             setInitial(true);
         }
