@@ -4,7 +4,9 @@
   @include ButtonBase;
   @include ButtonIcon;
   @include GetColors;
-
+  color: black;
+  //padding: 0;
+  justify-content: flex-start;
   &__content {
     width: 100%;
     display: flex;

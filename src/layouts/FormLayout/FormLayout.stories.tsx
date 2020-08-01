@@ -1,6 +1,6 @@
-import React from "react";
 import {FormLayout} from './FormLayout';
 import {Form} from "../../models/Form";
+import * as React from "react";
 
 // @ts-ignore
 export default {
@@ -48,6 +48,14 @@ export const Default = () => {
                     id: "Route", outline: true,
                     placeholder: "Route",
                 }))
+        )
+        .Add(
+            form.Group({form: true})
+                .Add(component.FormLabel({children: "Active"}))
+                .Add(component.Checkbox({
+                    id: "active",
+                    name: "active",
+                }, "Active"))
         )
         .Add(
             form.Group({form: true})

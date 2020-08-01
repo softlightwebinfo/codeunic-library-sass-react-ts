@@ -6,7 +6,7 @@ import {FormControlComponent, InputFieldComponent, isUndef} from "../..";
 import {InputLabelComponent} from "../..";
 import {useEffect, useState} from "react";
 import useFormLayout from "../../context/useFormLayout";
-import {GetFile} from "../../libs/Images";
+import {GetFile} from "../../libs";
 
 export function TextFieldComponent(props: ITextFieldComponentProps) {
     const bm = new BEM("TextField-component", {
