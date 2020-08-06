@@ -31,7 +31,7 @@ export class FormCheckbox extends FormComponentModel implements FormCheckboxInte
         )
         if (this.label) {
             return (
-                <FormControlLabelComponent control={component} label={"Primary"}/>
+                <FormControlLabelComponent control={component} label={this.label} key={key}/>
             );
         }
         return component;

@@ -23,6 +23,9 @@ export function InputFieldComponent(props: IInputFieldComponentProps) {
                 onBlur={props.onBlur}
                 className={"InputField-component__input"}
                 required={props.required}
+                // @ts-ignore
+                autoComplete={props.autoComplete}
+                autoFocus={props.autoFocus}
             />
         </div>
     );

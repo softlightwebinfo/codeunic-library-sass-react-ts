@@ -54,7 +54,7 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
         let value = e.target.value;
         if (props.type == "file") {
             GetFile(e, (d, url) => {
-                use.addValue(props.id, {
+                use.addValue && use.addValue(props.id, {
                     file: d,
                     url: url,
                 }, props);
@@ -62,9 +62,9 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
             });
         } else {
             if (use) {
-                use.addValue(props.id, value, props);
-                props.onChange && props.onChange(e);
+                if (use.addValue) use.addValue(props.id, value, props);
             }
+            props.onChange && props.onChange(e);
         }
     };
     const InputElement = (
@@ -91,7 +91,8 @@ export function TextFieldComponent(props: ITextFieldComponentProps) {
     return (
         <FormControlComponent className={bm.toString()} focus={focus}>
             {label && (
-                <InputLabelComponent isUp={isUp} htmlFor={props.id} className={"TextField-component__label TextField-component__label-form-control"}>
+                <InputLabelComponent isUp={isUp} htmlFor={props.id}
+                                     className={"TextField-component__label TextField-component__label-form-control"}>
                     {`${label} ${props.required ? " *" : ""}`}
                 </InputLabelComponent>
             )}

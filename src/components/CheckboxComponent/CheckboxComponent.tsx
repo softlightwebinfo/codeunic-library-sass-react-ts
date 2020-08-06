@@ -20,12 +20,12 @@ export function CheckboxComponent(props: ICheckboxComponentProps) {
     }
     useEffect(() => {
         if (!initial && use && use.values) {
-            use.addValue(props.id, isUndef(use.values[props.id]) ? !!props.checked : !!use.values[props.id], props);
+            use.addValue && use.addValue(props.id, isUndef(use.values[props.id]) ? !!props.checked : !!use.values[props.id], props);
             setInitial(true);
         }
     });
     const onChange = (e) => {
-        if (use) use.addValue(props.id, e.target.checked, props);
+        if (use && use.addValue) use.addValue(props.id, e.target.checked, props);
         props.onChange && props.onChange(e.target.checked, e);
     };
     return (
