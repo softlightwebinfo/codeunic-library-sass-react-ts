@@ -2,7 +2,21 @@ import * as React from "react";
 import {IAppBarLayoutProps} from "./AppBarLayout.types";
 import "./AppBarLayout.scss";
 import {BEM} from "../../libs";
-import {AppBarComponent, AvatarComponent, BadgeComponent, ButtonActionsComponent, ButtonIconComponent, DropdownComponent, DropDownMenuWidget, IconComponent, InputSearchComponent, isUndef, NotificationListComponent, ToolbarComponent, TypographyComponent} from "../..";
+import {
+    AppBarComponent,
+    AvatarComponent,
+    BadgeComponent,
+    ButtonActionsComponent,
+    ButtonIconComponent,
+    DropdownComponent,
+    DropDownMenuWidget,
+    IconComponent,
+    InputSearchComponent,
+    isUndef,
+    NotificationListComponent,
+    ToolbarComponent,
+    TypographyComponent
+} from "../..";
 import useDashboardAppContext from "../../context/useDashboardAppContext";
 
 export function AppBarLayout(props: IAppBarLayoutProps) {
@@ -30,11 +44,16 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                 >
                     <IconComponent style={{color: "white"}} icon="menu"/>
                 </ButtonIconComponent>
-                <TypographyComponent className={bem.Children("title")} color={"text-primary"} variant="h6">{props.title}</TypographyComponent>
+                <TypographyComponent className={bem.Children("title")} color={"text-primary"}
+                                     variant="h6">{props.title}</TypographyComponent>
                 {props.search && (
-                    <InputSearchComponent {...props.search} custom className={bem.Children("search")} onChange={props.search.onChange}/>
+                    <InputSearchComponent {...props.search} custom className={bem.Children("search")}
+                                          onChange={props.search.onChange}/>
                 )}
                 <ButtonActionsComponent>
+                    <>
+                        {props.actions}
+                    </>
                     {!isUndef(props.langData) ? (
                         <DropdownComponent
                             className={bem.Children("lang")}
@@ -99,7 +118,8 @@ export function AppBarLayout(props: IAppBarLayoutProps) {
                             data={props.menuLogin}
                             onChange={props.login.onChange}
                             trigger={(
-                                <AvatarComponent mini user status={props.login.status} src={props.login.avatar}>{props.login.name}</AvatarComponent>
+                                <AvatarComponent mini user status={props.login.status}
+                                                 src={props.login.avatar}>{props.login.name}</AvatarComponent>
                             )}
                         />
                     ) : null}

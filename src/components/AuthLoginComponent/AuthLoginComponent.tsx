@@ -24,7 +24,7 @@ export function AuthLoginComponent(props: IAuthLoginComponentProps) {
             </FormGroupComponent>
             <FormGroupComponent form>
                 <InputLabelComponent>Password</InputLabelComponent>
-                <TextFieldComponent onChange={props.onChange} name={"password"} outline id={"password"} placeholder={"Password"} value={props.passwordValue}/>
+                <TextFieldComponent onChange={props.onChange} type={"password"} name={"password"} outline id={"password"} placeholder={"Password"} value={props.passwordValue}/>
             </FormGroupComponent>
             <FormGroupComponent form style={{textAlign: "end"}}>
                 <ComponentForgotPassword><span className={bem.Children("forgot")}>{props.textForgot || "Forgot Password?"}</span></ComponentForgotPassword>

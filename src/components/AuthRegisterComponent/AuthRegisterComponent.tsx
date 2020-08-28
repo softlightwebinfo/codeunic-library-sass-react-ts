@@ -25,11 +25,11 @@ export function AuthRegisterComponent(props: IAuthRegisterComponentProps) {
             </FormGroupComponent>
             <FormGroupComponent form>
                 <InputLabelComponent>Password</InputLabelComponent>
-                <TextFieldComponent onChange={props.onChange} name={"password"} outline id={"password"} placeholder={"Password"} value={props.passwordValue}/>
+                <TextFieldComponent type={"password"} onChange={props.onChange} name={"password"} outline id={"password"} placeholder={"Password"} value={props.passwordValue}/>
             </FormGroupComponent>
             <FormGroupComponent form>
                 <InputLabelComponent>Repeat Password</InputLabelComponent>
-                <TextFieldComponent onChange={props.onChange} name={"repeat_password"} outline id={"repeat_password"} placeholder={"Repeat Password"} value={props.repeatPasswordValue}/>
+                <TextFieldComponent type={"password"} onChange={props.onChange} name={"repeat_password"} outline id={"repeat_password"} placeholder={"Repeat Password"} value={props.repeatPasswordValue}/>
             </FormGroupComponent>
             <FormGroupComponent form>
                 <ButtonComponent type={"submit"} big theme={"mixPurple"}>{props.textButton || "Register"}</ButtonComponent>

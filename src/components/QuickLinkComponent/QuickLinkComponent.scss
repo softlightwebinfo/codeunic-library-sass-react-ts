@@ -1,0 +1,23 @@
+.Quick-link-component {
+  $then: &;
+  position: relative;
+  padding: 15px;
+  min-width: 80px;
+  color: #666;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+
+  &__title {
+    margin-top: 5px;
+  }
+
+  &:hover {
+    background: #f4f4f4;
+    color: #444;
+    border-color: #aaa;
+    cursor: pointer;
+  }
+}

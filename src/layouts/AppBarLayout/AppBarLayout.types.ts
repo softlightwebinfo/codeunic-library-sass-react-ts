@@ -1,10 +1,11 @@
-import {IProp} from "../../Interfaces";
+import {IChildren, IProp} from "../../Interfaces";
 import {IInputSearchComponentProps} from "../../components/InputSearchComponent/InputSearchComponent.types";
 import {INotificationComponentProps} from "../../components/NotificationComponent/NotificationComponent.types";
 import {IDropdownDataComponent} from "../../components/DropdownComponent/DropdownComponent.types";
 import {TOnline} from "../../models";
 
 export interface IAppBarLayoutProps extends IProp {
+    actions?: IChildren[];
     lang: number;
     menuLogin?: IDropdownDataComponent[];
     login?: IAppBarLayoutPropsLogin;

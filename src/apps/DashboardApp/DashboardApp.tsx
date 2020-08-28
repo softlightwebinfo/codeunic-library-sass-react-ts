@@ -39,6 +39,7 @@ export class DashboardApp extends React.Component<IDashboardAppProps, IDashboard
             <DashboardAppContext.Provider value={this.state}>
                 <div className={bm.toString()}>
                     <AppBarLayout
+                        actions={this.props.header.actions}
                         title={this.props.header.title}
                         logo={this.props.header.logo}
                         routeLogo={this.props.header.routeLogo}

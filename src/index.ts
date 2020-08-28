@@ -99,6 +99,7 @@ export {AuthLoginComponent} from "./components/AuthLoginComponent/AuthLoginCompo
 export {AuthForgotComponent} from "./components/AuthForgotComponent/AuthForgotComponent";
 export {AuthRegisterComponent} from "./components/AuthRegisterComponent/AuthRegisterComponent";
 export {FormComponent} from "./components/FormComponent/FormComponent";
+export {QuickLinkComponent} from "./components/QuickLinkComponent/QuickLinkComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'
