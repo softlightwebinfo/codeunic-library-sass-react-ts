@@ -1,10 +1,10 @@
-import {IProp} from "../../Interfaces/IProp";
-import {IOnChange} from "../../Interfaces/IOnChange";
+import {IProp} from "../../Interfaces";
+import {IOnChange} from "../../Interfaces";
 import {ReactElement} from "react";
 
 export interface IHeaderToolbarComponentProps extends IProp {
-    title: string;
-    search: IHeaderToolbarComponentPropsSearch;
+    title?: string;
+    search?: IHeaderToolbarComponentPropsSearch;
     icons: ReactElement[];
 
     onClick(item: any, index: any): any;

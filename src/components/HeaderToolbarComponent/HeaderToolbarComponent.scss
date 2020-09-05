@@ -11,6 +11,12 @@
     padding: 0;
   }
 
+  &__left {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
+
   &__nav {
     display: flex;
     align-items: center;

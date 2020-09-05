@@ -1,8 +1,8 @@
 import * as React from "react";
-import {IHeaderToolbarComponentProps} from "./HeaderToolbarComponent.types";
+import { IHeaderToolbarComponentProps } from "./HeaderToolbarComponent.types";
 import "./HeaderToolbarComponent.scss";
-import {BEM} from "../../libs";
-import {ButtonIconComponent, InputSearchComponent, ListComponent, TypographyComponent} from "../..";
+import { BEM } from "../../libs";
+import { ButtonIconComponent, InputSearchComponent, ListComponent, TypographyComponent } from "../..";
 
 export function HeaderToolbarComponent(props: IHeaderToolbarComponentProps) {
     const bm = new BEM("HeaderToolbar-component", {});
@@ -17,15 +17,26 @@ export function HeaderToolbarComponent(props: IHeaderToolbarComponentProps) {
             style={props.style}
             className={bm.toString()}
         >
-            <TypographyComponent
-                component={"h4"}
-                variant={"h5"}
-                className={bm.Children("title")}
-            >
-                {props.title}
-            </TypographyComponent>
+            <div className={bm.Children("left")}>
+                {props.title && (
+                    <TypographyComponent
+                        component={"h4"}
+                        variant={"h5"}
+                        className={bm.Children("title")}
+                    >
+                        {props.title}
+                    </TypographyComponent>
+                )}
+            </div>
             <div className={bm.Children("nav")}>
-                <InputSearchComponent outlined onChange={props.search.onChange} placeholder={props.search.placeholder} value={props.search.value}/>
+                {props.search && (
+                    <InputSearchComponent
+                        outlined
+                        onChange={props.search.onChange}
+                        placeholder={props.search.placeholder}
+                        value={props.search.value}
+                    />
+                )}
                 <ListComponent horizontal>
                     {props.icons.map((item, index) => (
                         <ButtonIconComponent hover key={index} onClick={() => onClick(item, index)}>

@@ -37,6 +37,7 @@ import ampBass from "./assets/ampBass";
 import arrowBottom from "./assets/arrow";
 import mixer from "./assets/mixer";
 import microphone from "./assets/microphone";
+import dashboard from "./assets/dashboard";
 
 import {BEM} from "../../libs";
 
@@ -58,6 +59,7 @@ export const icons = {
     phone,
     camera,
     setting,
+    dashboard,
     attachment,
     close,
     pencil,
