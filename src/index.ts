@@ -100,6 +100,9 @@ export {AuthForgotComponent} from "./components/AuthForgotComponent/AuthForgotCo
 export {AuthRegisterComponent} from "./components/AuthRegisterComponent/AuthRegisterComponent";
 export {FormComponent} from "./components/FormComponent/FormComponent";
 export {QuickLinkComponent} from "./components/QuickLinkComponent/QuickLinkComponent";
+export {CardBoxComponent} from "./components/CardBoxComponent/CardBoxComponent";
+export {SectionBoxComponent} from "./components/SectionBoxComponent/SectionBoxComponent";
+export {BoxComponent} from "./components/BoxComponent/BoxComponent";
 
 //Layouts
 export {ComplexGridLayout} from './layouts/ComplexGridLayout/ComplexGridLayout'

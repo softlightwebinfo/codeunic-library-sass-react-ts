@@ -18,6 +18,7 @@ export function HeaderToolbarComponent(props: IHeaderToolbarComponentProps) {
             className={bm.toString()}
         >
             <div className={bm.Children("left")}>
+                {props.left}
                 {props.title && (
                     <TypographyComponent
                         component={"h4"}
@@ -38,11 +39,13 @@ export function HeaderToolbarComponent(props: IHeaderToolbarComponentProps) {
                     />
                 )}
                 <ListComponent horizontal>
+                    {props.rightBefore}
                     {props.icons.map((item, index) => (
                         <ButtonIconComponent hover key={index} onClick={() => onClick(item, index)}>
                             {item}
                         </ButtonIconComponent>
                     ))}
+                    {props.rightAfter}
                 </ListComponent>
             </div>
         </div>

@@ -1,26 +1,40 @@
 import * as React from "react";
-import {ICardComponentProps} from "./CardComponent.types";
-import "./CardComponent.scss";
-import {BEM} from "../../libs";
+import { ICardBoxComponentProps } from "./CardBoxComponent.types";
+import "./CardBoxComponent.scss";
+import { BEM } from "../../libs";
 import PropTypes from 'prop-types';
+import { TypographyComponent } from "../..";
 
-export function CardComponent(props: ICardComponentProps) {
-    const bm = new BEM("Card-component", {
-        rounded: props.rounded != undefined ? props.rounded : true,
-        variant: props.variant,
-    });
+export function CardBoxComponent(props: ICardBoxComponentProps) {
+    const bm = new BEM("CardBox-component", {});
     bm.Append(props.className);
     return (
-        <div
-            onClick={props.onClick}
+        <section
             style={props.style}
             className={bm.toString()}
         >
-            {props.children}
-        </div>
+            <section className={bm.Children("left")}>
+                <section className={bm.Children("title")}>
+                    <TypographyComponent component={"h2"} variant={"h4"}>{props.title}</TypographyComponent>
+                    <TypographyComponent component={"p"}>{props.description}</TypographyComponent>
+                </section>
+                <img src={props.image} alt={props.title}/>
+                <section className={bm.Children("footer")}>
+                    <TypographyComponent>{props.footer}</TypographyComponent>
+                </section>
+            </section>
+            {props.children && (
+                <section className={bm.Children("right")}>
+                    {props.children}
+                </section>
+            )}
+        </section>
     );
 }
 
-CardComponent.propTypes = {
+CardBoxComponent.propTypes = {
     rounded: PropTypes.bool,
+    title: PropTypes.string,
+    // children: PropTypes.element,
+    description: PropTypes.string,
 };

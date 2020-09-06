@@ -1,14 +1,9 @@
-import {IChildren} from "../../Interfaces/IChildren";
-import {ReactElement} from "react";
-import {IStyle} from "../../Interfaces/IStyle";
-import {IVariant} from "../../Interfaces/IVariant";
-import {IOnClick} from "../../Interfaces/IOnClick";
+import { IChildren, IProp } from "../../Interfaces";
 
-export interface ICardComponentProps {
-    className?: string;
-    onClick?: (e: IOnClick) => void;
-    rounded?: boolean;
-    style?: IStyle;
-    variant?: IVariant;
-    children: IChildren | ReactElement[];
+export interface ICardBoxComponentProps extends IProp {
+    children?: IChildren;
+    footer: string;
+    image: string;
+    description: string;
+    title: string;
 }
